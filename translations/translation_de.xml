@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<texts>
+		<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Red Holstein Kuh"/>
+		<text name="fillType_bull_red_holstein" text="Red Holstein Bulle"/>
+		<text name="fillType_cow_ayrshire" text="Ayrshire Kuh"/>
+		<text name="fillType_bull_ayrshire" text="Ayrshire Bulle"/>
+		<text name="fillType_cow_charolais" text="Charolais Kuh"/>
+		<text name="fillType_bull_charolais" text="Charolais Bulle"/>
+		<text name="fillType_cow_shorthorn" text="Shorthorn Kuh"/>
+		<text name="fillType_bull_shorthorn" text="Shorthorn Bulle"/>
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+	</texts>
+</l10n>

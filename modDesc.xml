@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+	<author>Con_Gan</author>
+	<version>0.1.0.0</version>
+	<title>
+		<en>Cow Breeds Pack for RLRM</en>
+		<de>Rinderrassen-Paket für RLRM</de>
+	</title>
+	<description>
+		<en><![CDATA[Adds Red Holstein, Ayrshire, Charolais, and Shorthorn cow breeds with texture variation to Realistic Livestock RM.
+
+Requires Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></en>
+		<de><![CDATA[Fuegt Red Holstein, Ayrshire, Charolais und Shorthorn Rinderrassen mit Texturvariationen zu Realistic Livestock RM hinzu.
+
+Benoetigt Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></de>
+	</description>	
+	<iconFilename>icon.dds</iconFilename>
+	<multiplayer supported="true"/>
+	
+</modDesc>
+
