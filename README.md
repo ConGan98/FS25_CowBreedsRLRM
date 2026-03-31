@@ -1,5 +1,5 @@
 > [!NOTE]
-> Ritter version of [FS25 Realistic Livestock]([[https://github.com/Arrow-kb/FS25_RealisticLivestock](https://github.com/rittermod/FS25_RealisticLivestockRM)]() is need for this to work.
+> Ritter version of [FS25 Realistic Livestock](https://github.com/rittermod/FS25_RealisticLivestockRM) is need for this to work.
 >
 > This is a WIP i am still working on the textures.
 
