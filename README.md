@@ -1,7 +1,8 @@
 > [!NOTE]
 > Ritter version of the awesome [FS25 Realistic Livestock]([https://github.com/Arrow-kb/FS25_RealisticLivestock](https://github.com/rittermod/FS25_RealisticLivestockRM)) is need for this to work.
 
-![](icon.dds)
+<img src="images/icon1.png">
+
 
 # FS25_CowBreedsRLRM
 With the help of Ritter on creating the base structor of the mod we are able to introduce 12 new cow breeds to the FS25_RealisticLivestockRM mod.  This only adds new breeds with new textures to corisponed to each breed, this DOSE NOT replace
