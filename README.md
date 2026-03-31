@@ -12,6 +12,8 @@ With the help of Ritter in creating the base structure of the mod, we are able t
 ## Requires 
 [FS25_RealisticLivestockRM](https://github.com/rittermod/FS25_RealisticLivestockRM)
 ## Features
+12 new breeds and values adjusted to represent the breed, Holstein gives most milk while Charolais and Angus gain most weight for beef production. 
+
 ### FOUR NEW DAIRY BREEDS
 - Red Holstein
 - Ayrshire
