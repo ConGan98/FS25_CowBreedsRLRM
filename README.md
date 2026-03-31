@@ -7,7 +7,7 @@
 
 
 ## FS25_CowBreedsRLRM
-With the help of Ritter in creating the base structure of the mod, we are able to introduce 12 new cow breeds to the FS25_RealisticLivestockRM mod. This mod only adds new breeds with corresponding textures for each one. It does not replace the 3D models of the cows in the game. Therefore, the 3D assets may appear larger than the actual breed of cow.
+With the help of Ritter in creating the base structure of the mod, we are able to introduce 12 new cow breeds to the FS25_RealisticLivestockRM mod. This is a companion mod to work with FS25_Realistic_livestock.This mod only adds new breeds with corresponding textures for each one. It does not replace the 3D models of the cows in the game. Therefore, the 3D assets may appear larger than the actual breed of cow.
 
 ## Requires 
 [FS25_RealisticLivestockRM](https://github.com/rittermod/FS25_RealisticLivestockRM)
