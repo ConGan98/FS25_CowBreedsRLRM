@@ -1,0 +1,25 @@
+name: Question
+description: Ask a question about the mod, its features, or how something works
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about Realistic Livestock RM? Ask away! You may also find your answer in the [user documentation](https://rittermod.github.io/FS25_RealisticLivestockRM/).
+
+  - type: checkboxes
+    id: docs-checked
+    attributes:
+      label: Documentation
+      description: "Have you checked the [user documentation](https://rittermod.github.io/FS25_RealisticLivestockRM/)?"
+      options:
+        - label: I have checked the documentation and didn't find the answer
+          required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know? Include any relevant details like mod version, game mode, animal type, screenshots, or log excerpts.
+    validations:
+      required: true
