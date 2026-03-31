@@ -4,11 +4,11 @@
 <img src="images/icon1.png">
 
 
-##FS25_CowBreedsRLRM
+## FS25_CowBreedsRLRM
 With the help of Ritter on creating the base structor of the mod we are able to introduce 12 new cow breeds to the FS25_RealisticLivestockRM mod.  This only adds new breeds with new textures to corisponed to each breed, this DOSE NOT replace
 the 3d models of the cows in game, Therefore the 3d assets might be bigger than the actual breed of cow.
 
-##Features
+## Features
 - FOUR NEW DAIRY BREEDS
 - Red Holistine
 - Aryshire
