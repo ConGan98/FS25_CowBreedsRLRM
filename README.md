@@ -18,13 +18,13 @@ With the help of Ritter in creating the base structure of the mod, we are able t
 
 ### EIGHT NEW BEEF BREEDS
 - Red Angus
--Hereford
--Charolais
--Shorthorn
--Irish Moiled
--British Blue
--Belted Galloway
--Simmental
+- Hereford
+- Charolais
+- Shorthorn
+- Irish Moiled
+- British Blue
+- Belted Galloway
+- Simmental
 
 ## Installation
 Place `FS25_CowBreedsRLRM.zip` in your mods folder.
