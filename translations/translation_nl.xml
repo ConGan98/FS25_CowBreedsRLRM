@@ -1,0 +1,56 @@
+<l10n>
+	<texts>
+		<!-- COWS -->
+
+		<text name="fillType_bull" text="Stier"/>
+		<text name="fillType_bull_swiss_brown" text="Brown-Swiss Stier"/>
+		<text name="fillType_bull_holstein" text="Holstein Stier"/>
+		<text name="fillType_bull_angus" text="Angus Stier"/>
+		<text name="fillType_bull_limousin" text="Limousin Stier"/>
+		<text name="fillType_cow_hereford" text="Hereford"/>
+		<text name="fillType_bull_hereford" text="Hereford Stier"/>
+		<text name="fillType_cow_highland_cattle" text="Schotse Hooglander"/>
+		<text name="fillType_bull_highland_cattle" text="Schotse Hooglander Stier"/>
+		<text name="animal_descriptionBullFeed" text="Stieren houden van gras, hooi and CGR."/>
+		<text name="animal_descriptionBullYoung" text="Dit is een mannelijk kalf."/>
+		<text name="animal_descriptionBullReproduction" text="Stieren die gezond zijn en ouder dan 12 maanden kunnen zich voortplanten."/>
+		<text name="rl_descriptionCowReproduction" text="Koeien die gezond zijn en ouder dan 12 maanden kunnen zich voortplanten."/>
+
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Schotse Red Holstein"/>
+		<text name="fillType_bull_red_holstein" text="Schotse Red Holstein Stier"/>
+		<text name="fillType_cow_ayrshire" text="Schotse Ayrshire"/>
+		<text name="fillType_bull_ayrshire" text="Schotse Ayrshire Stier"/>
+		<text name="fillType_cow_charolais" text="Schotse Charolais"/>
+		<text name="fillType_bull_charolais" text="Schotse Charolais Stier"/>
+		<text name="fillType_cow_shorthorn" text="Schotse Shorthorn"/>
+		<text name="fillType_bull_shorthorn" text="Schotse Shorthorn Stier"/>
+		<text name="fillType_cow_irishmoiled" text="Schotse Irish Moiled"/>
+		<text name="fillType_bull_irishmoiled" text="Schotse Irish Moiled Stier"/>
+		<text name="fillType_cow_britishblue" text="Schotse British Blue"/>		
+		<text name="fillType_bull_britishblue" text="Schotse British Blue Stier"/>	
+		<text name="fillType_cow_beltedgalloway" text="Schotse Belted Galloway"/>		
+		<text name="fillType_bull_beltedgalloway" text="Schotse Belted Galloway Stier"/>
+		<text name="fillType_cow_redangus" text="Schotse Red Angus"/>		
+		<text name="fillType_bull_redangus" text="Schotse Red Angus Stier"/>
+		<text name="fillType_cow_simmental" text="Schotse Simmental"/>		
+		<text name="fillType_bull_simmental" text="Schotse Simmental Stier"/>
+		<text name="fillType_cow_guernsey" text="Schotse Guernsey"/>		
+		<text name="fillType_bull_guernsey" text="Schotse Guernsey Stier"/>
+		<text name="fillType_cow_jersey" text="Schotse Jersey"/>		
+		<text name="fillType_bull_jersey" text="Schotse Jersey Stier"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>

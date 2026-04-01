@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<l10n>
+	<translationContributors>Kalderone</translationContributors>
+    <texts>
+		<!-- КОРОВИ -->
+		<text name="fillType_bull" text="Бик"/>
+		<text name="fillType_bull_swiss_brown" text="Бурий швейцарський бик"/>
+		<text name="fillType_bull_holstein" text="Гольштінський бик"/>
+		<text name="fillType_bull_angus" text="Ангусьский бик"/>
+		<text name="fillType_bull_limousin" text="Лімузинський бик"/>
+		<text name="fillType_cow_hereford" text="Hereford"/>
+		<text name="fillType_bull_hereford" text="Hereford Bull"/>
+		<text name="fillType_cow_highland_cattle" text="Хайленд"/>
+		<text name="fillType_bull_highland_cattle" text="Бик Хайленд"/>
+		<text name="animal_descriptionBullFeed" text="Бики їдять траву, сіно та TMR."/>
+		<text name="animal_descriptionBullYoung" text="Це бичок."/>
+		<text name="animal_descriptionBullReproduction" text="Бики, які здорові та старші за 12 місяців, можуть розмножуватись."/>
+		<text name="rl_descriptionCowReproduction" text="Корови, які здорові та старші за 12 місяців, можуть розмножуватись."/>
+
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Red Holstein"/>
+		<text name="fillType_bull_red_holstein" text="Бик Red Holstein"/>
+		<text name="fillType_cow_ayrshire" text="Ayrshire"/>
+		<text name="fillType_bull_ayrshire" text="Бик Ayrshire"/>
+		<text name="fillType_cow_charolais" text="Charolais"/>
+		<text name="fillType_bull_charolais" text="Бик Charolais"/>
+		<text name="fillType_cow_shorthorn" text="Shorthorn"/>
+		<text name="fillType_bull_shorthorn" text="Бик Shorthorn"/>
+		<text name="fillType_cow_irishmoiled" text="Irish Moiled"/>
+		<text name="fillType_bull_irishmoiled" text="Бик Irish Moiled"/>
+		<text name="fillType_cow_britishblue" text="British Blue"/>		
+		<text name="fillType_bull_britishblue" text="Бик British Blue"/>	
+		<text name="fillType_cow_beltedgalloway" text="Belted Galloway"/>		
+		<text name="fillType_bull_beltedgalloway" text="Бик Belted Galloway"/>
+		<text name="fillType_cow_redangus" text="Red Angus"/>		
+		<text name="fillType_bull_redangus" text="Бик Red Angus"/>
+		<text name="fillType_cow_simmental" text="Simmental"/>		
+		<text name="fillType_bull_simmental" text="Бик Simmental"/>
+		<text name="fillType_cow_guernsey" text="Guernsey"/>		
+		<text name="fillType_bull_guernsey" text="Бик Guernsey"/>
+		<text name="fillType_cow_jersey" text="Jersey"/>		
+		<text name="fillType_bull_jersey" text="Бик Jersey"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>

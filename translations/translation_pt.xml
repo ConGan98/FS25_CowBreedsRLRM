@@ -1,0 +1,56 @@
+<l10n>
+	<texts>
+		<!-- COWS -->
+		
+		<text name="fillType_bull" text="Touro"/>
+		<text name="fillType_bull_swiss_brown" text="Touro Brown-Swiss"/>
+		<text name="fillType_bull_holstein" text="Touro Holstein"/>
+		<text name="fillType_bull_angus" text="Touro Angus"/>
+		<text name="fillType_bull_limousin" text="Touro Limousin"/>
+		<text name="fillType_cow_hereford" text="Hereford"/>
+		<text name="fillType_bull_hereford" text="Hereford Bull"/>
+		<text name="fillType_cow_highland_cattle" text="Gado Highland"/>
+		<text name="fillType_bull_highland_cattle" text="Touro Highland"/>
+		<text name="animal_descriptionBullFeed" text="Touros gostam de erva, feno e TMR."/>
+		<text name="animal_descriptionBullYoung" text="Ele é um novilho."/>
+		<text name="animal_descriptionBullReproduction" text="Touros saudáveis e com mais de 12 meses podem reproduzir."/>
+		<text name="rl_descriptionCowReproduction" text="Vacas saudáveis e com mais de 12 meses podem reproduzir."/>
+
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Gado Red Holstein"/>
+		<text name="fillType_bull_red_holstein" text="Touro Red Holstein"/>
+		<text name="fillType_cow_ayrshire" text="Gado Ayrshire"/>
+		<text name="fillType_bull_ayrshire" text="Touro Ayrshire"/>
+		<text name="fillType_cow_charolais" text="Gado Charolais"/>
+		<text name="fillType_bull_charolais" text="Touro Charolais"/>
+		<text name="fillType_cow_shorthorn" text="Gado Shorthorn"/>
+		<text name="fillType_bull_shorthorn" text="Touro Shorthorn"/>
+		<text name="fillType_cow_irishmoiled" text="Gado Irish Moiled"/>
+		<text name="fillType_bull_irishmoiled" text="Touro Irish Moiled"/>
+		<text name="fillType_cow_britishblue" text="Gado British Blue"/>		
+		<text name="fillType_bull_britishblue" text="Touro British Blue"/>	
+		<text name="fillType_cow_beltedgalloway" text="Gado Belted Galloway"/>		
+		<text name="fillType_bull_beltedgalloway" text="Touro Belted Galloway"/>
+		<text name="fillType_cow_redangus" text="Gado Red Angus"/>		
+		<text name="fillType_bull_redangus" text="Touro Red Angus"/>
+		<text name="fillType_cow_simmental" text="Gado Simmental"/>		
+		<text name="fillType_bull_simmental" text="Touro Simmental"/>
+		<text name="fillType_cow_guernsey" text="Gado Guernsey"/>		
+		<text name="fillType_bull_guernsey" text="Touro Guernsey"/>
+		<text name="fillType_cow_jersey" text="Gado Jersey"/>		
+		<text name="fillType_bull_jersey" text="Touro Jersey"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>
