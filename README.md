@@ -33,6 +33,8 @@ With the help of Ritter in creating the base structure of the mod, we are able t
 ## Installation
 Place `FS25_CowBreedsRLRM.zip` in your mods folder.
 
+if adding to existing save game, please refresh the animal dealer in settings to get new breeds to so up striught away or weight some in game days.
+
 ## License
 This mod is released under GPL-3 license. See the [LICENSE](LICENSE) file for details.
 
