@@ -1,0 +1,56 @@
+<l10n>
+	<texts>
+		<!-- COWS -->
+		
+		<text name="fillType_bull" text="Byk"/>
+		<text name="fillType_bull_swiss_brown" text="Brown-Swiss Byk"/>
+		<text name="fillType_bull_holstein" text="Byk rasy holsztyńskiej"/>
+		<text name="fillType_bull_angus" text="Angus Byk"/>
+		<text name="fillType_bull_limousin" text="Byk rasy Limousin"/>
+		<text name="fillType_cow_hereford" text="Hereford"/>
+		<text name="fillType_bull_hereford" text="Hereford Bull"/>
+		<text name="fillType_cow_highland_cattle" text="Bydło Highland"/>
+		<text name="fillType_bull_highland_cattle" text="Byk Highland"/>
+		<text name="animal_descriptionBullFeed" text="Byki lubią trawę, siano i TMR."/>
+		<text name="animal_descriptionBullYoung" text="Jest to cielę płci męskiej."/>
+		<text name="animal_descriptionBullReproduction" text="Byki, które są zdrowe i starsze niż 12 miesięcy, mogą się rozmnażać."/>
+		<text name="rl_descriptionCowReproduction" text="Krowy, które są zdrowe i starsze niż 12 miesięcy, mogą się rozmnażać."/>
+
+	<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Bydło Red Holstein"/>
+		<text name="fillType_bull_red_holstein" text="Byk Red Holstein"/>
+		<text name="fillType_cow_ayrshire" text="Bydło Ayrshire"/>
+		<text name="fillType_bull_ayrshire" text="Byk Ayrshire"/>
+		<text name="fillType_cow_charolais" text="Bydło Charolais"/>
+		<text name="fillType_bull_charolais" text="Byk Charolais"/>
+		<text name="fillType_cow_shorthorn" text="Bydło Shorthorn"/>
+		<text name="fillType_bull_shorthorn" text="Byk Shorthorn"/>
+		<text name="fillType_cow_irishmoiled" text="Bydło Irish Moiled"/>
+		<text name="fillType_bull_irishmoiled" text="Byk Irish Moiled"/>
+		<text name="fillType_cow_britishblue" text="Bydło British Blue"/>		
+		<text name="fillType_bull_britishblue" text="Byk British Blue"/>	
+		<text name="fillType_cow_beltedgalloway" text="Bydło Belted Galloway"/>		
+		<text name="fillType_bull_beltedgalloway" text="Byk Belted Galloway"/>
+		<text name="fillType_cow_redangus" text="Bydło Red Angus"/>		
+		<text name="fillType_bull_redangus" text="Byk Red Angus"/>
+		<text name="fillType_cow_simmental" text="Bydło Simmental"/>		
+		<text name="fillType_bull_simmental" text="Byk Simmental"/>
+		<text name="fillType_cow_guernsey" text="Bydło Guernsey"/>		
+		<text name="fillType_bull_guernsey" text="Byk Guernsey"/>
+		<text name="fillType_cow_jersey" text="Bydło Jersey"/>		
+		<text name="fillType_bull_jersey" text="Byk Jersey"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>

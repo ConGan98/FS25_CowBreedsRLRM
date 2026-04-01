@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
 	<texts>
-		<!-- Fill type names -->
+			<!-- Fill type names -->
 		<text name="fillType_cow_red_holstein" text="Red Holstein Cow"/>
 		<text name="fillType_bull_red_holstein" text="Red Holstein Bull"/>
 		<text name="fillType_cow_ayrshire" text="Ayrshire Cow"/>
@@ -37,6 +36,5 @@
 		<text name="breed_simmental" text="Simmental"/>
 		<text name="breed_guernsey" text="Guernsey"/>
 		<text name="breed_jersey" text="Jersey"/>
-		
 	</texts>
 </l10n>

@@ -1,0 +1,57 @@
+<l10n>
+	<texts>
+		<!-- COWS -->
+		
+		<text name="fillType_bull" text="Taureau"/>
+		<text name="fillType_bull_swiss_brown" text="Taureau Brun-Suisse"/>
+		<text name="fillType_bull_holstein" text="Taureau Holstein"/>
+		<text name="fillType_bull_angus" text="Taureau Angus"/>
+		<text name="fillType_bull_limousin" text="Taureau Limousin"/>
+		<text name="fillType_cow_hereford" text="Hereford"/>
+		<text name="fillType_bull_hereford" text="Taureau Hereford"/>
+		<text name="fillType_cow_highland_cattle" text="Highland Cattle"/>
+		<text name="fillType_bull_highland_cattle" text="Taureau Highland"/>
+		<text name="animal_descriptionBullFeed" text="Les taureaux aiment l'herbe, le foin et le TMR."/>
+		<text name="animal_descriptionBullYoung" text="Il s'agit d'un veau mâle."/>
+		<text name="animal_descriptionBullReproduction" text="Les taureaux en bonne santé et âgés de plus de 12 mois peuvent se reproduire."/>
+		<text name="rl_descriptionCowReproduction" text="Les vaches en bonne santé et âgées de plus de 12 mois peuvent se reproduire."/>
+
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Red Holstein"/>
+		<text name="fillType_bull_red_holstein" text="Taureau Red Holstein"/>
+		<text name="fillType_cow_ayrshire" text="Ayrshire "/>
+		<text name="fillType_bull_ayrshire" text="Taureau Ayrshire "/>
+		<text name="fillType_cow_charolais" text="Charolais "/>
+		<text name="fillType_bull_charolais" text="Taureau Charolais "/>
+		<text name="fillType_cow_shorthorn" text="Shorthorn "/>
+		<text name="fillType_bull_shorthorn" text="Taureau Shorthorn "/>
+		<text name="fillType_cow_irishmoiled" text="Irish Moiled "/>
+		<text name="fillType_bull_irishmoiled" text="Taureau Irish Moiled "/>
+		<text name="fillType_cow_britishblue" text="British Blue "/>		
+		<text name="fillType_bull_britishblue" text="Taureau British Blue "/>	
+		<text name="fillType_cow_beltedgalloway" text="Belted Galloway "/>		
+		<text name="fillType_bull_beltedgalloway" text="Taureau Belted Galloway "/>
+		<text name="fillType_cow_redangus" text="Red Angus "/>		
+		<text name="fillType_bull_redangus" text="Taureau Red Angus "/>
+		<text name="fillType_cow_simmental" text="Simmental "/>		
+		<text name="fillType_bull_simmental" text="Taureau Simmental "/>
+		<text name="fillType_cow_guernsey" text="Guernsey "/>		
+		<text name="fillType_bull_guernsey" text="Taureau Guernsey "/>
+		<text name="fillType_cow_jersey" text="Jersey "/>		
+		<text name="fillType_bull_jersey" text="Taureau Jersey "/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+		
+	</texts>
+</l10n>

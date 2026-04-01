@@ -1,0 +1,41 @@
+<l10n>
+	<texts>
+
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Red Holstein Sığırı"/>
+		<text name="fillType_bull_red_holstein" text="Red Holstein Boğası"/>
+		<text name="fillType_cow_ayrshire" text="Ayrshire Sığırı"/>
+		<text name="fillType_bull_ayrshire" text="Ayrshire Boğası"/>
+		<text name="fillType_cow_charolais" text="Charolais Sığırı"/>
+		<text name="fillType_bull_charolais" text="Charolais Boğası"/>
+		<text name="fillType_cow_shorthorn" text="Shorthorn Sığırı"/>
+		<text name="fillType_bull_shorthorn" text="Shorthorn Boğası"/>
+		<text name="fillType_cow_irishmoiled" text="Irish Moiled Sığırı"/>
+		<text name="fillType_bull_irishmoiled" text="Irish Moiled Boğası"/>
+		<text name="fillType_cow_britishblue" text="British Blue Sığırı"/>		
+		<text name="fillType_bull_britishblue" text="British Blue Boğası"/>	
+		<text name="fillType_cow_beltedgalloway" text="Belted Galloway Sığırı"/>		
+		<text name="fillType_bull_beltedgalloway" text="Belted Galloway Boğası"/>
+		<text name="fillType_cow_redangus" text="Red Angus Sığırı"/>		
+		<text name="fillType_bull_redangus" text="Red Angus Boğası"/>
+		<text name="fillType_cow_simmental" text="Simmental Sığırı"/>		
+		<text name="fillType_bull_simmental" text="Simmental Boğası"/>
+		<text name="fillType_cow_guernsey" text="Guernsey Sığırı"/>		
+		<text name="fillType_bull_guernsey" text="Guernsey Boğası"/>
+		<text name="fillType_cow_jersey" text="Jersey Sığırı"/>		
+		<text name="fillType_bull_jersey" text="Jersey Boğası"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<l10n>
+	<texts>
+			<!-- Fill type names -->
+		<text name="fillType_cow_red_holstein" text="Red Holstein "/>
+		<text name="fillType_bull_red_holstein" text="Red Holstein-sonni"/>
+		<text name="fillType_cow_ayrshire" text="Ayrshire "/>
+		<text name="fillType_bull_ayrshire" text="Ayrshire-sonni"/>
+		<text name="fillType_cow_charolais" text="Charolais "/>
+		<text name="fillType_bull_charolais" text="Charolais-sonni"/>
+		<text name="fillType_cow_shorthorn" text="Shorthorn "/>
+		<text name="fillType_bull_shorthorn" text="Shorthorn-sonni"/>
+		<text name="fillType_cow_irishmoiled" text="Irish Moiled "/>
+		<text name="fillType_bull_irishmoiled" text="Irish Moiled-sonni"/>
+		<text name="fillType_cow_britishblue" text="British Blue "/>		
+		<text name="fillType_bull_britishblue" text="British Blue-sonni"/>	
+		<text name="fillType_cow_beltedgalloway" text="Belted Galloway "/>		
+		<text name="fillType_bull_beltedgalloway" text="Belted Galloway-sonni"/>
+		<text name="fillType_cow_redangus" text="Red Angus "/>		
+		<text name="fillType_bull_redangus" text="Red Angus-sonni"/>
+		<text name="fillType_cow_simmental" text="Simmental "/>		
+		<text name="fillType_bull_simmental" text="Simmental-sonni"/>
+		<text name="fillType_cow_guernsey" text="Guernsey "/>		
+		<text name="fillType_bull_guernsey" text="Guernsey-sonni"/>
+		<text name="fillType_cow_jersey" text="Jersey "/>		
+		<text name="fillType_bull_jersey" text="Jersey-sonni"/>		
+
+		<!-- Breed display names -->
+		<text name="breed_red_holstein" text="Red Holstein"/>
+		<text name="breed_ayrshire" text="Ayrshire"/>
+		<text name="breed_charolais" text="Charolais"/>
+		<text name="breed_shorthorn" text="Shorthorn"/>
+		<text name="breed_irishmoiled" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway" text="Belted Galloway"/>
+		<text name="breed_britishblue" text="British Blue"/>
+		<text name="breed_redangus" text="Red Angus"/>
+		<text name="breed_simmental" text="Simmental"/>
+		<text name="breed_guernsey" text="Guernsey"/>
+		<text name="breed_jersey" text="Jersey"/>
+	</texts>
+</l10n>
