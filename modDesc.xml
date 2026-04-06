@@ -16,6 +16,8 @@ Benoetigt Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></
 	</description>	
 	<iconFilename>icon.dds</iconFilename>
 	<multiplayer supported="true"/>
-	
+	<extraSourceFiles>
+        <sourceFile filename="Script/main.lua" />
+    </extraSourceFiles>
 </modDesc>
 

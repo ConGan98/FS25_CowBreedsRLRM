@@ -1,0 +1,82 @@
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO: Blender version is: 4.5.7 LTS
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO: I3D Exporter version is: (6, 2, 0)
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO: Exporting to C:\Users\Conor\Desktop\Belt\Untitled.i3d
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO: Exporter settings:
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   check_existing: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   collection: 
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   selection: SELECTED_OBJECTS
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   selection_traverse_children: False
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   binarize_i3d: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   keep_collections_as_transformgroups: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   apply_modifiers: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   apply_unit_scale: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   alphabetic_uvs: False
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   vertex_color_override: USE_MESH
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   object_types_to_export: {'EMPTY', 'ARMATURE', 'CURVE', 'LIGHT', 'MESH', 'CAMERA'}
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   features_to_export: {'MERGE_GROUPS', 'SKINNED_MESHES', 'MERGE_CHILDREN'}
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   copy_files: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   overwrite_files: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   file_structure: MODHUB
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   verbose_output: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   log_to_file: True
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   object_sorting_prefix: :
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   i3d_mapping_file_path: 
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   axis_forward: -Z
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO:   axis_up: Y
+bl_ext.user_default.i3dio.exporter:_export_selected_objects:INFO: 'Selected Objects' export is selected, exporting only selected objects without children traversal
+bl_ext.user_default.i3dio.exporter:_add_object_to_i3d:DEBUG: [Collar] is of type 'MESH'
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_create_xml_element:DEBUG: [Collar] Filling out basic attributes, {name='Collar', nodeId='1'}
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:__init__:DEBUG: [Collar] New Name: Collar
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:__init__:DEBUG: [Collar] Initialized as a 'ShapeNode'
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_create_shape:DEBUG: [Collar] Creating shape data for object 'Collar'
+bl_ext.user_default.i3dio.node_classes.shape.EvaluatedMesh:generate_evaluated_mesh:DEBUG: [Torus.001] is exported with modifiers applied
+bl_ext.user_default.i3dio.node_classes.shape.EvaluatedMesh:generate_evaluated_mesh:DEBUG: [Torus.001] applying unit scaling
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_create_xml_element:DEBUG: [Torus.001] Filling out basic attributes, {name='Torus.001', nodeId='1'}
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:populate_xml_element:DEBUG: [Torus.001] Processing mesh 'Torus.001'
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:process_and_write_mesh_data:DEBUG: [Torus.001] Starting final processing for shape 'Torus.001'
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:INFO: [Torus.001] Starting Subset-by-Subset processing of 1 mesh blocks.
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Grouping all triangles by final material subset...
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Subset slot indices: [0, 1]
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Found 2 unique materials across all processed meshes.
+bl_ext.user_default.i3dio.i3d.I3D:add_material:DEBUG: [Untitled] New Material
+bl_ext.user_default.i3dio.node_classes.node.Material:_create_xml_element:DEBUG: [Material.002] Filling out basic attributes, {name='Material.002', nodeId='1'}
+bl_ext.user_default.i3dio.node_classes.node.Material:_write_texture_to_xml:DEBUG: [Material.002] Has Texture: 'C:/Users/Conor/Desktop/Belt/tensionBeltForestry_diffuse.dds'
+bl_ext.user_default.i3dio.i3d.I3D:add_file:DEBUG: [Untitled] New File
+bl_ext.user_default.i3dio.node_classes.file.Image:_copy_file:INFO: [tensionBeltForestry_diffuse.dds] is not an FS builtin and will be copied
+bl_ext.user_default.i3dio.node_classes.file.Image:_copy_file:DEBUG: [tensionBeltForestry_diffuse.dds] will be copied using the 'MODHUB' hierarchy structure
+bl_ext.user_default.i3dio.node_classes.file.Image:_copy_file:INFO: [tensionBeltForestry_diffuse.dds] copied to WindowsPath('C:/Users/Conor/Desktop/Belt/textures/tensionBeltForestry_diffuse.dds')
+bl_ext.user_default.i3dio.node_classes.file.Image:_create_xml_element:DEBUG: [tensionBeltForestry_diffuse.dds] Filling out basic attributes, {name='textures/tensionBeltForestry_diffuse.dds', nodeId='1'}
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Writing non-default properties from propertygroup: 'I3DMaterialShader'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Wrote '0' properties
+bl_ext.user_default.i3dio.i3d.I3D:add_material:DEBUG: [Untitled] New Material
+bl_ext.user_default.i3dio.node_classes.node.Material:_create_xml_element:DEBUG: [Material.004] Filling out basic attributes, {name='Material.004', nodeId='2'}
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Writing non-default properties from propertygroup: 'I3DMaterialShader'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Wrote '0' properties
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Processing subsets one by one to create contiguous vertex buffer...
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Processing subset for material 'Material.002' with 1056 triangles...
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Processed 756 unique vertices and 1056 triangles for material 'Material.002'.
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Processing subset for material 'Material.004' with 528 triangles...
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:DEBUG: [Torus.001] Processed 1056 unique vertices and 528 triangles for material 'Material.004'.
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:_process_meshes:INFO: [Torus.001] Finished mesh processing.
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:process_and_write_mesh_data:DEBUG: [Torus.001] Added 2 material IDs for shape 'Collar'
+bl_ext.user_default.i3dio.node_classes.node.IndexedTriangleSet:process_and_write_mesh_data:INFO: [Torus.001] Exported 1812 vertices, 1584 triangles and 2 subsets for shape 'Torus.001'.
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Writing non-default properties from propertygroup: 'I3DNodeObjectAttributes'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Wrote '0' properties
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Writing non-default properties from propertygroup: 'I3DNodeShapeAttributes'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:DEBUG: Property 'casts_shadows' with value 'True'. Default is 'False'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:DEBUG: Property 'receive_shadows' with value 'True'. Default is 'False'
+bl_ext.user_default.i3dio.xml_i3d:write_i3d_properties:INFO: Wrote '2' properties
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_get_object_matrix:DEBUG: [Collar] no parent in exporter: using world matrix
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_add_transform_to_xml_element:DEBUG: [Collar] transforming to new transform-basis with <Matrix 4x4 (0.2843,  0.0000, 0.0000, 0.0000)
+            (0.0000,  0.2834, 0.0222, 1.2290)
+            (0.0000, -0.0222, 0.2834, 1.2169)
+            (0.0000,  0.0000, 0.0000, 1.0000)>
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_add_transform_to_xml_element:DEBUG: [Collar] translation is <Vector (0.0000, 1.2290, 1.2169)>
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_add_transform_to_xml_element:DEBUG: [Collar] has translation: [2.74095e-16 1.22902 1.21688]
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_add_transform_to_xml_element:DEBUG: [Collar] has rotation(degrees): [-4.47329 -0 0]
+bl_ext.user_default.i3dio.node_classes.node.ShapeNode:_add_transform_to_xml_element:DEBUG: [Collar] has scale: [0.28426 0.28426 0.28426]
+bl_ext.user_default.i3dio.i3d.I3D:_add_node:DEBUG: [Untitled] Node 'Collar' has no parent, adding to scene root.
+bl_ext.user_default.i3dio.exporter:_add_object_to_i3d:DEBUG: [Collar] processing objects children
+bl_ext.user_default.i3dio.exporter:_add_object_to_i3d:DEBUG: [Collar] no more children to process in object
+bl_ext.user_default.i3dio.exporter:_binarize_i3d:ERROR: No i3dConverter path set in preferences. Skipping binarization.
+bl_ext.user_default.i3dio.exporter:export_blend_to_i3d:INFO: Export took 0.374 seconds
