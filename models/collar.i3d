@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="collar.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="14" filename="font_normal_white.dds"/>
+    <File fileId="16" filename="offsetUV.xml"/>
+    <File fileId="1" filename="textures/tensionBeltForestry_diffuse.dds"/>
+    <File fileId="6" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="4" filename="$data/shared/default_normal.dds"/>
+    <File fileId="5" filename="$data/shared/default_vmask.dds"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="9" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
+    <File fileId="3" filename="$data/shared/white_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="COLLAR" materialId="5" specularColor="0.501961 1 0">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="Material.001" materialId="30" specularColor="1 1 0" customShaderId="16">
+      <Texture fileId="14"/>
+      <CustomParameter name="playScale" value="0 0 64 1"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
+    </Material>
+    <Material name="Material.001" materialId="72" specularColor="1 1 0" customShaderId="16">
+      <Texture fileId="14"/>
+      <CustomParameter name="playScale" value="0 0 64 1"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
+    </Material>
+    <Material name="plasticPainted_mat" materialId="7" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <Custommap name="detailSpecular" fileId="7"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="9"/>
+      <CustomParameter name="colorScale" value="0.585642 0.61809 0.0310598"/>
+    </Material>
+    <Material name="plasticPaintedShinyBlack_mat" materialId="8" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <Custommap name="detailSpecular" fileId="7"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="9"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <CustomParameter name="smoothnessScale" value="1.52"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="collar.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="monitor" scale="1.05 1.1 1" shapeId="1" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="5,8,7">
+      <Shape name="bumId1" translation="0.121542 -0.316672 0.0610723" rotation="0 -0 -0.350126" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="30"/>
+      <Shape name="bumId1" translation="0.117831 -0.351131 0.0701944" rotation="0 -0 -4.45657" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="30"/>
+      <Shape name="bumId1" translation="0.112996 -0.381294 0.0809594" rotation="0 -0 -4.45657" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="16" castsShadows="true" receiveShadows="true" materialIds="30"/>
+      <Shape name="bumId1" translation="0.097265 -0.412925 0.0901763" rotation="0 -0 -16.0937" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="17" castsShadows="true" receiveShadows="true" materialIds="30"/>
+      <Shape name="bumId1" translation="0.0897499 -0.442361 0.0991767" rotation="0 -0 -16.0937" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="18" castsShadows="true" receiveShadows="true" materialIds="30"/>
+      <Shape name="bumId1" translation="0.0717791 -0.464368 0.107859" rotation="0 -0 -27.2166" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="19" castsShadows="true" receiveShadows="true" materialIds="72"/>
+      <Shape name="Sphere" shapeId="3" nodeId="20" castsShadows="true" receiveShadows="true" materialIds="8"/>
+    </Shape>
+    <Light name="light" translation="17.2473 17.1038 16.8954" rotation="-34.916 41.5623 -1.78289e-07" nodeId="21" type="directional" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" numShadowMapSplits="5" shadowMapSplitDistancesParameter="0.9" range="500"/>
+  </Scene>
+
+</i3D>

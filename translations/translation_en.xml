@@ -23,7 +23,9 @@
 		<text name="fillType_cow_guernsey" text="Guernsey Cow"/>		
 		<text name="fillType_bull_guernsey" text="Guernsey Bull"/>
 		<text name="fillType_cow_jersey" text="Jersey Cow"/>		
-		<text name="fillType_bull_jersey" text="Jersey Bull"/>		
+		<text name="fillType_bull_jersey" text="Jersey Bull"/>	
+		<text name="fillType_cow_hereford_pack" text="Hereford cow"/>
+		<text name="fillType_bull_hereford_pack" text="Hereford Bull"/>		
 
 		<!-- Breed display names -->
 		<text name="breed_red_holstein" text="Red Holstein"/>
@@ -37,6 +39,6 @@
 		<text name="breed_simmental" text="Simmental"/>
 		<text name="breed_guernsey" text="Guernsey"/>
 		<text name="breed_jersey" text="Jersey"/>
-		
+		<text name="breed_hereford_pack" text="Hereford"/>
 	</texts>
 </l10n>

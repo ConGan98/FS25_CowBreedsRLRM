@@ -36,6 +36,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--Angus-->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--hereford-->
 				<node index="1|0|0" visibility="false"/>
 				<node index="1|1|0" visibility="false"/>
 				<node index="1|2|0" visibility="false"/>
@@ -88,6 +89,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--Angus-->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--hereford-->
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionBaby.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -137,6 +139,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--Angus-->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/><!--hereford-->
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
