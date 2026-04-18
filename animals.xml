@@ -22,7 +22,7 @@
 		<breed name="SIMMENTAL" displayName="$l10n_breed_simmental" markerColour="0.8 0.2 0.1"/>
 		<breed name="JERSEY" displayName="$l10n_breed_jersey" markerColour="0.8 0.2 0.1"/>
 		<breed name="GUERNSEY" displayName="$l10n_breed_guernsey" markerColour="0.8 0.2 0.1"/>
-		<breed name="HEREFORD(pack)" displayName="$l10n_breed_hereford(pack)" markerColour="0.8 0.2 0.1"/>
+		<breed name="HEREFORD_pack" displayName="$l10n_breed_hereford_pack" markerColour="0.8 0.2 0.1"/>
 	</breeds>
 	<animal type="COW">
 		<!-- ============================================================ -->
