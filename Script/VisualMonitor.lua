@@ -45,7 +45,8 @@ function MyLivestockHook:update(dt)
                 
                 -- Run custom shader code
                 if instance.nodes and instance.nodes.monitor then
-                    local uniqueId = instance.animal.uniqueId
+                    if instance.animal == nil then return end
+					local uniqueId = instance.animal.uniqueId
 					local numChildren = getNumOfChildren(instance.nodes.monitor)
 					
 					if numChildren ==  nil then return end 
