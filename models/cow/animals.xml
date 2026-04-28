@@ -21,8 +21,8 @@
 				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Guernsey -->	
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
 				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
-				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
-				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->
 			</assets>
@@ -74,8 +74,8 @@
 				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Guernsey -->	
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
 				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
-				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
-				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->	
 			</assets>
@@ -124,8 +124,8 @@
 				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Guernsey -->	
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
 				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
-				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
-				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Aryshire -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
 				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Jersey -->
 			</assets>
@@ -197,7 +197,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Charolais -->
 				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Shorthorn -->
 				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- IrishMoiled -->
-				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGaloway -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGalloway -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- SIMMENTAL -->
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- RedAngus -->
 				<node index="1|0|0" visibility="false"/>
@@ -216,7 +216,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Charolais -->
 				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Shorthorn -->
 				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- IrishMoiled -->
-				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGaloway -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGalloway -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- SIMMENTAL -->
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- RedAngus -->
 				
@@ -233,7 +233,7 @@
 				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Charolais -->
 				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- Shorthorn -->
 				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- IrishMoiled -->
-				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGaloway -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- BeltedGalloway -->
 				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- SIMMENTAL -->
 				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="4" mirrorV="false"/><!-- RedAngus -->
 				
