@@ -17,41 +17,44 @@
 		<text name="rl_descriptionCowReproduction" text="Les vaches en bonne santé et âgées de plus de 12 mois peuvent se reproduire."/>
 
 			<!-- Fill type names -->
-		<text name="fillType_cow_red_holstein" text="Red Holstein"/>
-		<text name="fillType_bull_red_holstein" text="Taureau Red Holstein"/>
-		<text name="fillType_cow_ayrshire" text="Ayrshire "/>
-		<text name="fillType_bull_ayrshire" text="Taureau Ayrshire "/>
-		<text name="fillType_cow_charolais" text="Charolais "/>
-		<text name="fillType_bull_charolais" text="Taureau Charolais "/>
-		<text name="fillType_cow_shorthorn" text="Shorthorn "/>
-		<text name="fillType_bull_shorthorn" text="Taureau Shorthorn "/>
-		<text name="fillType_cow_irishmoiled" text="Irish Moiled "/>
-		<text name="fillType_bull_irishmoiled" text="Taureau Irish Moiled "/>
-		<text name="fillType_cow_britishblue" text="British Blue "/>		
-		<text name="fillType_bull_britishblue" text="Taureau British Blue "/>	
-		<text name="fillType_cow_beltedgalloway" text="Belted Galloway "/>		
-		<text name="fillType_bull_beltedgalloway" text="Taureau Belted Galloway "/>
-		<text name="fillType_cow_redangus" text="Red Angus "/>		
-		<text name="fillType_bull_redangus" text="Taureau Red Angus "/>
-		<text name="fillType_cow_simmental" text="Simmental "/>		
-		<text name="fillType_bull_simmental" text="Taureau Simmental "/>
-		<text name="fillType_cow_guernsey" text="Guernsey "/>		
-		<text name="fillType_bull_guernsey" text="Taureau Guernsey "/>
-		<text name="fillType_cow_jersey" text="Jersey "/>		
-		<text name="fillType_bull_jersey" text="Taureau Jersey "/>		
+		<text name="fillType_cow_red_holstein_pack" text="Red Holstein"/>
+		<text name="fillType_bull_red_holstein_pack" text="Taureau Red Holstein"/>
+		<text name="fillType_cow_ayrshire_pack" text="Ayrshire "/>
+		<text name="fillType_bull_ayrshire_pack" text="Taureau Ayrshire "/>
+		<text name="fillType_cow_charolais_pack" text="Charolais "/>
+		<text name="fillType_bull_charolais_pack" text="Taureau Charolais "/>
+		<text name="fillType_cow_shorthorn_pack" text="Shorthorn "/>
+		<text name="fillType_bull_shorthorn_pack" text="Taureau Shorthorn "/>
+		<text name="fillType_cow_irishmoiled_pack" text="Irish Moiled "/>
+		<text name="fillType_bull_irishmoiled_pack" text="Taureau Irish Moiled "/>
+		<text name="fillType_cow_britishblue_pack" text="British Blue "/>		
+		<text name="fillType_bull_britishblue_pack" text="Taureau British Blue "/>	
+		<text name="fillType_cow_beltedgalloway_pack" text="Belted Galloway "/>		
+		<text name="fillType_bull_beltedgalloway_pack" text="Taureau Belted Galloway "/>
+		<text name="fillType_cow_redangus_pack" text="Red Angus "/>		
+		<text name="fillType_bull_redangus_pack" text="Taureau Red Angus "/>
+		<text name="fillType_cow_simmental_pack" text="Simmental "/>		
+		<text name="fillType_bull_simmental_pack" text="Taureau Simmental "/>
+		<text name="fillType_cow_guernsey_pack" text="Guernsey "/>		
+		<text name="fillType_bull_guernsey_pack" text="Taureau Guernsey "/>
+		<text name="fillType_cow_jersey_pack" text="Jersey "/>
+		<text name="fillType_bull_jersey_pack" text="Taureau Jersey "/>
+		<text name="fillType_cow_hereford_pack" text="Hereford "/>
+		<text name="fillType_bull_hereford_pack" text="Taureau Hereford "/>
 
 		<!-- Breed display names -->
-		<text name="breed_red_holstein" text="Red Holstein"/>
-		<text name="breed_ayrshire" text="Ayrshire"/>
-		<text name="breed_charolais" text="Charolais"/>
-		<text name="breed_shorthorn" text="Shorthorn"/>
-		<text name="breed_irishmoiled" text="Irish Moiled"/>
-		<text name="breed_beltedgalloway" text="Belted Galloway"/>
-		<text name="breed_britishblue" text="British Blue"/>
-		<text name="breed_redangus" text="Red Angus"/>
-		<text name="breed_simmental" text="Simmental"/>
-		<text name="breed_guernsey" text="Guernsey"/>
-		<text name="breed_jersey" text="Jersey"/>
-		
+		<text name="breed_red_holstein_pack" text="Red Holstein"/>
+		<text name="breed_ayrshire_pack" text="Ayrshire"/>
+		<text name="breed_charolais_pack" text="Charolais"/>
+		<text name="breed_shorthorn_pack" text="Shorthorn"/>
+		<text name="breed_irishmoiled_pack" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway_pack" text="Belted Galloway"/>
+		<text name="breed_britishblue_pack" text="British Blue"/>
+		<text name="breed_redangus_pack" text="Red Angus"/>
+		<text name="breed_simmental_pack" text="Simmental"/>
+		<text name="breed_guernsey_pack" text="Guernsey"/>
+		<text name="breed_jersey_pack" text="Jersey"/>
+		<text name="breed_hereford_pack" text="Hereford"/>
+
 	</texts>
 </l10n>

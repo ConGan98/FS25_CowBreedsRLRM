@@ -17,40 +17,43 @@
 		<text name="rl_descriptionCowReproduction" text="Koeien die gezond zijn en ouder dan 12 maanden kunnen zich voortplanten."/>
 
 			<!-- Fill type names -->
-		<text name="fillType_cow_red_holstein" text="Schotse Red Holstein"/>
-		<text name="fillType_bull_red_holstein" text="Schotse Red Holstein Stier"/>
-		<text name="fillType_cow_ayrshire" text="Schotse Ayrshire"/>
-		<text name="fillType_bull_ayrshire" text="Schotse Ayrshire Stier"/>
-		<text name="fillType_cow_charolais" text="Schotse Charolais"/>
-		<text name="fillType_bull_charolais" text="Schotse Charolais Stier"/>
-		<text name="fillType_cow_shorthorn" text="Schotse Shorthorn"/>
-		<text name="fillType_bull_shorthorn" text="Schotse Shorthorn Stier"/>
-		<text name="fillType_cow_irishmoiled" text="Schotse Irish Moiled"/>
-		<text name="fillType_bull_irishmoiled" text="Schotse Irish Moiled Stier"/>
-		<text name="fillType_cow_britishblue" text="Schotse British Blue"/>		
-		<text name="fillType_bull_britishblue" text="Schotse British Blue Stier"/>	
-		<text name="fillType_cow_beltedgalloway" text="Schotse Belted Galloway"/>		
-		<text name="fillType_bull_beltedgalloway" text="Schotse Belted Galloway Stier"/>
-		<text name="fillType_cow_redangus" text="Schotse Red Angus"/>		
-		<text name="fillType_bull_redangus" text="Schotse Red Angus Stier"/>
-		<text name="fillType_cow_simmental" text="Schotse Simmental"/>		
-		<text name="fillType_bull_simmental" text="Schotse Simmental Stier"/>
-		<text name="fillType_cow_guernsey" text="Schotse Guernsey"/>		
-		<text name="fillType_bull_guernsey" text="Schotse Guernsey Stier"/>
-		<text name="fillType_cow_jersey" text="Schotse Jersey"/>		
-		<text name="fillType_bull_jersey" text="Schotse Jersey Stier"/>		
+		<text name="fillType_cow_red_holstein_pack" text="Schotse Red Holstein"/>
+		<text name="fillType_bull_red_holstein_pack" text="Schotse Red Holstein Stier"/>
+		<text name="fillType_cow_ayrshire_pack" text="Schotse Ayrshire"/>
+		<text name="fillType_bull_ayrshire_pack" text="Schotse Ayrshire Stier"/>
+		<text name="fillType_cow_charolais_pack" text="Schotse Charolais"/>
+		<text name="fillType_bull_charolais_pack" text="Schotse Charolais Stier"/>
+		<text name="fillType_cow_shorthorn_pack" text="Schotse Shorthorn"/>
+		<text name="fillType_bull_shorthorn_pack" text="Schotse Shorthorn Stier"/>
+		<text name="fillType_cow_irishmoiled_pack" text="Schotse Irish Moiled"/>
+		<text name="fillType_bull_irishmoiled_pack" text="Schotse Irish Moiled Stier"/>
+		<text name="fillType_cow_britishblue_pack" text="Schotse British Blue"/>		
+		<text name="fillType_bull_britishblue_pack" text="Schotse British Blue Stier"/>	
+		<text name="fillType_cow_beltedgalloway_pack" text="Schotse Belted Galloway"/>		
+		<text name="fillType_bull_beltedgalloway_pack" text="Schotse Belted Galloway Stier"/>
+		<text name="fillType_cow_redangus_pack" text="Schotse Red Angus"/>		
+		<text name="fillType_bull_redangus_pack" text="Schotse Red Angus Stier"/>
+		<text name="fillType_cow_simmental_pack" text="Schotse Simmental"/>		
+		<text name="fillType_bull_simmental_pack" text="Schotse Simmental Stier"/>
+		<text name="fillType_cow_guernsey_pack" text="Schotse Guernsey"/>		
+		<text name="fillType_bull_guernsey_pack" text="Schotse Guernsey Stier"/>
+		<text name="fillType_cow_jersey_pack" text="Schotse Jersey"/>
+		<text name="fillType_bull_jersey_pack" text="Schotse Jersey Stier"/>
+		<text name="fillType_cow_hereford_pack" text="Schotse Hereford"/>
+		<text name="fillType_bull_hereford_pack" text="Schotse Hereford Stier"/>
 
 		<!-- Breed display names -->
-		<text name="breed_red_holstein" text="Red Holstein"/>
-		<text name="breed_ayrshire" text="Ayrshire"/>
-		<text name="breed_charolais" text="Charolais"/>
-		<text name="breed_shorthorn" text="Shorthorn"/>
-		<text name="breed_irishmoiled" text="Irish Moiled"/>
-		<text name="breed_beltedgalloway" text="Belted Galloway"/>
-		<text name="breed_britishblue" text="British Blue"/>
-		<text name="breed_redangus" text="Red Angus"/>
-		<text name="breed_simmental" text="Simmental"/>
-		<text name="breed_guernsey" text="Guernsey"/>
-		<text name="breed_jersey" text="Jersey"/>
+		<text name="breed_red_holstein_pack" text="Red Holstein"/>
+		<text name="breed_ayrshire_pack" text="Ayrshire"/>
+		<text name="breed_charolais_pack" text="Charolais"/>
+		<text name="breed_shorthorn_pack" text="Shorthorn"/>
+		<text name="breed_irishmoiled_pack" text="Irish Moiled"/>
+		<text name="breed_beltedgalloway_pack" text="Belted Galloway"/>
+		<text name="breed_britishblue_pack" text="British Blue"/>
+		<text name="breed_redangus_pack" text="Red Angus"/>
+		<text name="breed_simmental_pack" text="Simmental"/>
+		<text name="breed_guernsey_pack" text="Guernsey"/>
+		<text name="breed_jersey_pack" text="Jersey"/>
+		<text name="breed_hereford_pack" text="Hereford"/>
 	</texts>
 </l10n>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!--
 	RLRM Cow Breeds Pack - Animal definitions
-	Adds: Red Holstein, Ayrshire, Charolais, Shorthorn, Irish Moiled, Highland Varations,
-	Texture variation via expanded texture atlases on shared cow meshes
+	Adds 12 breeds: Red Holstein, Ayrshire, Jersey, Guernsey, Red Angus, Hereford,
+	Charolais, Shorthorn, Irish Moiled, British Blue, Belted Galloway, Simmental.
+	Texture variation via expanded texture atlases on shared cow meshes.
 -->
 <animals>
 	<!-- Replace cow model config with expanded texture atlases -->
@@ -11,17 +12,17 @@
 	</configOverrides>
 	<!-- Register new breed display names and marker colours -->
 	<breeds>
-		<breed name="REDHOLSTEIN" displayName="$l10n_breed_red_holstein" markerColour="0.8 0.2 0.1"/>
-		<breed name="AYRSHIRE" displayName="$l10n_breed_ayrshire" markerColour="0.7 0.3 0.2"/>
-		<breed name="CHAROLAIS" displayName="$l10n_breed_charolais" markerColour="0.95 0.9 0.8"/>
-		<breed name="SHORTHORN" displayName="$l10n_breed_shorthorn" markerColour="0.7 0.2 0.1"/>
-		<breed name="IRISHMOILED" displayName="$l10n_breed_irishmoiled" markerColour="0.7 0.2 0.1"/>
-		<breed name="BRITISHBLUE" displayName="$l10n_breed_britishblue" markerColour="0.7 0.2 0.1"/>
-		<breed name="BELTEDGALLOWAY" displayName="$l10n_breed_beltedgalloway" markerColour="0.7 0.2 0.1"/>
-		<breed name="REDANGUS" displayName="$l10n_breed_redangus" markerColour="0.8 0.2 0.1"/>
-		<breed name="SIMMENTAL" displayName="$l10n_breed_simmental" markerColour="0.8 0.2 0.1"/>
-		<breed name="JERSEY" displayName="$l10n_breed_jersey" markerColour="0.8 0.2 0.1"/>
-		<breed name="GUERNSEY" displayName="$l10n_breed_guernsey" markerColour="0.8 0.2 0.1"/>
+		<breed name="REDHOLSTEIN_pack" displayName="$l10n_breed_red_holstein_pack" markerColour="0.8 0.2 0.1"/>
+		<breed name="AYRSHIRE_pack" displayName="$l10n_breed_ayrshire_pack" markerColour="0.7 0.3 0.2"/>
+		<breed name="CHAROLAIS_pack" displayName="$l10n_breed_charolais_pack" markerColour="0.95 0.9 0.8"/>
+		<breed name="SHORTHORN_pack" displayName="$l10n_breed_shorthorn_pack" markerColour="0.7 0.2 0.1"/>
+		<breed name="IRISHMOILED_pack" displayName="$l10n_breed_irishmoiled_pack" markerColour="0.7 0.2 0.1"/>
+		<breed name="BRITISHBLUE_pack" displayName="$l10n_breed_britishblue_pack" markerColour="0.7 0.2 0.1"/>
+		<breed name="BELTEDGALLOWAY_pack" displayName="$l10n_breed_beltedgalloway_pack" markerColour="0.7 0.2 0.1"/>
+		<breed name="REDANGUS_pack" displayName="$l10n_breed_redangus_pack" markerColour="0.8 0.2 0.1"/>
+		<breed name="SIMMENTAL_pack" displayName="$l10n_breed_simmental_pack" markerColour="0.8 0.2 0.1"/>
+		<breed name="JERSEY_pack" displayName="$l10n_breed_jersey_pack" markerColour="0.8 0.2 0.1"/>
+		<breed name="GUERNSEY_pack" displayName="$l10n_breed_guernsey_pack" markerColour="0.8 0.2 0.1"/>
 		<breed name="HEREFORD_pack" displayName="$l10n_breed_hereford_pack" markerColour="0.8 0.2 0.1"/>
 	</breeds>
 	<animal type="COW">
@@ -29,7 +30,7 @@
 		<!-- NEW SUBTYPES (full definitions)                              -->
 		<!-- ============================================================ -->
 		<!-- Red Holstein (dairy breed, shares Holstein mesh with different texture rows) -->
-		<subType subType="COW_REDHOLSTEIN" fillTypeName="COW_REDHOLSTEIN" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1100.0" breed="REDHOLSTEIN">
+		<subType subType="COW_REDHOLSTEIN_pack" fillTypeName="COW_REDHOLSTEIN_pack" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1100.0" breed="REDHOLSTEIN_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
@@ -126,7 +127,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_REDHOLSTEIN" fillTypeName="BULL_REDHOLSTEIN" gender="male" minWeight="45.0" targetWeight="880.0" maxWeight="1300.0" breed="REDHOLSTEIN">
+		<subType subType="BULL_REDHOLSTEIN_pack" fillTypeName="BULL_REDHOLSTEIN_pack" gender="male" minWeight="45.0" targetWeight="880.0" maxWeight="1300.0" breed="REDHOLSTEIN_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -211,7 +212,7 @@
 			</output>
 		</subType>
 		<!-- Ayrshire (dairy breed, shares Holstein mesh with different texture rows) -->
-		<subType subType="COW_AYRSHIRE" fillTypeName="COW_AYRSHIRE" gender="female" minWeight="42.0" targetWeight="560.0" maxWeight="1100.0" breed="AYRSHIRE">
+		<subType subType="COW_AYRSHIRE_pack" fillTypeName="COW_AYRSHIRE_pack" gender="female" minWeight="42.0" targetWeight="560.0" maxWeight="1100.0" breed="AYRSHIRE_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
@@ -307,7 +308,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_AYRSHIRE" fillTypeName="BULL_AYRSHIRE" gender="male" minWeight="45.0" targetWeight="600.0" maxWeight="1300.0" breed="AYRSHIRE">
+		<subType subType="BULL_AYRSHIRE_pack" fillTypeName="BULL_AYRSHIRE_pack" gender="male" minWeight="45.0" targetWeight="600.0" maxWeight="1300.0" breed="AYRSHIRE_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -392,7 +393,7 @@
 			</output>
 		</subType>
 		<!-- JERSEY (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_JERSEY" fillTypeName="COW_JERSEY" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="850.0" breed="JERSEY">
+		<subType subType="COW_JERSEY_pack" fillTypeName="COW_JERSEY_pack" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="850.0" breed="JERSEY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
@@ -489,7 +490,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_JERSEY" fillTypeName="BULL_JERSEY" gender="male" minWeight="35.0" targetWeight="590.0" maxWeight="900.0" breed="JERSEY">
+		<subType subType="BULL_JERSEY_pack" fillTypeName="BULL_JERSEY_pack" gender="male" minWeight="35.0" targetWeight="590.0" maxWeight="900.0" breed="JERSEY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -574,7 +575,7 @@
 			</output>
 		</subType>
 		<!-- GUERNSEY (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_GUERNSEY" fillTypeName="COW_GUERNSEY" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="900.0" breed="GUERNSEY">
+		<subType subType="COW_GUERNSEY_pack" fillTypeName="COW_GUERNSEY_pack" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="900.0" breed="GUERNSEY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
@@ -670,7 +671,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_GUERNSEY" fillTypeName="BULL_GUERNSEY" gender="male" minWeight="35.0" targetWeight="650.0" maxWeight="1000.0" breed="GUERNSEY">
+		<subType subType="BULL_GUERNSEY_pack" fillTypeName="BULL_GUERNSEY_pack" gender="male" minWeight="35.0" targetWeight="650.0" maxWeight="1000.0" breed="GUERNSEY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -751,7 +752,7 @@
 			</output>
 		</subType>		
 		<!-- Charolais (beef breed, shares Limousin/Hereford mesh with different texture) -->
-		<subType subType="COW_CHAROLAIS" fillTypeName="COW_CHAROLAIS" gender="female" minWeight="33.0" targetWeight="900.0" maxWeight="1000.0" breed="CHAROLAIS">
+		<subType subType="COW_CHAROLAIS_pack" fillTypeName="COW_CHAROLAIS_pack" gender="female" minWeight="33.0" targetWeight="900.0" maxWeight="1000.0" breed="CHAROLAIS_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -844,7 +845,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_CHAROLAIS" fillTypeName="BULL_CHAROLAIS" gender="male" minWeight="35.0" targetWeight="1000.0" maxWeight="1250.0" breed="CHAROLAIS">
+		<subType subType="BULL_CHAROLAIS_pack" fillTypeName="BULL_CHAROLAIS_pack" gender="male" minWeight="35.0" targetWeight="1000.0" maxWeight="1250.0" breed="CHAROLAIS_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -925,7 +926,7 @@
 			</output>
 		</subType>
 		<!-- REDANGUS (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_REDANGUS" fillTypeName="COW_REDANGUS" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1200.0" breed="REDANGUS">
+		<subType subType="COW_REDANGUS_pack" fillTypeName="COW_REDANGUS_pack" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1200.0" breed="REDANGUS_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -1017,7 +1018,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_REDANGUS" fillTypeName="BULL_REDANGUS" gender="male" minWeight="35.0" targetWeight="900.0" maxWeight="1300.0" breed="REDANGUS">
+		<subType subType="BULL_REDANGUS_pack" fillTypeName="BULL_REDANGUS_pack" gender="male" minWeight="35.0" targetWeight="900.0" maxWeight="1300.0" breed="REDANGUS_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -1271,7 +1272,7 @@
 			</output>
 		</subType>	
 		<!-- Shorthorn (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_SHORTHORN" fillTypeName="COW_SHORTHORN" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1000.0" breed="SHORTHORN">
+		<subType subType="COW_SHORTHORN_pack" fillTypeName="COW_SHORTHORN_pack" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1000.0" breed="SHORTHORN_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -1363,7 +1364,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_SHORTHORN" fillTypeName="BULL_SHORTHORN" gender="male" minWeight="35.0" targetWeight="850.0" maxWeight="1200.0" breed="SHORTHORN">
+		<subType subType="BULL_SHORTHORN_pack" fillTypeName="BULL_SHORTHORN_pack" gender="male" minWeight="35.0" targetWeight="850.0" maxWeight="1200.0" breed="SHORTHORN_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -1444,7 +1445,7 @@
 			</output>
 		</subType>
 		<!-- IrishMoiled (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_IRISHMOILED" fillTypeName="COW_IRISHMOILED" gender="female" minWeight="33.0" targetWeight="650.0" maxWeight="1000.0" breed="IRISHMOILED">
+		<subType subType="COW_IRISHMOILED_pack" fillTypeName="COW_IRISHMOILED_pack" gender="female" minWeight="33.0" targetWeight="650.0" maxWeight="1000.0" breed="IRISHMOILED_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -1536,7 +1537,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_IRISHMOILED" fillTypeName="BULL_IRISHMOILED" gender="male" minWeight="35.0" targetWeight="700.0" maxWeight="1200.0" breed="IRISHMOILED">
+		<subType subType="BULL_IRISHMOILED_pack" fillTypeName="BULL_IRISHMOILED_pack" gender="male" minWeight="35.0" targetWeight="700.0" maxWeight="1200.0" breed="IRISHMOILED_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -1617,7 +1618,7 @@
 			</output>
 		</subType>
 		<!-- BritisBlue (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_BRITISHBLUE" fillTypeName="COW_BRITISHBLUE" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1000.0" breed="BRITISHBLUE">
+		<subType subType="COW_BRITISHBLUE_pack" fillTypeName="COW_BRITISHBLUE_pack" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1000.0" breed="BRITISHBLUE_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -1710,7 +1711,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_BRITISHBLUE" fillTypeName="BULL_BRITISHBLUE" gender="male" minWeight="35.0" targetWeight="990.0" maxWeight="1150.0" breed="BRITISHBLUE">
+		<subType subType="BULL_BRITISHBLUE_pack" fillTypeName="BULL_BRITISHBLUE_pack" gender="male" minWeight="35.0" targetWeight="990.0" maxWeight="1150.0" breed="BRITISHBLUE_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -1791,7 +1792,7 @@
 			</output>
 		</subType>
 		<!-- BELTEDGALLOWAY (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_BELTEDGALLOWAY" fillTypeName="COW_BELTEDGALLOWAY" gender="female" minWeight="33.0" targetWeight="575.0" maxWeight="1100.0" breed="BELTEDGALLOWAY">
+		<subType subType="COW_BELTEDGALLOWAY_pack" fillTypeName="COW_BELTEDGALLOWAY_pack" gender="female" minWeight="33.0" targetWeight="575.0" maxWeight="1100.0" breed="BELTEDGALLOWAY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -1882,7 +1883,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_BELTEDGALLOWAY" fillTypeName="BULL_BELTEDGALLOWAY" gender="male" minWeight="35.0" targetWeight="620.0" maxWeight="1200.0" breed="BELTEDGALLOWAY">
+		<subType subType="BULL_BELTEDGALLOWAY_pack" fillTypeName="BULL_BELTEDGALLOWAY_pack" gender="male" minWeight="35.0" targetWeight="620.0" maxWeight="1200.0" breed="BELTEDGALLOWAY_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -1963,7 +1964,7 @@
 			</output>
 		</subType>
 		<!-- SIMMENTAL (dual-purpose breed, shares Limousin/Hereford mesh) -->
-		<subType subType="COW_SIMMENTAL" fillTypeName="COW_SIMMENTAL" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1250.0" breed="SIMMENTAL">
+		<subType subType="COW_SIMMENTAL_pack" fillTypeName="COW_SIMMENTAL_pack" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1250.0" breed="SIMMENTAL_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
@@ -2054,7 +2055,7 @@
 				</liquidManure>
 			</output>
 		</subType>
-		<subType subType="BULL_SIMMENTAL" fillTypeName="BULL_SIMMENTAL" gender="male" minWeight="35.0" targetWeight="950.0" maxWeight="1300.0" breed="SIMMENTAL">
+		<subType subType="BULL_SIMMENTAL_pack" fillTypeName="BULL_SIMMENTAL_pack" gender="male" minWeight="35.0" targetWeight="950.0" maxWeight="1300.0" breed="SIMMENTAL_pack">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
@@ -2073,7 +2074,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowSimentalKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowSimental.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>

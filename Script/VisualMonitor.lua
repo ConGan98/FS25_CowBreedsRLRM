@@ -3,7 +3,6 @@
 
 MyLivestockHook = {}
 MyLivestockHook.isHooked = false
-local hasPrinted = false
 VisualsHook = {
     isHooked = false,
     checked = false

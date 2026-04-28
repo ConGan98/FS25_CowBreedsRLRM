@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/shared/xml/schema/fillTypes.xsd">
 	<fillTypes>
-		<fillType name="COW_SIMMENTAL" title="$l10n_fillType_cow_simmental" showOnPriceTable="false">
+		<fillType name="COW_SIMMENTAL_pack" title="$l10n_fillType_cow_simmental_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_SIMMENTAL" title="$l10n_fillType_bull_simmental" showOnPriceTable="false">
+		<fillType name="BULL_SIMMENTAL_pack" title="$l10n_fillType_bull_simmental_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
@@ -21,102 +21,102 @@
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_GUERNSEY" title="$l10n_fillType_cow_guernsey" showOnPriceTable="false">
+		<fillType name="COW_GUERNSEY_pack" title="$l10n_fillType_cow_guernsey_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_GUERNSEY" title="$l10n_fillType_bull_guernsey" showOnPriceTable="false">
+		<fillType name="BULL_GUERNSEY_pack" title="$l10n_fillType_bull_guernsey_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_JERSEY" title="$l10n_fillType_cow_jersey" showOnPriceTable="false">
+		<fillType name="COW_JERSEY_pack" title="$l10n_fillType_cow_jersey_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_JERSEY" title="$l10n_fillType_bull_jersey" showOnPriceTable="false">
+		<fillType name="BULL_JERSEY_pack" title="$l10n_fillType_bull_jersey_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_REDANGUS" title="$l10n_fillType_cow_redangus" showOnPriceTable="false">
+		<fillType name="COW_REDANGUS_pack" title="$l10n_fillType_cow_redangus_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_REDANGUS" title="$l10n_fillType_bull_redangus" showOnPriceTable="false">
+		<fillType name="BULL_REDANGUS_pack" title="$l10n_fillType_bull_redangus_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_BELTEDGALLOWAY" title="$l10n_fillType_cow_beltedgalloway" showOnPriceTable="false">
+		<fillType name="COW_BELTEDGALLOWAY_pack" title="$l10n_fillType_cow_beltedgalloway_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_BELTEDGALLOWAY" title="$l10n_fillType_bull_beltedgalloway" showOnPriceTable="false">
+		<fillType name="BULL_BELTEDGALLOWAY_pack" title="$l10n_fillType_bull_beltedgalloway_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_REDHOLSTEIN" title="$l10n_fillType_cow_red_holstein" showOnPriceTable="false">
+		<fillType name="COW_REDHOLSTEIN_pack" title="$l10n_fillType_cow_red_holstein_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_REDHOLSTEIN" title="$l10n_fillType_bull_red_holstein" showOnPriceTable="false">
+		<fillType name="BULL_REDHOLSTEIN_pack" title="$l10n_fillType_bull_red_holstein_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_AYRSHIRE" title="$l10n_fillType_cow_ayrshire" showOnPriceTable="false">
+		<fillType name="COW_AYRSHIRE_pack" title="$l10n_fillType_cow_ayrshire_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_AYRSHIRE" title="$l10n_fillType_bull_ayrshire" showOnPriceTable="false">
+		<fillType name="BULL_AYRSHIRE_pack" title="$l10n_fillType_bull_ayrshire_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>	
-		<fillType name="COW_IRISHMOILED" title="$l10n_fillType_cow_irishmoiled" showOnPriceTable="false">
+		<fillType name="COW_IRISHMOILED_pack" title="$l10n_fillType_cow_irishmoiled_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_IRISHMOILED" title="$l10n_fillType_bull_irishmoiled" showOnPriceTable="false">
+		<fillType name="BULL_IRISHMOILED_pack" title="$l10n_fillType_bull_irishmoiled_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_BRITISHBLUE" title="$l10n_fillType_cow_britishblue" showOnPriceTable="false">
+		<fillType name="COW_BRITISHBLUE_pack" title="$l10n_fillType_cow_britishblue_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_BRITISHBLUE" title="$l10n_fillType_bull_britishblue" showOnPriceTable="false">
+		<fillType name="BULL_BRITISHBLUE_pack" title="$l10n_fillType_bull_britishblue_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="4000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_CHAROLAIS" title="$l10n_fillType_cow_charolais" showOnPriceTable="false">
+		<fillType name="COW_CHAROLAIS_pack" title="$l10n_fillType_cow_charolais_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="5000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_CHAROLAIS" title="$l10n_fillType_bull_charolais" showOnPriceTable="false">
+		<fillType name="BULL_CHAROLAIS_pack" title="$l10n_fillType_bull_charolais_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="5000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="COW_SHORTHORN" title="$l10n_fillType_cow_shorthorn" showOnPriceTable="false">
+		<fillType name="COW_SHORTHORN_pack" title="$l10n_fillType_cow_shorthorn_pack" showOnPriceTable="false">
 			<physics massPerLiter="600.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="5000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
 		</fillType>
-		<fillType name="BULL_SHORTHORN" title="$l10n_fillType_bull_shorthorn" showOnPriceTable="false">
+		<fillType name="BULL_SHORTHORN_pack" title="$l10n_fillType_bull_shorthorn_pack" showOnPriceTable="false">
 			<physics massPerLiter="750.0" maxPhysicalSurfaceAngle="0"/>
 			<economy pricePerLiter="5000"/>
 			<image hud="$dataS/menu/hud/fillTypes/hud_fill_cow.png"/>
