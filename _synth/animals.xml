@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<animals>
+	<configOverrides>
+		<override type="COW" configFilename="models/cow/animals.xml"/>
+	</configOverrides>
+	<breeds>
+		<breed name="HOLSTEIN_vanilla" displayName="$l10n_breed_holstein_vanilla" markerColour="0.781 0.865 0.235"/>
+		<breed name="REDHOLSTEIN_vanilla" displayName="$l10n_breed_redholstein_vanilla" markerColour="0.235 0.865 0.708"/>
+		<breed name="BROWNSWISS_vanilla" displayName="$l10n_breed_brownswiss_vanilla" markerColour="0.246 0.865 0.235"/>
+		<breed name="LIMOUSIN_vanilla" displayName="$l10n_breed_limousin_vanilla" markerColour="0.298 0.865 0.235"/>
+		<breed name="ANGUS_vanilla" displayName="$l10n_breed_angus_vanilla" markerColour="0.235 0.865 0.235"/>
+	</breeds>
+	<animal type="COW">
+		<subType subType="COW_HOLSTEIN_vanilla" fillTypeName="COW_HOLSTEIN_vanilla" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1085.0" breed="HOLSTEIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="13" name="$l10n_shopItem_animalHolstein_F_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS01_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS01</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="14" name="$l10n_shopItem_animalHolstein_F_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS02_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS02</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="15" name="$l10n_shopItem_animalHolstein_F_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS03_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS03</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="16" name="$l10n_shopItem_animalHolstein_F_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS04_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS04</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="18" durationMonth="10" minHealthFactor="0.75"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="24" value="2500"/>
+				<key ageMonth="36" value="2500"/>
+				<key ageMonth="60" value="1800"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="250"/>
+				<key ageMonth="24" value="2450"/>
+				<key ageMonth="36" value="2450"/>
+				<key ageMonth="60" value="1500"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="12" value="80"/>
+				<key ageMonth="18" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="250"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="6" value="170"/>
+					<key ageMonth="12" value="210"/>
+					<key ageMonth="18" value="250"/>
+					<key ageMonth="22" value="300"/>
+					<key ageMonth="27" value="375"/>
+					<key ageMonth="28" value="450"/>
+				</food>
+			</input>
+			<output>
+				<milk fillType="MILK">
+					<key ageMonth="0" value="0"/>
+					<key ageMonth="27" value="0"/>
+					<key ageMonth="27" value="175"/>
+					<key ageMonth="28" value="350"/>
+					<key ageMonth="72" value="350"/>
+					<key ageMonth="96" value="175"/>
+					<key ageMonth="120" value="0"/>
+				</milk>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="500"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="BULL_HOLSTEIN_vanilla" fillTypeName="BULL_HOLSTEIN_vanilla" gender="male" minWeight="48.0" targetWeight="805.0" maxWeight="1247.0" breed="HOLSTEIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="17" name="$l10n_shopItem_animalHolstein_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS01_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS01</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="18" name="$l10n_shopItem_animalHolstein_M_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS02_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS02</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="15" visualAnimalIndex="19" name="$l10n_shopItem_animalHolstein_M_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS03_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS03</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="20" name="$l10n_shopItem_animalHolstein_M_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS04_Holstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS04</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="15" supported="false"/>
+			<buyPrice>
+				<key ageMonth="0" value="200"/>
+				<key ageMonth="24" value="1800"/>
+				<key ageMonth="36" value="1800"/>
+				<key ageMonth="60" value="1000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="100"/>
+				<key ageMonth="24" value="1700"/>
+				<key ageMonth="36" value="1700"/>
+				<key ageMonth="60" value="900"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="24" value="80"/>
+				<key ageMonth="60" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="250"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="6" value="170"/>
+					<key ageMonth="12" value="210"/>
+					<key ageMonth="18" value="250"/>
+					<key ageMonth="22" value="300"/>
+					<key ageMonth="27" value="375"/>
+					<key ageMonth="28" value="450"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="500"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="COW_REDHOLSTEIN_vanilla" fillTypeName="COW_REDHOLSTEIN_vanilla" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1085.0" breed="REDHOLSTEIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="13" name="$l10n_shopItem_animalRedHolstein_F_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS01_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS01</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="14" name="$l10n_shopItem_animalRedHolstein_F_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS02_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS02</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="15" name="$l10n_shopItem_animalRedHolstein_F_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS03_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS03</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="16" name="$l10n_shopItem_animalRedHolstein_F_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS04_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS04</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="18" durationMonth="10" minHealthFactor="0.75"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="24" value="2500"/>
+				<key ageMonth="36" value="2500"/>
+				<key ageMonth="60" value="1800"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="250"/>
+				<key ageMonth="24" value="2450"/>
+				<key ageMonth="36" value="2450"/>
+				<key ageMonth="60" value="1500"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="12" value="80"/>
+				<key ageMonth="18" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="250"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="6" value="170"/>
+					<key ageMonth="12" value="210"/>
+					<key ageMonth="18" value="250"/>
+					<key ageMonth="22" value="300"/>
+					<key ageMonth="27" value="375"/>
+					<key ageMonth="28" value="450"/>
+				</food>
+			</input>
+			<output>
+				<milk fillType="MILK">
+					<key ageMonth="0" value="0"/>
+					<key ageMonth="27" value="0"/>
+					<key ageMonth="27" value="175"/>
+					<key ageMonth="28" value="350"/>
+					<key ageMonth="72" value="350"/>
+					<key ageMonth="96" value="175"/>
+					<key ageMonth="120" value="0"/>
+				</milk>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="500"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="BULL_REDHOLSTEIN_vanilla" fillTypeName="BULL_REDHOLSTEIN_vanilla" gender="male" minWeight="48.0" targetWeight="805.0" maxWeight="1247.0" breed="REDHOLSTEIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="17" name="$l10n_shopItem_animalRedHolstein_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS01_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS01</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="18" name="$l10n_shopItem_animalRedHolstein_M_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS02_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS02</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="15" visualAnimalIndex="19" name="$l10n_shopItem_animalRedHolstein_M_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS03_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS03</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="20" name="$l10n_shopItem_animalRedHolstein_M_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS04_RedHolstein.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS04</description>
+					<textureIndexes>
+						<value>4</value>
+						<value>5</value>
+						<value>6</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="15" supported="false"/>
+			<buyPrice>
+				<key ageMonth="0" value="200"/>
+				<key ageMonth="24" value="1800"/>
+				<key ageMonth="36" value="1800"/>
+				<key ageMonth="60" value="1000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="100"/>
+				<key ageMonth="24" value="1700"/>
+				<key ageMonth="36" value="1700"/>
+				<key ageMonth="60" value="900"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="24" value="80"/>
+				<key ageMonth="60" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="250"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="6" value="170"/>
+					<key ageMonth="12" value="210"/>
+					<key ageMonth="18" value="250"/>
+					<key ageMonth="22" value="300"/>
+					<key ageMonth="27" value="375"/>
+					<key ageMonth="28" value="450"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="500"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="COW_BROWNSWISS_vanilla" fillTypeName="COW_BROWNSWISS_vanilla" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1085.0" breed="BROWNSWISS_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="13" name="$l10n_shopItem_animalBrownSwiss_F_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS01</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="14" name="$l10n_shopItem_animalBrownSwiss_F_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS02_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS02</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="15" name="$l10n_shopItem_animalBrownSwiss_F_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS03_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS03</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="16" name="$l10n_shopItem_animalBrownSwiss_F_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS04_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowMilk</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS04</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="18" durationMonth="10" minHealthFactor="0.75"/>
+			<buyPrice>
+				<key ageMonth="0" value="200"/>
+				<key ageMonth="24" value="2000"/>
+				<key ageMonth="36" value="2000"/>
+				<key ageMonth="60" value="1000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="150"/>
+				<key ageMonth="24" value="2000"/>
+				<key ageMonth="36" value="2000"/>
+				<key ageMonth="60" value="1000"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="12" value="80"/>
+				<key ageMonth="18" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="20"/>
+					<key ageMonth="22" value="190"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="6" value="150"/>
+					<key ageMonth="12" value="180"/>
+					<key ageMonth="18" value="200"/>
+					<key ageMonth="22" value="250"/>
+					<key ageMonth="27" value="325"/>
+					<key ageMonth="28" value="350"/>
+				</food>
+			</input>
+			<output>
+				<milk fillType="MILK">
+					<key ageMonth="0" value="0"/>
+					<key ageMonth="27" value="0"/>
+					<key ageMonth="27" value="150"/>
+					<key ageMonth="28" value="300"/>
+					<key ageMonth="72" value="300"/>
+					<key ageMonth="96" value="150"/>
+					<key ageMonth="120" value="0"/>
+				</milk>
+				<manure>
+					<key ageMonth="0" value="40"/>
+					<key ageMonth="24" value="400"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="12" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="BULL_BROWNSWISS_vanilla" fillTypeName="BULL_BROWNSWISS_vanilla" gender="male" minWeight="48.0" targetWeight="805.0" maxWeight="1247.0" breed="BROWNSWISS_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="17" name="$l10n_shopItem_animalBrownSwiss_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS01</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="18" name="$l10n_shopItem_animalBrownSwiss_M_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS02_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS02</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="15" visualAnimalIndex="19" name="$l10n_shopItem_animalBrownSwiss_M_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS03_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS03</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="20" name="$l10n_shopItem_animalBrownSwiss_M_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS04_BrownSwiss.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS04</description>
+					<textureIndexes>
+						<value>7</value>
+						<value>8</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="15" supported="false"/>
+			<buyPrice>
+				<key ageMonth="0" value="150"/>
+				<key ageMonth="24" value="1500"/>
+				<key ageMonth="36" value="1500"/>
+				<key ageMonth="60" value="900"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="80"/>
+				<key ageMonth="24" value="1500"/>
+				<key ageMonth="36" value="1500"/>
+				<key ageMonth="60" value="800"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="24" value="80"/>
+				<key ageMonth="60" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="20"/>
+					<key ageMonth="22" value="190"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="75"/>
+					<key ageMonth="6" value="140"/>
+					<key ageMonth="12" value="165"/>
+					<key ageMonth="18" value="180"/>
+					<key ageMonth="22" value="225"/>
+					<key ageMonth="27" value="280"/>
+					<key ageMonth="28" value="320"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="40"/>
+					<key ageMonth="24" value="400"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="COW_LIMOUSIN_vanilla" fillTypeName="COW_LIMOUSIN_vanilla" gender="female" minWeight="51.0" targetWeight="850.0" maxWeight="1317.0" breed="LIMOUSIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="21" name="$l10n_shopItem_animalLimousin_F_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS01</description>
+					<textureIndexes>
+						<value>1</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="22" name="$l10n_shopItem_animalLimousin_F_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS02_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS02</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="23" name="$l10n_shopItem_animalLimousin_F_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS03_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS03</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="24" name="$l10n_shopItem_animalLimousin_F_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS04_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS04</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="18" durationMonth="10" minHealthFactor="0.75"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="60" value="2000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="280"/>
+				<key ageMonth="15" value="2800"/>
+				<key ageMonth="20" value="4100"/>
+				<key ageMonth="60" value="1800"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="12" value="80"/>
+				<key ageMonth="18" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="260"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="130"/>
+					<key ageMonth="6" value="220"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="18" value="500"/>
+					<key ageMonth="22" value="575"/>
+					<key ageMonth="27" value="700"/>
+					<key ageMonth="28" value="900"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="320"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="50"/>
+					<key ageMonth="12" value="250"/>
+					<key ageMonth="24" value="750"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="BULL_LIMOUSIN_vanilla" fillTypeName="BULL_LIMOUSIN_vanilla" gender="male" minWeight="58.0" targetWeight="977.5" maxWeight="1515.0" breed="LIMOUSIN_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="25" name="$l10n_shopItem_animalLimousin_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS01</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="26" name="$l10n_shopItem_animalLimousin_M_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS02_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS02</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="15" visualAnimalIndex="27" name="$l10n_shopItem_animalLimousin_M_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS03_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS03</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="28" name="$l10n_shopItem_animalLimousin_M_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS04_Limousin.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS04</description>
+					<textureIndexes>
+						<value>1</value>
+						<value>2</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="15" supported="false"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="60" value="2000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="20" value="4300"/>
+				<key ageMonth="60" value="2000"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="24" value="80"/>
+				<key ageMonth="60" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="30"/>
+					<key ageMonth="22" value="260"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="130"/>
+					<key ageMonth="6" value="220"/>
+					<key ageMonth="12" value="350"/>
+					<key ageMonth="18" value="500"/>
+					<key ageMonth="22" value="575"/>
+					<key ageMonth="27" value="700"/>
+					<key ageMonth="28" value="900"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="60"/>
+					<key ageMonth="24" value="320"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="50"/>
+					<key ageMonth="12" value="250"/>
+					<key ageMonth="24" value="750"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="COW_ANGUS_vanilla" fillTypeName="COW_ANGUS_vanilla" gender="female" minWeight="51.0" targetWeight="850.0" maxWeight="1317.0" breed="ANGUS_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="21" name="$l10n_shopItem_animalAngus_F_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_Angus.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS01</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="22" name="$l10n_shopItem_animalAngus_F_GS02" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS02_Angus.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS02</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="23" name="$l10n_shopItem_animalAngus_F_GS03" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS03_Angus.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS03</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="24" name="$l10n_shopItem_animalAngus_F_GS04" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_F_GS04_Angus.png" canBeBought="true">
+					<description>$l10n_animal_descriptionCowProfit</description>
+					<description>$l10n_animal_descriptionCowFeed</description>
+					<description>$l10n_animal_descriptionWater</description>
+					<description>$l10n_animal_cattleF_GS04</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="18" durationMonth="10" minHealthFactor="0.75"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="60" value="2000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="280"/>
+				<key ageMonth="15" value="2800"/>
+				<key ageMonth="20" value="4500"/>
+				<key ageMonth="60" value="1800"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="12" value="80"/>
+				<key ageMonth="18" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="50"/>
+					<key ageMonth="22" value="300"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="160"/>
+					<key ageMonth="6" value="250"/>
+					<key ageMonth="12" value="400"/>
+					<key ageMonth="18" value="550"/>
+					<key ageMonth="22" value="625"/>
+					<key ageMonth="27" value="750"/>
+					<key ageMonth="28" value="975"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="24" value="600"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="250"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+		<subType subType="BULL_ANGUS_vanilla" fillTypeName="BULL_ANGUS_vanilla" gender="male" minWeight="58.0" targetWeight="977.5" maxWeight="1515.0" breed="ANGUS_vanilla">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="25" name="$l10n_shopItem_animalAngus_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_FM_GS01_Angus.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS01</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="5" visualAnimalIndex="26" name="$l10n_shopItem_animalAngus_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS02_Angus.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS02</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="15" visualAnimalIndex="27" name="$l10n_shopItem_animalAngus_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS03_Angus.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS03</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="28" visualAnimalIndex="28" name="$l10n_shopItem_animalAngus_M_GS01" image="../../FS25_AnimalPackage_vanillaEdition/animals/domesticated/cattle/store/store_M_GS04_Angus.png" canBeBought="true">
+					<description>$l10n_animal_cattleM_GS04</description>
+					<textureIndexes>
+						<value>3</value>
+						<value>4</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+			<reproduction minAgeMonth="15" supported="false"/>
+			<buyPrice>
+				<key ageMonth="0" value="300"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="60" value="2000"/>
+			</buyPrice>
+			<sellPrice>
+				<key ageMonth="0" value="230"/>
+				<key ageMonth="15" value="3000"/>
+				<key ageMonth="20" value="4800"/>
+				<key ageMonth="60" value="1800"/>
+			</sellPrice>
+			<transportPrice>
+				<key ageMonth="0" value="50"/>
+				<key ageMonth="24" value="80"/>
+				<key ageMonth="60" value="100"/>
+			</transportPrice>
+			<input>
+				<straw>
+					<key ageMonth="0" value="50"/>
+					<key ageMonth="22" value="300"/>
+				</straw>
+				<water>
+					<key ageMonth="0" value="55"/>
+					<key ageMonth="6" value="65"/>
+					<key ageMonth="12" value="75"/>
+					<key ageMonth="18" value="85"/>
+					<key ageMonth="26" value="95"/>
+					<key ageMonth="27" value="105"/>
+					<key ageMonth="28" value="115"/>
+				</water>
+				<food>
+					<key ageMonth="0" value="160"/>
+					<key ageMonth="6" value="250"/>
+					<key ageMonth="12" value="400"/>
+					<key ageMonth="18" value="550"/>
+					<key ageMonth="22" value="625"/>
+					<key ageMonth="27" value="750"/>
+					<key ageMonth="28" value="975"/>
+				</food>
+			</input>
+			<output>
+				<manure>
+					<key ageMonth="0" value="100"/>
+					<key ageMonth="24" value="600"/>
+				</manure>
+				<liquidManure>
+					<key ageMonth="0" value="80"/>
+					<key ageMonth="12" value="250"/>
+					<key ageMonth="24" value="500"/>
+				</liquidManure>
+			</output>
+		</subType>
+	</animal>
+</animals>

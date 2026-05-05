@@ -32,7 +32,7 @@
 		<!-- Red Holstein (dairy breed, shares Holstein mesh with different texture rows) -->
 		<subType subType="COW_REDHOLSTEIN_pack" fillTypeName="COW_REDHOLSTEIN_pack" gender="female" minWeight="42.0" targetWeight="700.0" maxWeight="1100.0" breed="REDHOLSTEIN_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -43,7 +43,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowRedHolsteinKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowRedHolsteinKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -129,7 +129,7 @@
 		</subType>
 		<subType subType="BULL_REDHOLSTEIN_pack" fillTypeName="BULL_REDHOLSTEIN_pack" gender="male" minWeight="45.0" targetWeight="880.0" maxWeight="1300.0" breed="REDHOLSTEIN_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowRedHolsteinBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -139,7 +139,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowRedHolsteinKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowRedHolsteinKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -214,7 +214,7 @@
 		<!-- Ayrshire (dairy breed, shares Holstein mesh with different texture rows) -->
 		<subType subType="COW_AYRSHIRE_pack" fillTypeName="COW_AYRSHIRE_pack" gender="female" minWeight="42.0" targetWeight="560.0" maxWeight="1100.0" breed="AYRSHIRE_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -225,7 +225,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_AyrshireKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_AyrshireKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -310,7 +310,7 @@
 		</subType>
 		<subType subType="BULL_AYRSHIRE_pack" fillTypeName="BULL_AYRSHIRE_pack" gender="male" minWeight="45.0" targetWeight="600.0" maxWeight="1300.0" breed="AYRSHIRE_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_AyrshireBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -320,7 +320,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_AyrshireKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_AyrshireKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -395,7 +395,7 @@
 		<!-- JERSEY (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_JERSEY_pack" fillTypeName="COW_JERSEY_pack" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="850.0" breed="JERSEY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -406,7 +406,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowJerseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowJerseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -492,7 +492,7 @@
 		</subType>
 		<subType subType="BULL_JERSEY_pack" fillTypeName="BULL_JERSEY_pack" gender="male" minWeight="35.0" targetWeight="590.0" maxWeight="900.0" breed="JERSEY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowJerseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -502,7 +502,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowJerseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowJerseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -577,7 +577,7 @@
 		<!-- GUERNSEY (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_GUERNSEY_pack" fillTypeName="COW_GUERNSEY_pack" gender="female" minWeight="33.0" targetWeight="500.0" maxWeight="900.0" breed="GUERNSEY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -588,7 +588,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowGuernseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowGuernseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowMilk</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -673,21 +673,23 @@
 		</subType>
 		<subType subType="BULL_GUERNSEY_pack" fillTypeName="BULL_GUERNSEY_pack" gender="male" minWeight="35.0" targetWeight="650.0" maxWeight="1000.0" breed="GUERNSEY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="6" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="4" image="images/store_cowGuernseyBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
 					<textureIndexes>
-						<value>7</value>
+						<value>1</value>
+						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="10" image="images/store_cowGuernseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="6" image="images/store_cowGuernseyKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
 					<textureIndexes>
-						<value>7</value>
+						<value>1</value>
+						<value>2</value>
 					</textureIndexes>
 				</visual>
 				<visual minAge="12" visualAnimalIndex="2" image="images/store_cowGuernseyKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
@@ -696,7 +698,8 @@
 					<description>$l10n_animal_descriptionMature</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
 					<textureIndexes>
-						<value>7</value>
+						<value>1</value>
+						<value>2</value>
 					</textureIndexes>
 				</visual>
 				<visual minAge="18" visualAnimalIndex="2" image="images/store_cowGuernsey.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
@@ -705,7 +708,8 @@
 					<description>$l10n_animal_descriptionMature</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
 					<textureIndexes>
-						<value>7</value>
+						<value>1</value>
+						<value>2</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -754,7 +758,7 @@
 		<!-- Charolais (beef breed, shares Limousin/Hereford mesh with different texture) -->
 		<subType subType="COW_CHAROLAIS_pack" fillTypeName="COW_CHAROLAIS_pack" gender="female" minWeight="33.0" targetWeight="900.0" maxWeight="1000.0" breed="CHAROLAIS_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -764,7 +768,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowCharolaisKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowCharolaisKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -773,7 +777,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowCharolais.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowCharolais.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -783,7 +787,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowCharolais.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowCharolais.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -847,7 +851,7 @@
 		</subType>
 		<subType subType="BULL_CHAROLAIS_pack" fillTypeName="BULL_CHAROLAIS_pack" gender="male" minWeight="35.0" targetWeight="1000.0" maxWeight="1250.0" breed="CHAROLAIS_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowCharolaisBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -856,7 +860,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowCharolaisKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowCharolaisKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -864,7 +868,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowCharolais.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowCharolais.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -873,7 +877,7 @@
 						<value>3</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowCharolais.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowCharolais.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -928,7 +932,7 @@
 		<!-- REDANGUS (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_REDANGUS_pack" fillTypeName="COW_REDANGUS_pack" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1200.0" breed="REDANGUS_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -938,7 +942,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowRedAngusKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowRedAngusKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -947,7 +951,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowRedAngus.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowRedAngus.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -957,7 +961,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowRedAngus.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowRedAngus.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1020,7 +1024,7 @@
 		</subType>
 		<subType subType="BULL_REDANGUS_pack" fillTypeName="BULL_REDANGUS_pack" gender="male" minWeight="35.0" targetWeight="900.0" maxWeight="1300.0" breed="REDANGUS_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowRedAngusBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1029,7 +1033,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowRedAngusKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowRedAngusKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1037,7 +1041,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowRedAngusKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowRedAngusKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1046,7 +1050,7 @@
 						<value>8</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowRedAngus.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowRedAngus.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1101,7 +1105,7 @@
 		<!-- Shorthorn (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_HEREFORD_pack" fillTypeName="COW_HEREFORD_pack" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1200.0" breed="HEREFORD_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowHerefordBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowHerefordBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1111,7 +1115,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowHerefordKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowHerefordKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1120,7 +1124,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowHereford.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowHereford.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1130,7 +1134,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowHereford.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowHereford.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1193,7 +1197,7 @@
 		</subType>
 		<subType subType="BULL_HEREFORD_pack" fillTypeName="BULL_HEREFORD_pack" gender="male" minWeight="35.0" targetWeight="900.0" maxWeight="1300.0" breed="HEREFORD_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowHerefordBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowHerefordBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1202,7 +1206,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowHerefordKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowHerefordKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1210,7 +1214,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowHerefordKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowHerefordKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1219,7 +1223,7 @@
 						<value>1</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowHereford.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowHereford.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1274,7 +1278,7 @@
 		<!-- Shorthorn (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_SHORTHORN_pack" fillTypeName="COW_SHORTHORN_pack" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1000.0" breed="SHORTHORN_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1284,7 +1288,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowShorthornKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowShorthornKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1293,7 +1297,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowShorthorn.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowShorthorn.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1303,7 +1307,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowShorthorn.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowShorthorn.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1366,7 +1370,7 @@
 		</subType>
 		<subType subType="BULL_SHORTHORN_pack" fillTypeName="BULL_SHORTHORN_pack" gender="male" minWeight="35.0" targetWeight="850.0" maxWeight="1200.0" breed="SHORTHORN_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowShorthornBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1375,7 +1379,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowShorthornKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowShorthornKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1383,7 +1387,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowShorthornKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowShorthornKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1392,7 +1396,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowShorthorn.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowShorthorn.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1447,7 +1451,7 @@
 		<!-- IrishMoiled (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_IRISHMOILED_pack" fillTypeName="COW_IRISHMOILED_pack" gender="female" minWeight="33.0" targetWeight="650.0" maxWeight="1000.0" breed="IRISHMOILED_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1457,7 +1461,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowIrishMoiledKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowIrishMoiledKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1466,7 +1470,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowIrishMoiled.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowIrishMoiled.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1476,7 +1480,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowIrishMoiled.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowIrishMoiled.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1539,7 +1543,7 @@
 		</subType>
 		<subType subType="BULL_IRISHMOILED_pack" fillTypeName="BULL_IRISHMOILED_pack" gender="male" minWeight="35.0" targetWeight="700.0" maxWeight="1200.0" breed="IRISHMOILED_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowIrishMoiledBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1548,7 +1552,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowIrishMoiledKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowIrishMoiledKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1556,7 +1560,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowIrishMoiledKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowIrishMoiledKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1565,7 +1569,7 @@
 						<value>5</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowIrishMoiled.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowIrishMoiled.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1620,7 +1624,7 @@
 		<!-- BritisBlue (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_BRITISHBLUE_pack" fillTypeName="COW_BRITISHBLUE_pack" gender="female" minWeight="33.0" targetWeight="850.0" maxWeight="1000.0" breed="BRITISHBLUE_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1630,7 +1634,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowBritishBlueKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowBritishBlueKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1639,7 +1643,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowBritishBlue.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowBritishBlue.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1649,7 +1653,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowBritishBlue.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowBritishBlue.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1713,7 +1717,7 @@
 		</subType>
 		<subType subType="BULL_BRITISHBLUE_pack" fillTypeName="BULL_BRITISHBLUE_pack" gender="male" minWeight="35.0" targetWeight="990.0" maxWeight="1150.0" breed="BRITISHBLUE_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowBritishBlueBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1722,7 +1726,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowBritishBlueKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowBritishBlueKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1730,7 +1734,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowBritishBlueKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowBritishBlueKid.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1739,7 +1743,7 @@
 						<value>2</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowBritishBlue.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowBritishBlue.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1794,7 +1798,7 @@
 		<!-- BELTEDGALLOWAY (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_BELTEDGALLOWAY_pack" fillTypeName="COW_BELTEDGALLOWAY_pack" gender="female" minWeight="33.0" targetWeight="575.0" maxWeight="1100.0" breed="BELTEDGALLOWAY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1804,7 +1808,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowBeltedGallowayKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowBeltedGallowayKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1813,7 +1817,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowBeltedGalloway.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowBeltedGalloway.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1823,7 +1827,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowBeltedGalloway.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowBeltedGalloway.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1885,7 +1889,7 @@
 		</subType>
 		<subType subType="BULL_BELTEDGALLOWAY_pack" fillTypeName="BULL_BELTEDGALLOWAY_pack" gender="male" minWeight="35.0" targetWeight="620.0" maxWeight="1200.0" breed="BELTEDGALLOWAY_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowBeltedGallowayBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -1894,7 +1898,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowBeltedGallowayKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowBeltedGallowayKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -1902,7 +1906,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowBeltedGalloway.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowBeltedGalloway.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1911,7 +1915,7 @@
 						<value>6</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowBeltedGalloway.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowBeltedGalloway.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -1966,7 +1970,7 @@
 		<!-- SIMMENTAL (dual-purpose breed, shares Limousin/Hereford mesh) -->
 		<subType subType="COW_SIMMENTAL_pack" fillTypeName="COW_SIMMENTAL_pack" gender="female" minWeight="33.0" targetWeight="800.0" maxWeight="1250.0" breed="SIMMENTAL_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1976,7 +1980,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowSimentalKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowSimentalKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1985,7 +1989,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowSimental.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowSimental.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -1995,7 +1999,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowSimental.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowSimental.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionCowProfit</description>
 					<description>$l10n_animal_descriptionCowFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
@@ -2057,7 +2061,7 @@
 		</subType>
 		<subType subType="BULL_SIMMENTAL_pack" fillTypeName="BULL_SIMMENTAL_pack" gender="male" minWeight="35.0" targetWeight="950.0" maxWeight="1300.0" breed="SIMMENTAL_pack">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="18" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="0" visualAnimalIndex="9" image="images/store_cowSimentalBaby.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullYoung</description>
@@ -2066,7 +2070,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="17" image="images/store_cowSimentalKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
+				<visual minAge="6" visualAnimalIndex="8" image="images/store_cowSimentalKid.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionBullReproduction</description>
@@ -2074,7 +2078,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="16" image="images/store_cowSimental.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="12" visualAnimalIndex="7" image="images/store_cowSimental.dds" canBeBought="false" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -2083,7 +2087,7 @@
 						<value>7</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="16" image="images/store_cowSimental.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
+				<visual minAge="18" visualAnimalIndex="7" image="images/store_cowSimental.dds" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<description>$l10n_animal_descriptionBullFeed</description>
 					<description>$l10n_animal_descriptionWater</description>
 					<description>$l10n_animal_descriptionMature</description>
@@ -2146,56 +2150,56 @@
 		<!-- Swiss Brown: Holstein mesh, texture rows 0 (indices 1,2) -->
 		<subType subType="COW_SWISS_BROWN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="5">
+				<visual minAge="0" visualAnimalIndex="4" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="9">
+				<visual minAge="6" visualAnimalIndex="6" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="1">
+				<visual minAge="12" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="1">
+				<visual minAge="18" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0"  bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
 		</subType>
 		<subType subType="BULL_SWISS_BROWN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="5">
+				<visual minAge="0" visualAnimalIndex="4" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="9">
+				<visual minAge="6" visualAnimalIndex="6" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="1">
+				<visual minAge="12" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="1">
+				<visual minAge="18" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>1</value>
-						<value>2</value>
+						<value>9</value>
+						<value>10</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -2203,56 +2207,56 @@
 		<!-- Holstein: Holstein mesh, texture rows 1 (indices 1,2) -->
 		<subType subType="COW_HOLSTEIN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="5">
+				<visual minAge="0" visualAnimalIndex="4" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="9">
+				<visual minAge="6" visualAnimalIndex="6" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="1">
-					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+				<visual minAge="12" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" bumId="0|0|0|6" marker="0|0|0|7">
+					<textureIndexes>						
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="1">
+				<visual minAge="18" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
 		</subType>
 		<subType subType="BULL_HOLSTEIN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="5">
+				<visual minAge="0" visualAnimalIndex="4" canBeBought="true" monitor="0|0|0|0|0|0|0|0|0|1|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" marker="0|0|0|4">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="9">
+				<visual minAge="6" visualAnimalIndex="6" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="1">
+				<visual minAge="12" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="1">
+				<visual minAge="18" visualAnimalIndex="2" canBeBought="true" monitor="0|0|0|0|0|0|0|1" earTagLeft="0|0|0|0|0|0|0|0|0|1|0|0" earTagRight="0|0|0|0|0|0|0|0|0|2|0|0" noseRing="0|0|0|0|0|0|0|0|0|7" bumId="0|0|0|6" marker="0|0|0|7">
 					<textureIndexes>
-						<value>3</value>
-						<value>4</value>
+						<value>11</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -2260,56 +2264,56 @@
 		<!-- LIMOUSIN: ANGUS mesh, texture rows 1 (indices 1,2) -->
 		<subType subType="COW_LIMOUSIN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="16" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
 		</subType>
 		<subType subType="BULL_LIMOUSIN">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>					
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>3</value>
-						<value>2</value>
+						<value>10</value>
+						<value>11</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -2317,48 +2321,48 @@
 		<!-- ANGUS: ANGUS mesh, texture rows 1 (indices 1,2) -->
 		<subType subType="COW_ANGUS">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
 		</subType>
 		<subType subType="BULL_ANGUS">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>1</value>
+						<value>9</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -2366,48 +2370,48 @@
 		<!-- Hereford: Limousin/Hereford mesh, texture index 1 + new store images -->
 		<subType subType="COW_HEREFORD">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
 		</subType>
 		<subType subType="BULL_HEREFORD">
 			<visuals>
-				<visual minAge="0" visualAnimalIndex="7">
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6" visualAnimalIndex="11">
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12" visualAnimalIndex="3">
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18" visualAnimalIndex="3">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
-						<value>4</value>
+						<value>12</value>
 					</textureIndexes>
 				</visual>
 			</visuals>
@@ -2415,7 +2419,7 @@
 		
 		<subType subType="COW_HIGHLAND_CATTLE">
 			<visuals>
-				<visual minAge="0">
+				<visual minAge="0" visualAnimalIndex="10">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2423,7 +2427,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6">
+				<visual minAge="6" visualAnimalIndex="11"> 
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2431,7 +2435,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12">
+				<visual minAge="12" visualAnimalIndex="12">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2439,7 +2443,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18">
+				<visual minAge="18" visualAnimalIndex="12">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2451,7 +2455,7 @@
 		</subType>
 		<subType subType="BULL_HIGHLAND_CATTLE">
 			<visuals>
-				<visual minAge="0">
+				<visual minAge="0" visualAnimalIndex="10">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2459,7 +2463,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="6">
+				<visual minAge="6" visualAnimalIndex="11">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2467,7 +2471,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="12">
+				<visual minAge="12" visualAnimalIndex="12">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2475,7 +2479,7 @@
 						<value>4</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="18">
+				<visual minAge="18" visualAnimalIndex="12">
 					<textureIndexes>
 						<value>1</value>
 						<value>2</value>
@@ -2485,6 +2489,23 @@
 				</visual>
 			</visuals>
 		</subType>
-		<!-- Angus, Limousin, WaterBuffalo: no textureIndexes needed (single-texture models) -->
+		<!-- WaterBuffalo override: redirect RLRM bundle's vai 13/14/15 -> our buffalo entries at vai 1 (adult), 3 (baby), 5 (kid). -->
+		<subType subType="COW_WATERBUFFALO">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="3"/>
+				<visual minAge="6" visualAnimalIndex="5"/>
+				<visual minAge="12" visualAnimalIndex="1"/>
+				<visual minAge="18" visualAnimalIndex="1"/>
+			</visuals>
+		</subType>
+		<subType subType="BULL_WATERBUFFALO">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="3"/>
+				<visual minAge="6" visualAnimalIndex="5"/>
+				<visual minAge="12" visualAnimalIndex="1"/>
+				<visual minAge="18" visualAnimalIndex="1"/>
+			</visuals>
+		</subType>
+		<!-- Angus, Limousin: no textureIndexes needed (single-texture models) -->
 	</animal>
 </animals>
