@@ -8,7 +8,7 @@
 -- — RLRM then processes it through its normal flow, which applies our config
 -- override and registers our _vanilla subtypes alongside its own.
 
-print("[CowBreedsRLRM/VanillaBridge] module sourced (v0.2.1.0)")
+print("[CowBreedsRLRM/VanillaBridge] module sourced (v0.5.6.0)")
 
 -- Kill switch: if this file exists, the bridge does nothing.
 -- Path: <userProfile>/modSettings/CowBreedsRLRM_VanillaBridge.disabled
@@ -24,7 +24,7 @@ local TAG          = "[CowBreedsRLRM/VanillaBridge]"
 local VANILLA_MOD  = "FS25_AnimalPackage_vanillaEdition"
 local SYNTH_NAME   = "FS25_CowBreedsRLRM_VanillaBridge"
 local SYNTH_TITLE  = "Cow Breeds - Vanilla Bridge"
-local SYNTH_VERSION = "0.2.1.0"
+local SYNTH_VERSION = "0.5.6.0"
 local SUFFIX       = "_vanilla"
 
 -- Whitelisted breeds. Engine has a confirmed hard 32-entry-per-husbandry-XML
@@ -626,6 +626,123 @@ end
 -- all 4 growth stages emit cleanly. Total: 13 + 16 = 29, comfy 3-slot margin.
 local VANILLA_HUSBANDRY_LIMIT = 16
 
+-- ---------- Map-mod (Mechet) support ----------
+-- FS25_The_Mechet defines its own COW meshes at vai 22-30 inside
+-- maps/animals/cow/animals.xml (Charolaise/Simmental/Montbeliarde/Vosgienne).
+-- Our pack's <configOverride> normally replaces that husbandry XML with our 12-
+-- slot version, so Mechet's mesh definitions never load and its breeds resolve
+-- to vai=1 (= WATER_BUFFALO in our V1.0.2 layout). When Mechet is loaded we
+-- regenerate the synth husbandry with vai 22-30 entries pointing at Mechet's
+-- i3d files (cross-mod relative paths). Vanilla bridge slot allocator avoids
+-- 22-30 so Mechet's slots stay reserved.
+local MECHET_MOD       = "FS25_The_Mechet"
+local MECHET_HUSB_PATH = "maps/animals/cow/animals.xml"
+-- Mechet's NEW subTypes claim vai 19-30:
+--   19-21: CharolaiseEtSimmental rig (used by COW_CHAROLAISE)
+--   22-24: MontbeliardeEtVosgienne rig (used by COW_MONTBELIARDE)
+--   25-27: CharolaiseEtSimmental rig duplicate (used by COW_SIMMENTAL)
+--   28-30: MontbeliardeEtVosgienne rig duplicate (used by COW_VOSGIENNE)
+-- Phase-1 had Highland at 19-21, but our pack overrides COW_HIGHLAND_CATTLE
+-- with V1.0.2 vai's so Highland still renders correctly via the remap hook.
+local MECHET_VAI_START = 19
+local MECHET_VAI_END   = 30
+
+local function findMechetMod()
+    if g_modIsLoaded == nil then return nil end
+    if g_modIsLoaded[MECHET_MOD] then return MECHET_MOD end
+    local target = MECHET_MOD:lower()
+    for name, _ in pairs(g_modIsLoaded) do
+        if name:lower() == target then return name end
+    end
+    return nil
+end
+
+-- ---------- One-time Mechet+vanilla compatibility warning ----------
+-- When AnimalPackage and Mechet are both loaded the vanilla bridge is capped
+-- at 6 slots (instead of 16) so Mechet's CharolaiseEtSimmental rig at 19-21
+-- and unique meshes at 22-30 stay reserved. Players see a one-time dialog
+-- explaining this; once they click OK we persist a flag file in userProfile
+-- so the dialog never shows again on this profile.
+-- Per-savegame ack: each new save shows the warning once. The ack file lives
+-- under <userProfile>/modSettings/ with the savegame index baked into the
+-- filename so saves are independent. Returns nil if no save context is
+-- available yet (during early bootstrap, before g_currentMission settles).
+local WARNING_ACK_FILE_PREFIX = "modSettings/CowBreedsRLRM_MechetVanillaWarning_save"
+
+local function getMechetVanillaWarningAckPath()
+    local saveIdx = nil
+    if g_currentMission ~= nil and g_currentMission.missionInfo ~= nil then
+        saveIdx = g_currentMission.missionInfo.savegameIndex
+    end
+    if saveIdx == nil then return nil end
+    return ensureSlash(getUserProfileAppPath()) .. WARNING_ACK_FILE_PREFIX .. tostring(saveIdx) .. ".acknowledged"
+end
+
+local function isMechetVanillaWarningAcknowledged()
+    local path = getMechetVanillaWarningAckPath()
+    if path == nil then return false end -- can't confirm; assume not acknowledged
+    return fileExists(path)
+end
+
+local function writeMechetVanillaWarningAck()
+    local path = getMechetVanillaWarningAckPath()
+    if path == nil then
+        logf("save context missing at ack write time; skipping (warning will repeat)")
+        return
+    end
+    local f, err = io.open(path, "w")
+    if f ~= nil then
+        f:write("acknowledged")
+        f:close()
+        logf("Mechet+vanilla warning acknowledged; flag written to %s", path)
+    else
+        logf("could not write warning ack file: %s", tostring(err))
+    end
+end
+
+local WARNING_TEXT =
+    "FS25 Cow Breeds RLRM\n\n" ..
+    "FS25_AnimalPackage_vanillaEdition and FS25_The_Mechet are both loaded.\n\n" ..
+    "Mechet's four custom breeds (Charolaise, Simmental, Montbeliarde, Vosgienne) " ..
+    "keep their meshes. To stay within the engine's 32-slot husbandry cap, the " ..
+    "vanilla animal pack is limited to bulls only (M_GS01 through M_GS04 across " ..
+    "all 5 vanilla breeds). Vanilla cow subtypes are not purchasable in this " ..
+    "configuration.\n\n" ..
+    "This warning will not show again on this save."
+
+local function showMechetVanillaWarningNow()
+    if isMechetVanillaWarningAcknowledged() then return end
+    -- FS25's actual API is InfoDialog.show(text, callback) — not g_gui:showInfoDialog.
+    if InfoDialog == nil or InfoDialog.show == nil then
+        logf("InfoDialog not ready when warning fired; skipped")
+        return
+    end
+    InfoDialog.show(WARNING_TEXT, writeMechetVanillaWarningAck)
+    logf("displayed Mechet+vanilla warning dialog")
+end
+
+-- The bridge bootstrap fires inside FillTypeManager.loadMapData — way too
+-- early for g_gui (we're still on the loading screen). Subscribe via the
+-- message center so the dialog fires once the player is actually in the
+-- game. The ack file is per-savegame, so a fresh save with the same mod
+-- combo will see the warning again until acknowledged.
+local function maybeScheduleMechetVanillaWarning()
+    -- Don't pre-check ack here: g_currentMission isn't ready, so we can't
+    -- resolve the per-save ack path yet. The actual show callback re-checks.
+    if g_messageCenter ~= nil and MessageType ~= nil then
+        local mt = MessageType.LOADED_MISSION_FINISHED
+                or MessageType.SAVEGAME_LOADED
+                or MessageType.LOAD_GAME_FINISHED
+        if mt ~= nil then
+            g_messageCenter:subscribe(mt, showMechetVanillaWarningNow)
+            logf("Mechet+vanilla warning scheduled for message type %s", tostring(mt))
+            return
+        end
+    end
+    logf("no message center hook available; attempting immediate dialog")
+    showMechetVanillaWarningNow()
+end
+
 -- Compute a mapping from vanilla source visualAnimalIndex (1-based) → output
 -- visualAnimalIndex in the synth husbandry XML. Output indices are drawn from
 -- {1..32} minus the indices the pack already uses, so vanilla entries land in
@@ -638,12 +755,20 @@ local VANILLA_HUSBANDRY_LIMIT = 16
 -- growth stages fit cleanly.
 --
 -- Returns: { [vanillaVai] = outputVai, ... }
-local function allocateVanillaSlots(packXml, vanillaToWalk)
+-- vanillaToWalk: either a count N (walks source vai 1..N) or a list of
+-- source vai's to allocate explicitly. The list form lets callers pick a
+-- non-contiguous subset (e.g. {5, 7, 8} for bull GS01/GS03/GS04 only).
+local function allocateVanillaSlots(packXml, vanillaToWalk, reservedSlots)
     local packUsed = {}
     local packCount = countHusbandryEntries(packXml)
     for i = 0, packCount - 1 do
         local vai = getXMLInt(packXml, string.format("animalHusbandry.animals.animal(%d)#visualAnimalIndex", i)) or (i + 1)
         packUsed[vai] = true
+    end
+    -- Reserved slots (e.g. Mechet's 19-30) get treated as "used" so the
+    -- vanilla allocator skips them.
+    if reservedSlots ~= nil then
+        for vai, _ in pairs(reservedSlots) do packUsed[vai] = true end
     end
 
     local freeSlots = {}
@@ -651,14 +776,22 @@ local function allocateVanillaSlots(packXml, vanillaToWalk)
         if not packUsed[vai] then table.insert(freeSlots, vai) end
     end
 
+    local sources
+    if type(vanillaToWalk) == "table" then
+        sources = vanillaToWalk
+    else
+        sources = {}
+        for v = 1, vanillaToWalk or 0 do table.insert(sources, v) end
+    end
+
     local origToOutput = {}
     local freeIdx = 1
-    for vai = 1, vanillaToWalk do
+    for _, sourceVai in ipairs(sources) do
         if freeIdx > #freeSlots then
-            logf("free-slot pool exhausted at vanilla vai=%d (free=%d)", vai, #freeSlots)
+            logf("free-slot pool exhausted at vanilla source vai=%d (free=%d)", sourceVai, #freeSlots)
             break
         end
-        origToOutput[vai] = freeSlots[freeIdx]
+        origToOutput[sourceVai] = freeSlots[freeIdx]
         freeIdx = freeIdx + 1
     end
 
@@ -678,19 +811,20 @@ end
 -- allocateVanillaSlots (which picks free slots in {1..32} \ pack_used).
 -- GS03 vanilla sources don't claim slots — they share the GS04 sibling's slot
 -- via redirect inside synthSubType.
-local function buildCombinedHusbandryXml(packXml, vanillaXml, packModDir, vanillaModDir, synthHusbDir, origToOutput)
+local function buildCombinedHusbandryXml(packXml, vanillaXml, packModDir, vanillaModDir, synthHusbDir, origToOutput, mechetXml, mechetModDir)
     origToOutput = origToOutput or {}
-    local packBaseDir    = ensureSlash(packModDir)    .. "models/cow/"
-    local vanillaBaseDir = ensureSlash(vanillaModDir) .. "animals/domesticated/cattle/"
+    local packBaseDir    = ensureSlash(packModDir) .. "models/cow/"
+    local vanillaBaseDir = vanillaModDir and (ensureSlash(vanillaModDir) .. "animals/domesticated/cattle/") or nil
+    local mechetBaseDir  = mechetModDir  and (ensureSlash(mechetModDir)  .. "maps/animals/cow/")            or nil
 
     local lines = {}
     table.insert(lines, '<?xml version="1.0" encoding="utf-8" standalone="no" ?>')
     table.insert(lines, '<animalHusbandry>')
     local mrsg  = getXMLString(packXml, "animalHusbandry.animals#milkRobotSoundGroup")
-              or  getXMLString(vanillaXml, "animalHusbandry.animals#milkRobotSoundGroup")
+              or (vanillaXml and getXMLString(vanillaXml, "animalHusbandry.animals#milkRobotSoundGroup"))
               or "milkRobot"
     local mrdsg = getXMLString(packXml, "animalHusbandry.animals#milkRobotDoorSoundGroup")
-              or  getXMLString(vanillaXml, "animalHusbandry.animals#milkRobotDoorSoundGroup")
+              or (vanillaXml and getXMLString(vanillaXml, "animalHusbandry.animals#milkRobotDoorSoundGroup"))
               or "milkRobotDoor"
     table.insert(lines, string.format('\t<animals milkRobotSoundGroup="%s" milkRobotDoorSoundGroup="%s">', mrsg, mrdsg))
 
@@ -708,6 +842,8 @@ local function buildCombinedHusbandryXml(packXml, vanillaXml, packModDir, vanill
         if vai > maxSlot then maxSlot = vai end
     end
 
+    -- Vanilla bridge slots claim first (allocator already avoided 22-30 via
+    -- reservedSlots, so vanilla typically lands in 13-21).
     for sourceVai, outputVai in pairs(origToOutput) do
         if slots[outputVai] ~= nil then
             logf("ERROR: vanilla slot %d collides with %s — bridge inactive", outputVai, slots[outputVai].kind)
@@ -716,6 +852,33 @@ local function buildCombinedHusbandryXml(packXml, vanillaXml, packModDir, vanill
         end
         slots[outputVai] = { xml = vanillaXml, sourceIdx = sourceVai - 1, baseDir = vanillaBaseDir, modRoot = vanillaModDir, kind = "vanilla" }
         if outputVai > maxSlot then maxSlot = outputVai end
+    end
+
+    -- Mechet: claim vai positions 13-30 that aren't already occupied. The
+    -- unique Mechet content lives at vai 22-30 (Charolaise/Simmental/
+    -- Montbeliarde/Vosgienne meshes). The 13-21 range holds Phase-1 standard
+    -- entries (buffalo/beef/highland) that Mechet's base subTypes reference;
+    -- we need them in the synth to keep slots contiguous from 1..maxSlot
+    -- when no vanilla bridge is active.
+    --
+    -- Mechet's <animal> elements do NOT carry a visualAnimalIndex attribute;
+    -- vai is positional (1st <animal> = vai 1). Fall back to (i+1) when the
+    -- attribute is absent, matching how the engine resolves it.
+    if mechetXml ~= nil and mechetBaseDir ~= nil then
+        local mechetCount = countHusbandryEntries(mechetXml)
+        local mechetClaimed = 0
+        for i = 0, mechetCount - 1 do
+            local vai = getXMLInt(mechetXml, string.format("animalHusbandry.animals.animal(%d)#visualAnimalIndex", i)) or (i + 1)
+            if vai >= 13 and vai <= MECHET_VAI_END then
+                if slots[vai] == nil then
+                    slots[vai] = { xml = mechetXml, sourceIdx = i, baseDir = mechetBaseDir, modRoot = mechetModDir, kind = "mechet" }
+                    mechetClaimed = mechetClaimed + 1
+                    if vai > maxSlot then maxSlot = vai end
+                end
+            end
+        end
+        logf("Mechet contributed %d husbandry slot(s) (vai 13-%d, source had %d animals)",
+             mechetClaimed, MECHET_VAI_END, mechetCount)
     end
 
     -- Emit in slot order. Engine uses positional indexing so we MUST be contiguous
@@ -733,12 +896,15 @@ local function buildCombinedHusbandryXml(packXml, vanillaXml, packModDir, vanill
     table.insert(lines, '\t</animals>')
 
     -- Combined sound section: pack first, then vanilla (skipping duplicate names).
-    if getXMLString(packXml, "animalHusbandry.sound.soundGroup(0)#name") ~= nil
-       or getXMLString(vanillaXml, "animalHusbandry.sound.soundGroup(0)#name") ~= nil then
+    local hasPackSounds    = getXMLString(packXml,    "animalHusbandry.sound.soundGroup(0)#name") ~= nil
+    local hasVanillaSounds = vanillaXml and getXMLString(vanillaXml, "animalHusbandry.sound.soundGroup(0)#name") ~= nil
+    if hasPackSounds or hasVanillaSounds then
         table.insert(lines, '\t<sound>')
         local seen = {}
         emitSoundGroups(lines, packXml, seen, packBaseDir, synthHusbDir)
-        emitSoundGroups(lines, vanillaXml, seen, vanillaBaseDir, synthHusbDir)
+        if vanillaXml ~= nil then
+            emitSoundGroups(lines, vanillaXml, seen, vanillaBaseDir, synthHusbDir)
+        end
         table.insert(lines, '\t</sound>')
     end
 
@@ -957,13 +1123,292 @@ local function installVisualAccessoryHook(RLMapBridge)
     logf("installed applyPropertyOverrides accessory hook")
 end
 
+-- Map RLRM Phase-1 husbandry vai (1..21) to the equivalent slot in this pack's
+-- V1.0.2 husbandry XML (12 entries). External map mods (e.g. FS25_Witcombe) hard-
+-- code visualAnimalIndex values against the Phase-1 layout when defining their
+-- own subTypes (Witcombe's BULL_JERSEY uses vai=5 expecting Holstein baby). Our
+-- configOverride replaces the husbandry XML, so vai=5 now resolves to
+-- WATER_BUFFALO_KID and the cow renders as a buffalo. This table redirects each
+-- Phase-1 vai to the V1.0.2 slot that holds the same logical model.
+local PHASE1_TO_V102_VAI = {
+    [1]  = 2,    -- Holstein adult       -> V1.0.2 vai 2 (Holstein 4x4)
+    [2]  = 2,    -- Holstein adult dup   -> V1.0.2 vai 2
+    [3]  = 7,    -- Angus adult          -> V1.0.2 vai 7 (beef-v3)
+    [4]  = 7,    -- Angus/Limousin adult -> V1.0.2 vai 7
+    [5]  = 4,    -- BABY_SWISS_BROWN     -> V1.0.2 vai 4 (Holstein 4x4 baby)
+    [6]  = 4,    -- Holstein baby dup    -> V1.0.2 vai 4
+    [7]  = 9,    -- Angus baby           -> V1.0.2 vai 9 (beef-v3 baby)
+    [8]  = 9,    -- Angus baby dup       -> V1.0.2 vai 9
+    [9]  = 6,    -- Holstein calf        -> V1.0.2 vai 6 (Holstein 4x4 calf)
+    [10] = 6,    -- Holstein calf dup    -> V1.0.2 vai 6
+    [11] = 8,    -- Angus calf           -> V1.0.2 vai 8 (beef-v3 calf)
+    [12] = 8,    -- Angus calf dup       -> V1.0.2 vai 8
+    [13] = 3,    -- WATER_BUFFALO_BABY   -> V1.0.2 vai 3
+    [14] = 5,    -- WATER_BUFFALO_KID    -> V1.0.2 vai 5
+    [15] = 1,    -- WATER_BUFFALO        -> V1.0.2 vai 1
+    [16] = 7,    -- beef-v3 adult        -> V1.0.2 vai 7
+    [17] = 8,    -- beef-v3 calf         -> V1.0.2 vai 8
+    [18] = 9,    -- beef-v3 baby         -> V1.0.2 vai 9
+    [19] = 10,   -- HIGHLAND_CATTLE_BABY -> V1.0.2 vai 10
+    [20] = 11,   -- HIGHLAND_CATTLE_KID  -> V1.0.2 vai 11
+    [21] = 12,   -- HIGHLAND_CATTLE      -> V1.0.2 vai 12
+}
+
+-- For foreign subTypes (not in PACK_SUBTYPES) that share a breed name with our
+-- pack atlases, this maps the breed-prefix portion of the name to the
+-- textureIndexes that select that breed's tile within the V1.0.2 atlas.
+-- Without this, foreign Jersey/etc. cows render with random dairy textures
+-- because their bridge XML omits textureIndexes and the atlas exposes all 12.
+local BREED_TEXTURE_INDEXES = {
+    -- Holstein 4x4 dairy atlas (vai 2 adult / 4 baby / 6 calf)
+    JERSEY      = {7, 8},
+    GUERNSEY    = {1, 2},
+    REDHOLSTEIN = {3, 4},
+    AYRSHIRE    = {5, 6},
+    BROWNSWISS  = {9, 10},
+    SWISSBROWN  = {9, 10},
+    HOLSTEIN    = {11, 12},
+}
+
+-- SubTypes whose visualAnimalIndex values are authored against the V1.0.2 layout
+-- (our pack subTypes + base-game subTypes we override + vanilla bridge subTypes).
+-- These must NOT be remapped — they're already correct.
+-- Foreign subTypes whose visualAnimalIndex values are AUTHORED against the
+-- combined synth husbandry XML (with Mechet's slots 13-30 included). These
+-- must NOT be remapped — Charolaise's vai 19/20/21 already correctly point at
+-- Mechet's CharolaiseEtSimmental mesh that we baked into synth slots 19/20/21.
+-- Without this skip, the Phase-1 remap table sends vai 19→10 (Highland) and
+-- the cow renders as a Highland.
+local MECHET_SUBTYPES = {
+    COW_CHAROLAISE   = true, BULL_CHAROLAISE   = true,
+    COW_MONTBELIARDE = true, BULL_MONTBELIARDE = true,
+    COW_SIMMENTAL    = true, BULL_SIMMENTAL    = true,
+    COW_VOSGIENNE    = true, BULL_VOSGIENNE    = true,
+}
+
+local PACK_SUBTYPES = {
+    -- Pack _PACK breeds
+    COW_REDHOLSTEIN_PACK = true, BULL_REDHOLSTEIN_PACK = true,
+    COW_AYRSHIRE_PACK    = true, BULL_AYRSHIRE_PACK    = true,
+    COW_JERSEY_PACK      = true, BULL_JERSEY_PACK      = true,
+    COW_GUERNSEY_PACK    = true, BULL_GUERNSEY_PACK    = true,
+    COW_CHAROLAIS_PACK   = true, BULL_CHAROLAIS_PACK   = true,
+    COW_REDANGUS_PACK    = true, BULL_REDANGUS_PACK    = true,
+    COW_HEREFORD_PACK    = true, BULL_HEREFORD_PACK    = true,
+    COW_SHORTHORN_PACK   = true, BULL_SHORTHORN_PACK   = true,
+    COW_IRISHMOILED_PACK = true, BULL_IRISHMOILED_PACK = true,
+    COW_BRITISHBLUE_PACK = true, BULL_BRITISHBLUE_PACK = true,
+    COW_BELTEDGALLOWAY_PACK = true, BULL_BELTEDGALLOWAY_PACK = true,
+    COW_SIMMENTAL_PACK   = true, BULL_SIMMENTAL_PACK   = true,
+    -- Base-game subTypes our pack overrides with V1.0.2 vai's
+    COW_HOLSTEIN         = true, BULL_HOLSTEIN         = true,
+    COW_SWISS_BROWN      = true, BULL_SWISS_BROWN      = true,
+    COW_LIMOUSIN         = true, BULL_LIMOUSIN         = true,
+    COW_ANGUS            = true, BULL_ANGUS            = true,
+    COW_HEREFORD         = true, BULL_HEREFORD         = true,
+    COW_HIGHLAND_CATTLE  = true, BULL_HIGHLAND_CATTLE  = true,
+    COW_WATERBUFFALO     = true, BULL_WATERBUFFALO     = true,
+    -- Vanilla edition bridge subTypes
+    COW_HOLSTEIN_VANILLA    = true, BULL_HOLSTEIN_VANILLA    = true,
+    COW_REDHOLSTEIN_VANILLA = true, BULL_REDHOLSTEIN_VANILLA = true,
+    COW_BROWNSWISS_VANILLA  = true, BULL_BROWNSWISS_VANILLA  = true,
+    COW_LIMOUSIN_VANILLA    = true, BULL_LIMOUSIN_VANILLA    = true,
+    COW_ANGUS_VANILLA       = true, BULL_ANGUS_VANILLA       = true,
+}
+
+-- Hook RLMapBridge.applyPropertyOverrides to remap stale Phase-1 visualAnimalIndex
+-- values on foreign COW subTypes. Many are loaded in Phase 2 from a map's
+-- map/config/animals.xml (e.g. FS25_Witcombe defines COW_JERSEY there with
+-- vai=5/9/1) — visuals never appear in any Phase-3 bridge XML, so a per-bridge
+-- XML walk would miss them. Instead we walk every COW subType in animalSystem
+-- after each bridge applies (idempotent because each visual is flagged once
+-- remapped) and rewrite Phase-1 vai's to V1.0.2 equivalents. PACK_SUBTYPES are
+-- skipped because their visuals are authored against V1.0.2 directly.
+local function installVisualIndexRemapHook(RLMapBridge)
+    if RLMapBridge.__cowBreedsVaiRemapHooked then return end
+    if RLMapBridge.applyPropertyOverrides == nil then
+        logf("RLMapBridge.applyPropertyOverrides missing, vai remap hook skipped")
+        return
+    end
+
+    -- Find the "_PACK" pack equivalent for a foreign subType (e.g. for
+    -- "COW_JERSEY" return the COW_JERSEY_PACK subType if registered) so we
+    -- can copy textureIndexes + accessory attrs (monitor, earTagLeft, etc.)
+    -- onto the foreign visual. Returns nil if no pack equivalent exists yet
+    -- — common during Witcombe's bridge call (our pack hasn't loaded). The
+    -- caller defers the copy until a later hook call when the source exists.
+    local function findPackEquivalent(animalSystem, cowType, foreignName)
+        local upper = foreignName:upper()
+        if upper:find("_PACK$") or upper:find("_VANILLA$") then return nil end
+        local target = upper .. "_PACK"
+        for _, idx in ipairs(cowType.subTypes) do
+            local s = animalSystem.subTypes and animalSystem.subTypes[idx]
+            if s ~= nil and s.name ~= nil and s.name:upper() == target then return s end
+        end
+        return nil
+    end
+
+    -- Static fallback for textureIndexes only — used when no _PACK equivalent
+    -- exists (e.g. a foreign breed we haven't packed). Derive breed key from
+    -- subType name.
+    local function deriveBreed(subTypeName)
+        local rest = subTypeName:upper():match("^COW_(.+)$")
+                  or subTypeName:upper():match("^BULL_(.+)$")
+        if rest == nil then return nil end
+        return rest:gsub("_", "")
+    end
+
+    local ACCESSORY_ATTRS = {"monitor","earTagLeft","earTagRight","marker","bumId","noseRing"}
+
+    -- Beef breed names (used to pick beef-v3 rig for unknown high vai's).
+    local BEEF_BREEDS = {
+        CHAROLAIS=true, CHAROLAISE=true,
+        SIMMENTAL=true,
+        HEREFORD=true,
+        ANGUS=true, REDANGUS=true,
+        LIMOUSIN=true,
+        SHORTHORN=true,
+        BRITISHBLUE=true,
+        IRISHMOILED=true,
+        BELTEDGALLOWAY=true,
+    }
+
+    -- Resolve a foreign vai to a V1.0.2 husbandry slot. Tries the explicit
+    -- Phase-1 table first; if the vai is out of Phase-1 range (e.g. a map mod
+    -- like FS25_The_Mechet defines its own meshes at vai 22+), falls back to
+    -- age + breed heuristics so the cow at least renders as cattle instead
+    -- of falling through to the default vai 1 (= WATER_BUFFALO in V1.0.2).
+    local function resolveVai(currentVai, minAge, breed)
+        local explicit = PHASE1_TO_V102_VAI[currentVai]
+        if explicit ~= nil then return explicit end
+        if minAge == nil then return nil end
+        local isBeef = breed and BEEF_BREEDS[breed] or false
+        if isBeef then
+            if minAge >= 12 then return 7    -- beef-v3 adult
+            elseif minAge >= 6 then return 8 -- beef-v3 calf
+            else return 9                    -- beef-v3 baby
+            end
+        else
+            if minAge >= 12 then return 2    -- Holstein 4x4 adult
+            elseif minAge >= 6 then return 6 -- Holstein 4x4 calf
+            else return 4                    -- Holstein 4x4 baby
+            end
+        end
+    end
+
+    local function walkAndRemap(animalSystem, bridgeName)
+        if animalSystem == nil or animalSystem.nameToType == nil then return 0 end
+        local cowType = animalSystem.nameToType["COW"]
+        if cowType == nil or cowType.subTypes == nil then return 0 end
+        local remapped = 0
+        local retextured = 0
+        local accessoriesCopied = 0
+        for _, idx in ipairs(cowType.subTypes) do
+            local subType = animalSystem.subTypes and animalSystem.subTypes[idx]
+            if subType ~= nil and subType.name ~= nil and subType.visuals ~= nil then
+                local upper = subType.name:upper()
+                if not PACK_SUBTYPES[upper] and not MECHET_SUBTYPES[upper] then
+                    local source = findPackEquivalent(animalSystem, cowType, subType.name)
+                    local breed = deriveBreed(subType.name)
+                    local breedTex = breed and BREED_TEXTURE_INDEXES[breed]
+                    for _, v in ipairs(subType.visuals) do
+                        -- (1) vai remap — one-shot, doesn't need source.
+                        if v.__cowBreedsVaiRemapped ~= true then
+                            local current = v.visualAnimalIndex
+                            local target = current and resolveVai(current, v.minAge, breed)
+                            if target ~= nil and target ~= current then
+                                v.visualAnimalIndex = target
+                                remapped = remapped + 1
+                            end
+                            if breedTex ~= nil and (v.textureIndexes == nil or #v.textureIndexes == 0) then
+                                v.textureIndexes = { breedTex[1], breedTex[2] }
+                                retextured = retextured + 1
+                            end
+                            v.__cowBreedsVaiRemapped = true
+                        end
+                        -- (2) Accessory + textureIndexes copy from _PACK source.
+                        -- Deferred until source exists; on the bridge call where
+                        -- our pack subTypes get registered, this finally fires.
+                        -- We OVERWRITE rather than only-fill-if-nil because
+                        -- RLRM initializes unspecified accessory attrs to default
+                        -- strings (not nil), and we want the pack's breed-correct
+                        -- pattern (e.g. monitor only on the Jersey tile) to win.
+                        if v.__cowBreedsAccessoryCopied ~= true and source ~= nil and source.visuals ~= nil then
+                            local match = nil
+                            for _, sv in ipairs(source.visuals) do
+                                if sv.minAge == v.minAge then match = sv; break end
+                            end
+                            if match ~= nil then
+                                if match.textureIndexes ~= nil then
+                                    v.textureIndexes = match.textureIndexes
+                                end
+                                for _, attr in ipairs(ACCESSORY_ATTRS) do
+                                    if match[attr] ~= nil then
+                                        v[attr] = match[attr]
+                                        accessoriesCopied = accessoriesCopied + 1
+                                    end
+                                end
+                                v.__cowBreedsAccessoryCopied = true
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        if remapped > 0 or retextured > 0 or accessoriesCopied > 0 then
+            logf("vai remap [%s]: rewrote %d vai, %d textureIndexes, copied %d accessory attr(s)",
+                 tostring(bridgeName), remapped, retextured, accessoriesCopied)
+        end
+        return remapped
+    end
+
+    RLMapBridge.applyPropertyOverrides = Utils.appendedFunction(
+        RLMapBridge.applyPropertyOverrides,
+        function(animalSystem, xmlFile, bridgeName, mapModDir)
+            local ok, err = pcall(walkAndRemap, animalSystem, bridgeName)
+            if not ok then
+                logf("vai remap hook failed for bridge '%s': %s", tostring(bridgeName), tostring(err))
+            end
+        end
+    )
+
+    -- Also hook loadBridgeAnimals so we get a final walk AFTER ALL bridges
+    -- finish — this is when our pack's _PACK subTypes are finally registered
+    -- and the deferred accessory copy from foreign visuals can succeed.
+    -- applyPropertyOverrides only fires for bridges that override existing
+    -- subTypes (Witcombe), so without this our hook never runs again once
+    -- Cow Breeds has loaded.
+    if RLMapBridge.loadBridgeAnimals ~= nil then
+        RLMapBridge.loadBridgeAnimals = Utils.appendedFunction(
+            RLMapBridge.loadBridgeAnimals,
+            function(animalSystem)
+                local ok, err = pcall(walkAndRemap, animalSystem, "<post-loadBridgeAnimals>")
+                if not ok then
+                    logf("vai remap post-bridge hook failed: %s", tostring(err))
+                end
+            end
+        )
+        logf("installed loadBridgeAnimals post-bridge vai remap hook")
+    end
+
+    RLMapBridge.__cowBreedsVaiRemapHooked = true
+    logf("installed applyPropertyOverrides vai remap hook")
+end
+
 -- Hook FillTypeManager.loadMapData. RLRM appends its own loadBridgeFillTypes
 -- (which calls scanAnimalPacks) to this same function. By appending our hook
 -- first, our fn runs in the chain BEFORE RLRM's appended fn, letting us install
 -- a scanAnimalPacks hook just in time. By that point RLMapBridge is defined.
 -- We also install the applyPropertyOverrides accessory hook here for the same
 -- timing reason.
-local function installFillTypeManagerHook(modDir)
+--
+-- Importantly, we ALSO defer companion-mod detection (AnimalPackage / Mechet)
+-- and synth regeneration to this hook. Map mods like Mechet aren't yet present
+-- in g_modIsLoaded at module-source time — they only get registered once the
+-- save's map starts loading, which happens before loadMapData runs but after
+-- our module is sourced. So bridgeLateBootstrap() runs the detection/regen
+-- once per launch when this hook fires.
+local function installFillTypeManagerHook(packModDir, bridgeLateBootstrap)
     if FillTypeManager == nil or FillTypeManager.loadMapData == nil then
         logf("FillTypeManager.loadMapData missing, hook skipped")
         return
@@ -973,6 +1418,12 @@ local function installFillTypeManagerHook(modDir)
     FillTypeManager.loadMapData = Utils.appendedFunction(
         FillTypeManager.loadMapData,
         function(self)
+            -- Late detection + regeneration: g_modIsLoaded is fully populated by
+            -- now (including map mods). bridgeLateBootstrap returns the synth
+            -- dir to register, or nil if no companion mod was found.
+            local tempDir = bridgeLateBootstrap(packModDir)
+            if tempDir == nil then return end
+
             local RLMapBridge = getRLMapBridge()
             if RLMapBridge == nil or RLMapBridge.scanAnimalPacks == nil then
                 logf("RLMapBridge not available at FillTypeManager.loadMapData; bridge inactive")
@@ -981,46 +1432,113 @@ local function installFillTypeManagerHook(modDir)
             if not RLMapBridge.__cowBreedsVanillaBridgeHooked then
                 RLMapBridge.scanAnimalPacks = Utils.appendedFunction(
                     RLMapBridge.scanAnimalPacks,
-                    function() manualLoadSynthPack(modDir) end
+                    function() manualLoadSynthPack(tempDir) end
                 )
                 RLMapBridge.__cowBreedsVanillaBridgeHooked = true
-                logf("installed scanAnimalPacks appended hook")
+                logf("installed scanAnimalPacks appended hook (synth=%s)", tempDir)
             end
             installVisualAccessoryHook(RLMapBridge)
+            installVisualIndexRemapHook(RLMapBridge)
         end
     )
     FillTypeManager.__cowBreedsVanillaBridgeHooked = true
 end
 
-local function regenerate(vanillaDir, tempDir, packModDir)
-    -- Read vanilla source XMLs
-    local cowXml = loadXMLFile("vanillaCow", ensureSlash(vanillaDir) .. "xmls/animals/cow.xml")
-    if cowXml == nil then error("cannot load vanilla xmls/animals/cow.xml", 0) end
-    local fillXml = loadXMLFile("vanillaFill", ensureSlash(vanillaDir) .. "xmls/fillTypes.xml")
-    if fillXml == nil then delete(cowXml); error("cannot load vanilla xmls/fillTypes.xml", 0) end
-    local vanillaHusbXml = loadXMLFile("vanillaHusb",
-        ensureSlash(vanillaDir) .. "animals/domesticated/cattle/husbandryAnimalsCattle.xml")
-    if vanillaHusbXml == nil then delete(cowXml); delete(fillXml); error("cannot load vanilla husbandryAnimalsCattle.xml", 0) end
+-- Minimal animals.xml + fillTypes.xml stubs for the Mechet-only synth bundle.
+-- The synth pack still needs an animals.xml (for the configOverride) but no
+-- vanilla bridge subTypes get registered.
+local function buildMinimalAnimalsXml()
+    return table.concat({
+        '<?xml version="1.0" encoding="utf-8" standalone="no" ?>',
+        '<animals>',
+        '\t<configOverrides>',
+        '\t\t<override type="COW" configFilename="models/cow/animals.xml"/>',
+        '\t</configOverrides>',
+        '\t<breeds>',
+        '\t</breeds>',
+        '</animals>',
+        ''
+    }, "\n")
+end
 
-    -- Read this mod's existing models/cow/animals.xml so we can put its 21 entries
+local function buildMinimalFillTypesXml()
+    return table.concat({
+        '<?xml version="1.0" encoding="utf-8" standalone="no" ?>',
+        '<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/shared/xml/schema/fillTypes.xsd">',
+        '\t<fillTypes>',
+        '\t</fillTypes>',
+        '</map>',
+        ''
+    }, "\n")
+end
+
+local function regenerate(vanillaDir, tempDir, packModDir, mechetDir)
+    -- Vanilla source XMLs are optional — only load when AnimalPackage is present.
+    local cowXml, fillXml, vanillaHusbXml = nil, nil, nil
+    if vanillaDir ~= nil then
+        cowXml = loadXMLFile("vanillaCow", ensureSlash(vanillaDir) .. "xmls/animals/cow.xml")
+        if cowXml == nil then error("cannot load vanilla xmls/animals/cow.xml", 0) end
+        fillXml = loadXMLFile("vanillaFill", ensureSlash(vanillaDir) .. "xmls/fillTypes.xml")
+        if fillXml == nil then delete(cowXml); error("cannot load vanilla xmls/fillTypes.xml", 0) end
+        vanillaHusbXml = loadXMLFile("vanillaHusb",
+            ensureSlash(vanillaDir) .. "animals/domesticated/cattle/husbandryAnimalsCattle.xml")
+        if vanillaHusbXml == nil then delete(cowXml); delete(fillXml); error("cannot load vanilla husbandryAnimalsCattle.xml", 0) end
+    end
+
+    -- Read this mod's existing models/cow/animals.xml so we can put its 12 entries
     -- first in the combined husbandry config (preserving _pack subtype indices).
     local packHusbXml = loadXMLFile("packHusb",
         ensureSlash(packModDir) .. "models/cow/animals.xml")
     if packHusbXml == nil then
-        delete(cowXml); delete(fillXml); delete(vanillaHusbXml)
+        if cowXml then delete(cowXml) end
+        if fillXml then delete(fillXml) end
+        if vanillaHusbXml then delete(vanillaHusbXml) end
         error("cannot load pack models/cow/animals.xml", 0)
     end
     local packCount = countHusbandryEntries(packHusbXml)
     logf("pack husbandry has %d animal entries", packCount)
 
-    -- Pre-compute vanilla source-vai → output-vai map. Used by both
-    -- buildAnimalsXml (so subType visuals reference correct output slots) AND
-    -- buildCombinedHusbandryXml (so the husbandry XML emits matching entries).
-    local origToOutput = allocateVanillaSlots(packHusbXml, VANILLA_HUSBANDRY_LIMIT)
+    -- Optionally read Mechet's husbandry XML (for the _synth_mechet*/ builds).
+    local mechetHusbXml = nil
+    local effectiveVanillaLimit = vanillaDir and VANILLA_HUSBANDRY_LIMIT or 0
+    local reservedSlots = nil
+    if mechetDir ~= nil then
+        mechetHusbXml = loadXMLFile("mechetHusb", ensureSlash(mechetDir) .. MECHET_HUSB_PATH)
+        if mechetHusbXml ~= nil then
+            -- 32 cap: 12 pack + 12 Mechet (19-30) = 24. With Mechet loaded the
+            -- vanilla bridge collapses to bulls-only across all 4 growth stages
+            -- for both dairy and beef rigs:
+            --   source vai 5-8  = dairy bulls (Holstein/RedHolstein/BrownSwiss)
+            --   source vai 13-16 = beef bulls (Limousin/Angus)
+            -- 8 husbandry slots used. Cow _VANILLA subTypes get 0 visuals
+            -- (Mechet's dairy and our pack already cover that side).
+            -- Total: 12 pack + 8 vanilla + 12 Mechet = 32 / 32 (exactly at cap).
+            if vanillaDir ~= nil then
+                effectiveVanillaLimit = { 5, 6, 7, 8, 13, 14, 15, 16 }
+            end
+            reservedSlots = {}
+            for vai = MECHET_VAI_START, MECHET_VAI_END do reservedSlots[vai] = true end
+            local vanillaDesc = (type(effectiveVanillaLimit) == "table")
+                and ("source vai's {" .. table.concat(effectiveVanillaLimit, ",") .. "}")
+                or  ("limit " .. tostring(effectiveVanillaLimit))
+            logf("Mechet husbandry loaded; vanilla %s, reserved vai %d-%d",
+                 vanillaDesc, MECHET_VAI_START, MECHET_VAI_END)
+        else
+            logf("Mechet husbandry XML missing at %s%s; ignoring Mechet support", mechetDir, MECHET_HUSB_PATH)
+        end
+    end
+
+    -- Pre-compute vanilla source-vai → output-vai map. Empty when AnimalPackage
+    -- is absent, but allocateVanillaSlots is still called so reservedSlots is
+    -- consistently honoured.
+    local origToOutput = allocateVanillaSlots(packHusbXml, effectiveVanillaLimit, reservedSlots)
     do
         local emitted = 0
         for vai = 1, 32 do if origToOutput[vai] then emitted = emitted + 1 end end
-        logf("vanilla slot map: walked 1..%d, emitted %d entries", VANILLA_HUSBANDRY_LIMIT, emitted)
+        local walkedDesc = (type(effectiveVanillaLimit) == "table")
+            and ("vai {" .. table.concat(effectiveVanillaLimit, ",") .. "}")
+            or  ("1.." .. tostring(effectiveVanillaLimit))
+        logf("vanilla slot map: walked %s, emitted %d entries", walkedDesc, emitted)
     end
 
     createFolder(tempDir)
@@ -1028,23 +1546,30 @@ local function regenerate(vanillaDir, tempDir, packModDir)
     createFolder(tempDir .. "models/cow")
     createFolder(tempDir .. "translations")
 
-    writeFile(tempDir .. "rlrm_pack.xml",  buildPackXml())
-    writeFile(tempDir .. "animals.xml",    buildAnimalsXml(cowXml, vanillaDir, origToOutput))
-    writeFile(tempDir .. "fillTypes.xml",  buildFillTypesXml(fillXml))
+    writeFile(tempDir .. "rlrm_pack.xml", buildPackXml())
+    if vanillaDir ~= nil then
+        writeFile(tempDir .. "animals.xml",   buildAnimalsXml(cowXml, vanillaDir, origToOutput))
+        writeFile(tempDir .. "fillTypes.xml", buildFillTypesXml(fillXml))
+    else
+        -- Mechet-only mode: no vanilla bridge subTypes, just the configOverride stub.
+        writeFile(tempDir .. "animals.xml",   buildMinimalAnimalsXml())
+        writeFile(tempDir .. "fillTypes.xml", buildMinimalFillTypesXml())
+    end
     -- Combined husbandry XML — referenced by configOverride in synth animals.xml.
     -- Asset paths inside this file are emitted relative to synthHusbDir using `..`
-    -- traversal so the engine routes through both the pack and vanilla mod zips.
+    -- traversal so the engine routes through both the pack and companion mod dirs.
     local synthHusbDir = tempDir .. "models/cow/"
     writeFile(tempDir .. "models/cow/animals.xml",
-        buildCombinedHusbandryXml(packHusbXml, vanillaHusbXml, packModDir, vanillaDir, synthHusbDir, origToOutput))
+        buildCombinedHusbandryXml(packHusbXml, vanillaHusbXml, packModDir, vanillaDir, synthHusbDir, origToOutput, mechetHusbXml, mechetDir))
     local trans = buildTranslationsXml()
     writeFile(tempDir .. "translations/translation_en.xml", trans)
     writeFile(tempDir .. "translations/translation_de.xml", trans)
 
-    delete(cowXml)
-    delete(fillXml)
-    delete(vanillaHusbXml)
+    if cowXml         then delete(cowXml) end
+    if fillXml        then delete(fillXml) end
+    if vanillaHusbXml then delete(vanillaHusbXml) end
     delete(packHusbXml)
+    if mechetHusbXml ~= nil then delete(mechetHusbXml) end
 end
 
 -- Find the AnimalPackage mod even if its zip filename uses different casing
@@ -1078,71 +1603,136 @@ local function synthIsComplete(tempDir)
        and fileExists(tempDir .. "translations/translation_de.xml")
 end
 
-local function setup()
+-- Late bootstrap: runs once on first FillTypeManager.loadMapData call.
+-- Returns the synth dir to register with RLRM, or nil if no companion mod
+-- is loaded. By this point map mods (Mechet) ARE in g_modIsLoaded.
+local bridgeLateBootstrapDone = false
+local function bridgeLateBootstrap(packModDir)
+    if bridgeLateBootstrapDone then return nil end
+    bridgeLateBootstrapDone = true
+
     if g_modIsLoaded == nil then
-        logf("g_modIsLoaded nil; bridge skipped")
-        return
+        logf("g_modIsLoaded nil at late bootstrap; bridge skipped")
+        return nil
     end
 
+    -- Detect both companion mods. Bridge activates if EITHER is present;
+    -- only skips if neither AnimalPackage nor Mechet is loaded.
     local actualVanillaName = findVanillaModName()
-    if actualVanillaName == nil then
-        logf("AnimalPackage not found; bridge skipped. Loaded mods follow:")
+    local mechetName        = findMechetMod()
+
+    if actualVanillaName == nil and mechetName == nil then
+        logf("Neither AnimalPackage nor Mechet found; bridge skipped. Loaded mods follow:")
         local names = {}
         for name, _ in pairs(g_modIsLoaded) do table.insert(names, name) end
         table.sort(names)
         for _, name in ipairs(names) do logf("  loaded: %s", name) end
-        return
-    end
-    if actualVanillaName ~= VANILLA_MOD then
-        logf("matched AnimalPackage under alternate name: '%s'", actualVanillaName)
+        return nil
     end
 
-    local vanillaDir = g_modNameToDirectory[actualVanillaName]
-    if vanillaDir == nil or vanillaDir == "" then
-        logf("vanilla mod directory unknown; bridge skipped")
-        return
+    local vanillaDir = nil
+    if actualVanillaName ~= nil then
+        if actualVanillaName ~= VANILLA_MOD then
+            logf("matched AnimalPackage under alternate name: '%s'", actualVanillaName)
+        end
+        vanillaDir = g_modNameToDirectory[actualVanillaName]
+        if vanillaDir == nil or vanillaDir == "" then
+            logf("AnimalPackage directory unknown; vanilla bridge inactive")
+            vanillaDir = nil
+        else
+            vanillaDir = ensureSlash(vanillaDir)
+        end
     end
-    vanillaDir = ensureSlash(vanillaDir)
 
+    local mechetDir = nil
+    if mechetName ~= nil then
+        mechetDir = g_modNameToDirectory[mechetName]
+        if mechetDir == nil or mechetDir == "" then
+            logf("Mechet detected (%s) but mod directory unknown; Mechet support inactive", mechetName)
+            mechetDir = nil
+        else
+            mechetDir = ensureSlash(mechetDir)
+            logf("Mechet detected at %s", mechetDir)
+        end
+    end
+
+    if vanillaDir == nil and mechetDir == nil then
+        logf("Both companion mods detected but directories unknown; bridge skipped")
+        return nil
+    end
+
+    if packModDir == nil or packModDir == "" then
+        logf("cannot resolve pack mod directory; bridge skipped")
+        return nil
+    end
+
+    -- Synth dir lives INSIDE the pack mod's directory so relative `..` paths
+    -- in the combined husbandry XML can navigate to companion mods (same drive
+    -- guaranteed). Cross-drive `..` traversal doesn't work and the engine
+    -- doesn't recognize Windows drive letters (`F:/`) as absolute, so any path
+    -- resolution must produce a relative path from synth/models/cow/ back to
+    -- the target asset.
+    --
+    -- Three synth bundles exist:
+    --   _synth/             — only AnimalPackage loaded
+    --   _synth_mechet/      — both AnimalPackage AND Mechet loaded
+    --   _synth_mechet_only/ — only Mechet loaded (no vanilla bridge subTypes)
+    -- Each is pre-built unzipped and shipped in the zip; runtime regeneration
+    -- to userProfile doesn't work because the synth's relative paths can't
+    -- traverse drive boundaries.
+    local synthSubdir
+    if vanillaDir ~= nil and mechetDir ~= nil then
+        synthSubdir = "_synth_mechet/"
+    elseif mechetDir ~= nil then
+        synthSubdir = "_synth_mechet_only/"
+    else
+        synthSubdir = "_synth/"
+    end
+    local tempDir = ensureSlash(packModDir) .. synthSubdir
+    local vanillaVersion = vanillaDir and readVanillaModVersion(vanillaDir) or "n/a"
+
+    -- Shipping path: dev populates _synth*/ once unzipped, commits it, players
+    -- load the .zip read-only. If the bundle is already complete, skip regen
+    -- entirely (writes would throw against a zipped mod dir).
+    if synthIsComplete(tempDir) then
+        logf("synth bundle present at %s; skipping regenerate (vanilla=%s, mechet=%s)",
+             tempDir, tostring(vanillaDir), tostring(mechetDir))
+    else
+        logf("regenerating bridge at %s (vanilla=%s, mechet=%s)",
+             tempDir, tostring(vanillaDir), tostring(mechetDir))
+        local rok, rerr = pcall(regenerate, vanillaDir, tempDir, packModDir, mechetDir)
+        if not rok then
+            logf("regenerate failed: %s; bridge inactive", tostring(rerr))
+            return nil
+        end
+        logf("regenerated bridge files at %s", tempDir)
+    end
+
+    -- One-time warning when both AnimalPackage and Mechet are loaded.
+    -- Scheduled for after-load so g_gui is ready by the time the dialog fires.
+    if vanillaDir ~= nil and mechetDir ~= nil then
+        pcall(maybeScheduleMechetVanillaWarning)
+    end
+
+    return tempDir
+end
+
+-- Module-source bootstrap: just install the FillTypeManager hook with the pack
+-- directory and a deferred bootstrap callback. Real detection + regeneration
+-- happens later inside the hook (after maps load and g_modIsLoaded is fully
+-- populated). We do NOT add a fake mod to g_modIsLoaded: doing so caused other
+-- game code paths (g_onCreateUtil init, onCreate script registration) to crash
+-- when iterating loaded mods because our synthetic mod has no real modDesc.xml
+-- on disk. Instead, we wait until RLMapBridge is loaded, then append a manual
+-- pack-load to RLMapBridge.scanAnimalPacks so our pack ends up in
+-- RLMapBridge.activeBridges through RLRM's own code path.
+local function setup()
     local packModDir = g_currentModDirectory or g_modNameToDirectory[g_currentModName or ""]
     if packModDir == nil or packModDir == "" then
         logf("cannot resolve pack mod directory; bridge skipped")
         return
     end
-
-    -- Synth dir lives INSIDE the pack mod's directory so relative `..` paths
-    -- in the combined husbandry XML can navigate to the AnimalPackage mod
-    -- (same drive guaranteed). Cross-drive `..` traversal doesn't work, and
-    -- the engine doesn't recognize Windows drive letters (`F:/`) as absolute,
-    -- so any path resolution must produce a relative path from synth/models/cow/
-    -- back to the target asset.
-    local tempDir = ensureSlash(packModDir) .. "_synth/"
-    local vanillaVersion = readVanillaModVersion(vanillaDir)
-
-    -- Shipping path: dev populates _synth/ once unzipped, commits it, players
-    -- load the .zip read-only. If the bundle is already complete, skip regen
-    -- entirely (writes would throw against a zipped mod dir).
-    if synthIsComplete(tempDir) then
-        logf("synth bundle present at %s; skipping regenerate (vanilla v%s)",
-             tempDir, vanillaVersion)
-    else
-        logf("regenerating bridge (vanilla v%s, pack=%s)", vanillaVersion, packModDir)
-        local rok, rerr = pcall(regenerate, vanillaDir, tempDir, packModDir)
-        if not rok then
-            logf("regenerate failed: %s; bridge inactive", tostring(rerr))
-            return
-        end
-        logf("regenerated bridge files at %s", tempDir)
-    end
-
-    -- Hook RLRM's bridge directly. We do NOT add a fake mod to g_modIsLoaded:
-    -- doing so caused other game code paths (g_onCreateUtil init, onCreate
-    -- script registration) to crash when iterating loaded mods because our
-    -- synthetic mod has no real modDesc.xml on disk. Instead, we wait until
-    -- RLMapBridge is loaded (by hooking FillTypeManager.loadMapData), then
-    -- append a manual pack-load to RLMapBridge.scanAnimalPacks so our pack
-    -- ends up in RLMapBridge.activeBridges through RLRM's own code path.
-    installFillTypeManagerHook(tempDir)
+    installFillTypeManagerHook(packModDir, bridgeLateBootstrap)
 end
 
 local ok, err = pcall(setup)
