@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<texts>
+		<text name="breed_holstein_vanilla" text="Holstein (Vanilla)"/>
+		<text name="fillType_cow_holstein_vanilla" text="Holstein Cow (Vanilla)"/>
+		<text name="fillType_bull_holstein_vanilla" text="Holstein Bull (Vanilla)"/>
+		<text name="breed_redholstein_vanilla" text="Red Holstein (Vanilla)"/>
+		<text name="fillType_cow_redholstein_vanilla" text="Red Holstein Cow (Vanilla)"/>
+		<text name="fillType_bull_redholstein_vanilla" text="Red Holstein Bull (Vanilla)"/>
+		<text name="breed_brownswiss_vanilla" text="Brown Swiss (Vanilla)"/>
+		<text name="fillType_cow_brownswiss_vanilla" text="Brown Swiss Cow (Vanilla)"/>
+		<text name="fillType_bull_brownswiss_vanilla" text="Brown Swiss Bull (Vanilla)"/>
+		<text name="breed_limousin_vanilla" text="Limousin (Vanilla)"/>
+		<text name="fillType_cow_limousin_vanilla" text="Limousin Cow (Vanilla)"/>
+		<text name="fillType_bull_limousin_vanilla" text="Limousin Bull (Vanilla)"/>
+		<text name="breed_angus_vanilla" text="Angus (Vanilla)"/>
+		<text name="fillType_cow_angus_vanilla" text="Angus Cow (Vanilla)"/>
+		<text name="fillType_bull_angus_vanilla" text="Angus Bull (Vanilla)"/>
+	</texts>
+</l10n>

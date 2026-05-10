@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<rlrmPack name="Cow Breeds - Vanilla Bridge" author="Con_Gan" version="0.5.6.0">
+	<animals path="animals.xml"/>
+	<fillTypes path="fillTypes.xml"/>
+	<translations prefix="translations/translation"/>
+</rlrmPack>
