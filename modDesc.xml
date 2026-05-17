@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="107">
 	<author>Con_Gan</author>
-	<version>1.0.3.0</version>
+	<version>1.0.4.0</version>
 	<title>
 		<en>Cow Breeds Pack for RLRM</en>
 		<de>Rinderrassen-Paket für RLRM</de>
 	</title>
 	<description>
-		<en><![CDATA[Adds 12 new cow breeds with texture variation to Realistic Livestock RM.
+		<en><![CDATA[Adds 14 new cow breeds with texture variation to Realistic Livestock RM.
 
-Dairy: Red Holstein, Ayrshire, Jersey, Guernsey.
+Dairy: Red Holstein, Ayrshire, Jersey, Guernsey, Kerry, Shorthorn Milkers.
 Beef: Red Angus, Hereford, Charolais, Shorthorn, Irish Moiled, British Blue, Belted Galloway, Simmental.
 
 Requires Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></en>
-		<de><![CDATA[Fuegt 12 neue Rinderrassen mit Texturvariationen zu Realistic Livestock RM hinzu.
+		<de><![CDATA[Fuegt 14 neue Rinderrassen mit Texturvariationen zu Realistic Livestock RM hinzu.
 
-Milch: Red Holstein, Ayrshire, Jersey, Guernsey.
+Milch: Red Holstein, Ayrshire, Jersey, Guernsey, Kerry, Shorthorn Milkers.
 Fleisch: Red Angus, Hereford, Charolais, Shorthorn, Irish Moiled, British Blue, Belted Galloway, Simmental.
 
 Benoetigt Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></de>

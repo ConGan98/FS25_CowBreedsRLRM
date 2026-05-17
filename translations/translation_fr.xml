@@ -41,6 +41,10 @@
 		<text name="fillType_bull_jersey_pack" text="Taureau Jersey "/>
 		<text name="fillType_cow_hereford_pack" text="Hereford "/>
 		<text name="fillType_bull_hereford_pack" text="Taureau Hereford "/>
+		<text name="fillType_cow_kerry_pack" text="Kerry "/>
+		<text name="fillType_bull_kerry_pack" text="Taureau Kerry "/>
+		<text name="fillType_cow_shorthornmilkers_pack" text="Shorthorn Milkers "/>
+		<text name="fillType_bull_shorthornmilkers_pack" text="Taureau Shorthorn Milkers "/>
 
 		<!-- Breed display names -->
 		<text name="breed_red_holstein_pack" text="Red Holstein"/>
@@ -55,6 +59,8 @@
 		<text name="breed_guernsey_pack" text="Guernsey"/>
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_hereford_pack" text="Hereford"/>
+		<text name="breed_kerry_pack" text="Kerry"/>
+		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
 
 	</texts>
 </l10n>

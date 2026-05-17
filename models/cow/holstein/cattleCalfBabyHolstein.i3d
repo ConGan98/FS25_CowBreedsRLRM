@@ -6,7 +6,7 @@
   </Asset>
 
   <Files>
-    <File fileId="1" filename="cattleCalfHolstein_diffuse.png"/>
+    <File fileId="1" filename="cattleHolstein_diffuse.png"/>
     <File fileId="7" filename="../../earTags.i3d"/>
     <File fileId="9" filename="../../earTagsRight.i3d"/>
     <File fileId="8" filename="../../monitor.i3d"/>

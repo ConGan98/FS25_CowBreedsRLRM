@@ -27,6 +27,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotion.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -57,6 +61,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionBaby.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -87,6 +95,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -106,6 +118,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<node index="1|0|0" visibility="false"/>
 				<node index="1|1|0" visibility="false"/>
 				<node index="1|2|0" visibility="false"/>
@@ -128,6 +144,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -147,6 +167,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/>
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/>
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionBaby.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>

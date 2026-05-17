@@ -5,7 +5,7 @@
 
 
 ## FS25_CowBreedsRLRM
-With the help of Ritter in creating the base structure of the mod, we are able to introduce 12 new cow breeds to the FS25_RealisticLivestockRM mod. This is a companion mod to work with FS25_Realistic_livestock. This mod adds new breeds with corresponding textures for each one. The 3D models of the base game cows are reused, so the 3D assets may appear larger or smaller than the actual breed of cow.
+With the help of Ritter in creating the base structure of the mod, we are able to introduce 14 new cow breeds to the FS25_RealisticLivestockRM mod. This is a companion mod to work with FS25_Realistic_livestock. This mod adds new breeds with corresponding textures for each one. The 3D models of the base game cows are reused, so the 3D assets may appear larger or smaller than the actual breed of cow.
 
 ## Requires
 - [FS25_RealisticLivestockRM](https://github.com/rittermod/FS25_RealisticLivestockRM) — required. v1.2.4.0 or newer recommended for the built-in Le Mechet bridge.
@@ -14,14 +14,16 @@ With the help of Ritter in creating the base structure of the mod, we are able t
 
 ## Features
 
-### Twelve new breeds (always on)
+### Fourteen new breeds (always on)
 Values adjusted to represent each breed — Holstein gives the most milk while Charolais and Angus gain the most weight for beef production.
 
-**Four new dairy breeds**
+**Six new dairy breeds**
 - Red Holstein
 - Ayrshire
 - Jersey
 - Guernsey
+- Kerry
+- Shorthorn Milkers
 
 **Eight new beef breeds**
 - Red Angus
@@ -77,6 +79,8 @@ If adding to an existing save game, refresh the animal dealer in settings so the
 
 ## Compatibility
 - Save-game safe: existing animals on a save before installing this pack will keep their breed; new breeds become purchasable from the dealer once you refresh.
+- Pre-v1.0.4 saves (when subType identifiers used the lowercase `_pack` suffix, or no suffix at all) are auto-migrated on load by `Script/Migration.lua` — no manual action needed.
+- The "Hereford" entry in the animal dealer is this pack's `HEREFORD_PACK`. RLRM's own bundled Hereford still exists and remains usable on existing saves with its stock RLRM appearance.
 - Multiplayer supported.
 - The bridge writes nothing to your `mods/` folder — when shipped zipped, it loads the right pre-built synth bundle (`_synth/`, `_synth_mechet/`, or `_synth_mechet_only/`) read-only from inside the pack.
 - Save-compatible with the [FS25_Witcombe](https://www.farming-simulator.com/) map: Witcombe's Jersey breed renders correctly via the foreign-bridge vai remap (no Witcombe-specific synth needed).
