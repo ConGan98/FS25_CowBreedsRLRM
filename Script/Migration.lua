@@ -1,9 +1,11 @@
--- Save-game migration for the _pack breed rename.
+-- Save-game migration for the breed-ID renames.
 --
--- Saves written before all 12 breeds were given a "_pack" suffix contain the
--- old subType strings (e.g. "COW_REDHOLSTEIN"). The registered subTypes are now
--- "COW_REDHOLSTEIN_pack", so a stock lookup returns nil and RLRM drops the
--- animal on load (see AnimalPersistence.loadFromXMLFile).
+-- Two historical forms of the subType IDs exist in the wild:
+--   1. Pre-pack:      "COW_REDHOLSTEIN"       (original v0.1 release)
+--   2. Intermediate:  "COW_REDHOLSTEIN_pack"  (lowercase suffix, brief window)
+-- The current registered form is "COW_REDHOLSTEIN_PACK" (uppercase suffix).
+-- Uppercase was chosen so the breed string matches RLRM's MapBridge, which
+-- uppercases breed names when populating BREED_TO_NAME / BREED_TO_MARKER_COLOUR.
 --
 -- This hook intercepts AnimalSystem:getSubTypeIndexByName: if the requested
 -- name is a known legacy ID, it retries with the renamed equivalent. The next
@@ -11,30 +13,23 @@
 -- name, so the on-disk IDs are upgraded automatically and the alias path is
 -- only walked once per legacy animal.
 
-local SUBTYPE_ALIASES = {
-    COW_REDHOLSTEIN     = "COW_REDHOLSTEIN_pack",
-    BULL_REDHOLSTEIN    = "BULL_REDHOLSTEIN_pack",
-    COW_AYRSHIRE        = "COW_AYRSHIRE_pack",
-    BULL_AYRSHIRE       = "BULL_AYRSHIRE_pack",
-    COW_JERSEY          = "COW_JERSEY_pack",
-    BULL_JERSEY         = "BULL_JERSEY_pack",
-    COW_GUERNSEY        = "COW_GUERNSEY_pack",
-    BULL_GUERNSEY       = "BULL_GUERNSEY_pack",
-    COW_CHAROLAIS       = "COW_CHAROLAIS_pack",
-    BULL_CHAROLAIS      = "BULL_CHAROLAIS_pack",
-    COW_REDANGUS        = "COW_REDANGUS_pack",
-    BULL_REDANGUS       = "BULL_REDANGUS_pack",
-    COW_SHORTHORN       = "COW_SHORTHORN_pack",
-    BULL_SHORTHORN      = "BULL_SHORTHORN_pack",
-    COW_IRISHMOILED     = "COW_IRISHMOILED_pack",
-    BULL_IRISHMOILED    = "BULL_IRISHMOILED_pack",
-    COW_BRITISHBLUE     = "COW_BRITISHBLUE_pack",
-    BULL_BRITISHBLUE    = "BULL_BRITISHBLUE_pack",
-    COW_BELTEDGALLOWAY  = "COW_BELTEDGALLOWAY_pack",
-    BULL_BELTEDGALLOWAY = "BULL_BELTEDGALLOWAY_pack",
-    COW_SIMMENTAL       = "COW_SIMMENTAL_pack",
-    BULL_SIMMENTAL      = "BULL_SIMMENTAL_pack",
+local PACK_BREEDS = {
+    "REDHOLSTEIN", "AYRSHIRE", "JERSEY", "GUERNSEY", "CHAROLAIS", "REDANGUS",
+    "SHORTHORN", "IRISHMOILED", "BRITISHBLUE", "BELTEDGALLOWAY", "SIMMENTAL",
+    "HEREFORD",
 }
+
+local SUBTYPE_ALIASES = {}
+for _, b in ipairs(PACK_BREEDS) do
+    local target_cow  = "COW_"  .. b .. "_PACK"
+    local target_bull = "BULL_" .. b .. "_PACK"
+    -- Pre-pack form (no suffix)
+    SUBTYPE_ALIASES["COW_"  .. b] = target_cow
+    SUBTYPE_ALIASES["BULL_" .. b] = target_bull
+    -- Intermediate form (lowercase _pack)
+    SUBTYPE_ALIASES["COW_"  .. b .. "_pack"] = target_cow
+    SUBTYPE_ALIASES["BULL_" .. b .. "_pack"] = target_bull
+end
 
 local function migrateGetSubTypeIndexByName(self, superFunc, name)
     local idx = superFunc(self, name)

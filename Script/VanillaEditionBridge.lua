@@ -8,7 +8,7 @@
 -- — RLRM then processes it through its normal flow, which applies our config
 -- override and registers our _vanilla subtypes alongside its own.
 
-print("[CowBreedsRLRM/VanillaBridge] module sourced (v0.5.6.0)")
+print("[CowBreedsRLRM/VanillaBridge] module sourced (v0.5.7.0)")
 
 -- Kill switch: if this file exists, the bridge does nothing.
 -- Path: <userProfile>/modSettings/CowBreedsRLRM_VanillaBridge.disabled
@@ -24,7 +24,7 @@ local TAG          = "[CowBreedsRLRM/VanillaBridge]"
 local VANILLA_MOD  = "FS25_AnimalPackage_vanillaEdition"
 local SYNTH_NAME   = "FS25_CowBreedsRLRM_VanillaBridge"
 local SYNTH_TITLE  = "Cow Breeds - Vanilla Bridge"
-local SYNTH_VERSION = "0.5.6.0"
+local SYNTH_VERSION = "0.5.7.0"
 local SUFFIX       = "_vanilla"
 
 -- Whitelisted breeds. Engine has a confirmed hard 32-entry-per-husbandry-XML
@@ -1200,6 +1200,8 @@ local PACK_SUBTYPES = {
     COW_BRITISHBLUE_PACK = true, BULL_BRITISHBLUE_PACK = true,
     COW_BELTEDGALLOWAY_PACK = true, BULL_BELTEDGALLOWAY_PACK = true,
     COW_SIMMENTAL_PACK   = true, BULL_SIMMENTAL_PACK   = true,
+    COW_KERRY_PACK       = true, BULL_KERRY_PACK       = true,
+    COW_SHORTHORNMILKERS_PACK = true, BULL_SHORTHORNMILKERS_PACK = true,
     -- Base-game subTypes our pack overrides with V1.0.2 vai's
     COW_HOLSTEIN         = true, BULL_HOLSTEIN         = true,
     COW_SWISS_BROWN      = true, BULL_SWISS_BROWN      = true,

@@ -29,6 +29,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Holstein -->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Kerry -->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotion.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -61,6 +65,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Holstein -->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Kerry -->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionBaby.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -93,6 +101,10 @@
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
 				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Holstein -->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Kerry -->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
@@ -113,6 +125,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--British Blue-->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Shorthorn-->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--IrishMoiled-->
 				<node index="1|0|0" visibility="false"/>
 				<node index="1|1|0" visibility="false"/>
 				<node index="1|2|0" visibility="false"/>
@@ -136,6 +152,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--British Blue-->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Shorthorn-->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--IrishMoiled-->
 							
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
@@ -157,6 +177,10 @@
 				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
 				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--British Blue-->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Shorthorn-->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--IrishMoiled-->
 				
 				
 			</assets>

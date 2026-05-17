@@ -7,7 +7,7 @@
 
   <Files>
     <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml"/>
-    <File fileId="1" filename="cattleCalf_diffuse.png"/>
+    <File fileId="1" filename="cattleAngus_diffuse.png"/>
     <File fileId="2" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_normal.png"/>
     <File fileId="3" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_specular.png"/>
     <File fileId="6" filename="$dataS/character/animals/domesticated/cow/cattle_alpha.png"/>

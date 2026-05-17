@@ -25,7 +25,11 @@
 		<text name="fillType_cow_jersey_pack" text="Jersey Cow"/>		
 		<text name="fillType_bull_jersey_pack" text="Jersey Bull"/>	
 		<text name="fillType_cow_hereford_pack" text="Hereford cow"/>
-		<text name="fillType_bull_hereford_pack" text="Hereford Bull"/>		
+		<text name="fillType_bull_hereford_pack" text="Hereford Bull"/>
+		<text name="fillType_cow_kerry_pack" text="Kerry Cow"/>
+		<text name="fillType_bull_kerry_pack" text="Kerry Bull"/>
+		<text name="fillType_cow_shorthornmilkers_pack" text="Shorthorn Milkers Cow"/>
+		<text name="fillType_bull_shorthornmilkers_pack" text="Shorthorn Milkers Bull"/>
 
 		<!-- Breed display names -->
 		<text name="breed_red_holstein_pack" text="Red Holstein"/>
@@ -40,5 +44,7 @@
 		<text name="breed_guernsey_pack" text="Guernsey"/>
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_hereford_pack" text="Hereford"/>
+		<text name="breed_kerry_pack" text="Kerry"/>
+		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
 	</texts>
 </l10n>
