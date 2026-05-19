@@ -1420,13 +1420,24 @@ local function installFillTypeManagerHook(packModDir, bridgeLateBootstrap)
     FillTypeManager.loadMapData = Utils.appendedFunction(
         FillTypeManager.loadMapData,
         function(self)
+            -- Install accessory + vai-remap hooks unconditionally — they read
+            -- the pack's own bridge XML (rlrm_pack.xml → animals.xml) and patch
+            -- accessory attrs (monitor, earTags, marker, bumId, noseRing) onto
+            -- base-game COW_HOLSTEIN/SWISS_BROWN/LIMOUSIN/ANGUS/HEREFORD whether
+            -- or not a companion mod is loaded. The companion-specific synth
+            -- registration below is what gates on bridgeLateBootstrap.
+            local RLMapBridge = getRLMapBridge()
+            if RLMapBridge ~= nil then
+                installVisualAccessoryHook(RLMapBridge)
+                installVisualIndexRemapHook(RLMapBridge)
+            end
+
             -- Late detection + regeneration: g_modIsLoaded is fully populated by
             -- now (including map mods). bridgeLateBootstrap returns the synth
             -- dir to register, or nil if no companion mod was found.
             local tempDir = bridgeLateBootstrap(packModDir)
             if tempDir == nil then return end
 
-            local RLMapBridge = getRLMapBridge()
             if RLMapBridge == nil or RLMapBridge.scanAnimalPacks == nil then
                 logf("RLMapBridge not available at FillTypeManager.loadMapData; bridge inactive")
                 return
@@ -1439,8 +1450,6 @@ local function installFillTypeManagerHook(packModDir, bridgeLateBootstrap)
                 RLMapBridge.__cowBreedsVanillaBridgeHooked = true
                 logf("installed scanAnimalPacks appended hook (synth=%s)", tempDir)
             end
-            installVisualAccessoryHook(RLMapBridge)
-            installVisualIndexRemapHook(RLMapBridge)
         end
     )
     FillTypeManager.__cowBreedsVanillaBridgeHooked = true

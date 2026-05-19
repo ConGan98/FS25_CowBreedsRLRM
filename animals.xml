@@ -2773,6 +2773,54 @@
 				</visual>
 			</visuals>
 		</subType>
+		<subType subType="COW_HEREFORD">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+		</subType>
+		<subType subType="BULL_HEREFORD">
+			<visuals>
+				<visual minAge="0" visualAnimalIndex="9" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="6" visualAnimalIndex="8" monitor="0|0|0|0|0|0|0|0|0|1|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="12" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
+					<textureIndexes>
+						<value>12</value>
+					</textureIndexes>
+				</visual>
+			</visuals>
+		</subType>
 		<subType subType="COW_HIGHLAND_CATTLE">
 			<visuals>
 				<visual minAge="0" visualAnimalIndex="10">
