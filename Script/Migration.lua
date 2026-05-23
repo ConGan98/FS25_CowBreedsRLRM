@@ -31,6 +31,8 @@ for _, b in ipairs(PACK_BREEDS) do
     SUBTYPE_ALIASES["BULL_" .. b .. "_pack"] = target_bull
 end
 
+local function logf(fmt, ...) print(string.format("[CowBreedsRLRM/Migration] " .. fmt, ...)) end
+
 local function migrateGetSubTypeIndexByName(self, superFunc, name)
     local idx = superFunc(self, name)
     if idx ~= nil then return idx end
@@ -39,17 +41,53 @@ local function migrateGetSubTypeIndexByName(self, superFunc, name)
     if mapped ~= nil then
         local mappedIdx = superFunc(self, mapped)
         if mappedIdx ~= nil then
-            print(string.format("[CowBreedsRLRM] migrated legacy subType '%s' -> '%s'", name, mapped))
+            logf("migrated legacy subType '%s' -> '%s' (idx=%s)", name, mapped, tostring(mappedIdx))
             return mappedIdx
+        else
+            logf("alias '%s' -> '%s' failed: target also unresolved", name, mapped)
         end
+    else
+        logf("unknown subType '%s' (no alias) — RLRM will drop or default this animal", tostring(name))
     end
 
     return nil
 end
 
-if AnimalSystem ~= nil and AnimalSystem.getSubTypeIndexByName ~= nil then
+local hookInstalled = false
+local function tryInstall(stage)
+    if hookInstalled then return true end
+    if AnimalSystem == nil or AnimalSystem.getSubTypeIndexByName == nil then
+        logf("install skipped at %s: AnimalSystem=%s, getSubTypeIndexByName=%s",
+             stage, tostring(AnimalSystem), tostring(AnimalSystem and AnimalSystem.getSubTypeIndexByName))
+        return false
+    end
     AnimalSystem.getSubTypeIndexByName = Utils.overwrittenFunction(
         AnimalSystem.getSubTypeIndexByName,
         migrateGetSubTypeIndexByName
     )
+    hookInstalled = true
+    logf("installed AnimalSystem.getSubTypeIndexByName hook at %s (aliases=%d)",
+         stage, table.maxn and table.maxn(SUBTYPE_ALIASES) or 0)
+    return true
+end
+
+if not tryInstall("source") then
+    -- Deferred install: try again at AnimalSystem.loadFromXMLFile time. By the
+    -- time any savegame tries to resolve a subType, the engine has populated
+    -- AnimalSystem. The retry runs once at the first load call and self-disarms.
+    if AnimalSystem ~= nil and AnimalSystem.loadFromXMLFile ~= nil then
+        AnimalSystem.loadFromXMLFile = Utils.prependedFunction(
+            AnimalSystem.loadFromXMLFile,
+            function(self, ...) tryInstall("loadFromXMLFile") end
+        )
+        logf("scheduled deferred install via AnimalSystem.loadFromXMLFile")
+    elseif FSBaseMission ~= nil and FSBaseMission.loadMap ~= nil then
+        FSBaseMission.loadMap = Utils.prependedFunction(
+            FSBaseMission.loadMap,
+            function(self, ...) tryInstall("FSBaseMission.loadMap") end
+        )
+        logf("scheduled deferred install via FSBaseMission.loadMap")
+    else
+        logf("no deferred-install anchor found — migration is INACTIVE this run")
+    end
 end
