@@ -2688,7 +2688,7 @@
 						<value>11</value>
 					</textureIndexes>
 				</visual>
-				<visual minAge="16" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
+				<visual minAge="18" visualAnimalIndex="7" monitor="0|0|0|0|0|0|0|1">
 					<textureIndexes>
 						<value>10</value>
 						<value>11</value>
