@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<i3D xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cattleCalfHighlandBull.i3d" version="1.6" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.13" />
+  </Asset>
+
+  <Files>
+	<File fileId="1" filename="cattleCalfHighland_diffuse.png"/>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml"/>
+    <File fileId="6" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_alpha.png"/>
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_normal.png"/>
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_specular.png"/>
+	<File fileId="1111" filename="../../earTags.i3d"/>
+    <File fileId="1311" filename="../../earTagsRight.i3d"/>
+    <File fileId="1211" filename="../../monitor.i3d"/>
+    <File fileId="1711" filename="../../sprayedMarker_cattle.i3d"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="cattleCalfHighland_01_mat1" materialId="5" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="1" />
+      <Normalmap fileId="2" />
+      <Glossmap fileId="3" />
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0.5 0.5" />
+      <CustomParameter name="dirt" value="0 20 20" />
+    </Material>
+    <Material name="cattleCalfHighland_02_mat1" materialId="6" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <Texture fileId="1" />
+      <Normalmap fileId="2" />
+      <Glossmap fileId="3" />
+      <Custommap name="alphaMap" fileId="6" />
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0.5 0.5" />
+      <CustomParameter name="dirt" value="0 20 20" />
+    </Material>
+    <Material name="standardSurface1" materialId="7" diffuseColor="0.4 0.4 0.4 1" specularColor="0.501961 1 0">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cattleCalfHighlandBull.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="calf_root_skin_jnt" nodeId="1">
+      <TransformGroup name="calf_spine_skin_jnt_01" translation="0.01622 0.931428 -0.447729" rotation="0 -90 0" nodeId="2">
+        <TransformGroup name="calf_spine_skin_jnt_02" translation="0.479665 -0.000355 -0.013339" nodeId="3">
+          <TransformGroup name="calf_spine_skin_jnt_03" translation="0.48079 -0.008462 0.001867" nodeId="4">
+            <TransformGroup name="calf_neck_skin_jnt_01" translation="0.0421 -0.081661 0.00007" rotation="0 0 25.298672" nodeId="5">
+              <TransformGroup name="calf_neck_skin_jnt_02" translation="0.14763 0.014153 0" nodeId="6">
+                <TransformGroup name="calf_neck_skin_jnt_03" translation="0.148188 -0.001712 0" nodeId="7">
+                  <TransformGroup name="calf_head_skin_jnt" translation="0.030617 -0.015602 0.00007" rotation="41.400414 90 0" nodeId="8">
+                    <TransformGroup name="calf_jaw_skin_jnt" translation="0.000074 0.004052 0.105765" rotation="90 -44.654106 -90" nodeId="9">
+                      <TransformGroup name="calf_tongue_skin_jnt_01" translation="0.055533 -0.030325 0" rotation="0 0 22.657143" nodeId="10">
+                        <TransformGroup name="calf_tongue_skin_jnt_02" translation="0.095493 0 0" nodeId="11" />
+                      </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="calf_ear_L_skin_jnt_01" translation="0.13004 0.104559 -0.024727" rotation="6.781565 1.23969 -70.071495" nodeId="12">
+                      <TransformGroup name="calf_ear_L_skin_jnt_02" translation="0 0.124381 -0.000014" rotation="0.036943 0 0" nodeId="13">
+							<ReferenceNode name="earTag" translation="0.035 0.006 0.029" rotation="-102.184 70.407 -28.084" scale="1 0.9 0.9" referenceId="1111" />
+							<ReferenceNode name="monitor" translation="-0.017 -0.015 0.027" rotation="-4.093 -76.147 101.445" scale="1 0.5 0.5" visibility="false" referenceId="1211" />
+						</TransformGroup>
+						</TransformGroup>
+                    <TransformGroup name="calf_ear_R_skin_jnt_01" translation="-0.137506 0.10719 -0.021456" rotation="173.21843 1.23969 -109.928505" nodeId="14">
+                      <TransformGroup name="calf_ear_R_skin_jnt_02" translation="0 0.123597 0.000015" rotation="-0.036943 0 0" nodeId="15" >
+							<ReferenceNode name="earTag" translation="0.047 0.022 -0.029" rotation="109.823 -60.471 -26.124" scale="1 0.9 0.9" referenceId="1311" />
+						</TransformGroup>
+						</TransformGroup>
+                    <TransformGroup name="calf_eyeball_L_skin_jnt" translation="0.103985 0.082674 0.110983" rotation="24.01125 -29.156639 -11.12394" nodeId="16" />
+                    <TransformGroup name="calf_eyeball_R_skin_jnt" translation="-0.10548 0.084617 0.111434" rotation="155.988754 -29.156639 -168.876053" nodeId="17" />
+                    <TransformGroup name="calf_eyelid_up_L_skin_jnt" translation="0.12468 0.098404 0.119498" rotation="0.236387 -37.078014 29.855055" nodeId="18" />
+                    <TransformGroup name="calf_eyelid_up_R_skin_jnt" translation="-0.116893 0.095703 0.115737" rotation="178.477081 -37.078014 150.144943" nodeId="19" />
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="calf_shoulder_L_skin_jnt" translation="0.073389 -0.039816 -0.125677" rotation="0 0 -117.484505" nodeId="20">
+              <TransformGroup name="calf_elbow_L_skin_jnt" translation="0.30307 0 0" rotation="0 0 36.862595" nodeId="21">
+                <TransformGroup name="calf_wrist_L_skin_jnt" translation="0.325168 0 0" rotation="0 0 -14.180241" nodeId="22">
+                  <TransformGroup name="calf_front_foot_L_skin_jnt" translation="0.221675 0 0" rotation="0 0 13.141648" nodeId="23">
+                    <TransformGroup name="calf_front_ball_L_skin_jnt" translation="0.054128 0 0" nodeId="24" />
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="calf_shoulder_R_skin_jnt" translation="0.049769 -0.021088 0.127608" rotation="0 0 62.515491" nodeId="25">
+              <TransformGroup name="calf_elbow_R_skin_jnt" translation="-0.30307 0 0" rotation="0 0 36.862595" nodeId="26">
+                <TransformGroup name="calf_wrist_R_skin_jnt" translation="-0.325168 0 0" rotation="0 0 -14.180241" nodeId="27">
+                  <TransformGroup name="calf_front_foot_R_skin_jnt" translation="-0.221675 0 0" rotation="0 0 -166.858353" nodeId="28">
+                    <TransformGroup name="calf_front_ball_R_skin_jnt" translation="0.054128 0 0" nodeId="29" />
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_belly_skin_jnt" translation="0 -0.391513 0" rotation="0 90 0" nodeId="30" />
+        </TransformGroup>
+        <TransformGroup name="calf_tail_skin_jnt_01" translation="-0.015356 0.238558 0" rotation="-180 0 176.891342" nodeId="31">
+          <TransformGroup name="calf_tail_skin_jnt_02" translation="0.198066 -0.001399 0.000195" rotation="0 0 -38.555691" nodeId="32">
+            <TransformGroup name="calf_tail_skin_jnt_03" translation="0.225485 0.014733 -0.001058" rotation="0 0 -9.012101" nodeId="33">
+              <TransformGroup name="calf_tail_skin_jnt_04" translation="0.243029 0 0" rotation="0 0 -0.954205" nodeId="34">
+                <TransformGroup name="calf_tail_skin_jnt_05" translation="0.212297 0 0" nodeId="35" />
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="calf_hip_L_skin_jnt" translation="-0.073385 0.092284 -0.135485" rotation="0 0 -60.495724" nodeId="36">
+          <TransformGroup name="calf_knee_L_skin_jnt" translation="0.295943 0 0" rotation="0 0 -55.643448" nodeId="37">
+            <TransformGroup name="calf_ankle_L_skin_jnt" translation="0.392427 0 0" rotation="0 0 31.530563" nodeId="38">
+              <TransformGroup name="calf_hind_foot_L_skin_jnt" translation="0.318786 0 0" rotation="0 0 1.160991" nodeId="39">
+                <TransformGroup name="calf_hind_ball_L_skin_jnt" translation="0.051852 0 0" nodeId="40" />
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="calf_hip_R_skin_jnt" translation="-0.073385 0.092284 0.135485" rotation="0 0 119.50428" nodeId="41">
+          <TransformGroup name="calf_knee_R_skin_jnt" translation="-0.295943 0 0" rotation="0 0 -55.643448" nodeId="42">
+            <TransformGroup name="calf_ankle_R_skin_jnt" translation="-0.392427 0 0" rotation="0 0 31.530563" nodeId="43">
+              <TransformGroup name="calf_hind_foot_R_skin_jnt" translation="-0.318787 0 0" rotation="0 0 -178.839005" nodeId="44">
+                <TransformGroup name="calf_hind_ball_R_skin_jnt" translation="0.051852 0 0" nodeId="45" />
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>					
+        </TransformGroup>
+		<ReferenceNode name="sprayedMarker" translation="0.217 0.283 -0.009" rotation="-81.777 87.727 -90" scale="0.171093 0.171093 0.171093" referenceId="1711" />
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="02_cattleCalfHighland" rotation="90 -0 0" clipDistance="300" nodeId="73">
+      <Shape name="01_body" shapeId="1" clipDistance="300" nodeId="74" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="5" />
+      <Shape name="02_eyes" shapeId="2" clipDistance="300" nodeId="75" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="5" />
+      <Shape name="03_teeth" shapeId="3" clipDistance="300" nodeId="76" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="5" />
+      <Shape name="04_tongue" shapeId="4" clipDistance="300" nodeId="77" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="5" />
+      <TransformGroup name="05_hair" clipDistance="300" nodeId="78">
+        <Shape name="01_eyelashes" shapeId="5" clipDistance="300" nodeId="79" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="02_neckFur" shapeId="6" clipDistance="300" nodeId="80" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="03_fur1" shapeId="7" clipDistance="300" nodeId="81" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="04_fur2" shapeId="8" clipDistance="300" nodeId="82" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <TransformGroup name="05_reverse" clipDistance="300" nodeId="83">
+          <Shape name="01_hairbody_reverse" shapeId="9" clipDistance="300" nodeId="84" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+          <Shape name="02_hairFur01_reverse" shapeId="10" clipDistance="300" nodeId="85" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+          <Shape name="03_harFur02_reverse" shapeId="11" clipDistance="300" nodeId="86" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+          <Shape name="04_hairFur03_reverse" shapeId="12" clipDistance="300" nodeId="87" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+          <Shape name="05_spineFur_reverse" shapeId="13" clipDistance="300" nodeId="88" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        </TransformGroup>
+        <Shape name="06_hairbody" shapeId="14" clipDistance="300" nodeId="89" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="07_hairFur01" shapeId="15" clipDistance="300" nodeId="90" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="08_harFur02" shapeId="16" clipDistance="300" nodeId="91" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="09_hairFur03" shapeId="17" clipDistance="300" nodeId="92" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+        <Shape name="10_spineFur" shapeId="18" clipDistance="300" nodeId="93" castsShadows="true" receiveShadows="true" skinBindNodeIds="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" materialIds="6" />
+      </TransformGroup>
+    </TransformGroup>
+    <Shape name="03_cattleCalfHighlandproxy" rotation="90 -0 0" shapeId="19" kinematic="true" collisionFilterGroup="0x200000" collisionFilterMask="0xfffffbff" linearDamping="0.5" angularDamping="0.5" nodeId="94" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7" />
+  </Scene>
+
+<Animation externalAnimFile="cattleCalfHighlandAnimations.i3d.anim" /></i3D>

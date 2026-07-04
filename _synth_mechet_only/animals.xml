@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<animals>
-	<configOverrides>
-		<override type="COW" configFilename="models/cow/animals.xml"/>
-	</configOverrides>
-	<breeds>
-	</breeds>
-</animals>

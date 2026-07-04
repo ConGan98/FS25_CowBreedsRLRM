@@ -1,92 +1,128 @@
+# FS25_CowBreedsRLRM
+
 > [!NOTE]
-> Ritter version of [FS25 Realistic Livestock](https://github.com/rittermod/FS25_RealisticLivestockRM) is needed for this to work.
+> The [Ritter version of FS25 Realistic Livestock](https://github.com/rittermod/FS25_RealisticLivestockRM) is required for this mod to work.
 
 <img src="images/icon1.png">
 
+A companion pack for **FS25 Realistic Livestock (RM)** that adds **13 new cow breeds** with their own textures, plus custom bull and calf models, per‑breed horns, and visual accessories for the base breeds. Breed economics (weight, feed, and outputs) are calibrated against RLRM's base breeds so each breed behaves the way you'd expect.
 
-## FS25_CowBreedsRLRM
-With the help of Ritter in creating the base structure of the mod, we are able to introduce 14 new cow breeds to the FS25_RealisticLivestockRM mod. This is a companion mod to work with FS25_Realistic_livestock. This mod adds new breeds with corresponding textures for each one. The 3D models of the base game cows are reused, so the 3D assets may appear larger or smaller than the actual breed of cow.
+> [!WARNING]
+> **Back up your save before installing.** Existing animals are migrated automatically on load, but migration **cannot guarantee every possible save state** — if an animal's breed can't be resolved, RLRM may drop it. Always test on a **copy** of your save first.
+>
+> **Map compatibility.** This pack replaces the game's cow husbandry configuration, so it will **not** work alongside maps that add their **own** extra cow breeds. It is **not compatible with Le Mechet** (its Charolaise / Simmental / Montbeliarde / Vosgienne breeds will not load), and the same likely applies to other breed‑adding maps. It **is** compatible with **Witcombe Park**.
 
 ## Requires
-- [FS25_RealisticLivestockRM](https://github.com/rittermod/FS25_RealisticLivestockRM) — required. v1.2.4.0 or newer recommended for the built-in Le Mechet bridge.
-- [FS25_AnimalPackage_vanillaEdition](https://www.farming-simulator.com/) — *optional*. Adds five vanilla breeds via the Vanilla Edition Bridge.
-- [FS25_The_Mechet](https://www.farming-simulator.com/) — *optional*. When the map is in use, the pack ships a Mechet-aware synth bundle so Charolaise / Simmental / Montbeliarde / Vosgienne render with their own meshes.
+- **[FS25_RealisticLivestockRM](https://github.com/rittermod/FS25_RealisticLivestockRM)** — required. Tested against v1.2.4.0+.
+
+## The breeds
+
+**Dairy (6)** — Red Holstein · Ayrshire · Jersey · Guernsey · Kerry · Shorthorn Milkers
+**Beef (7)** — Red Angus · Charolais · Shorthorn · Irish Moiled · British Blue · Belted Galloway · Simmental
+
+> Hereford is **not** a separate pack breed — it's folded into RLRM's own Hereford, which this pack re‑skins with custom models and textures (see *Compatibility*).
 
 ## Features
 
-### Fourteen new breeds (always on)
-Values adjusted to represent each breed — Holstein gives the most milk while Charolais and Angus gain the most weight for beef production.
+- **Custom bull (male) models** for the dairy, beef and Highland lines — males are no longer just the cow model.
+- **Custom calf models**, including male calf variants, for dairy, beef and Highland.
+- **Per‑breed horns** — a runtime system picks the right horns per animal:
+  - **Highland** — always horned.
+  - **Swiss Brown, Kerry** — mostly horned.
+  - **Hereford, Limousin, Charolais, Shorthorn, British Blue, Simmental** — occasionally horned (bulls more often than cows).
+  - All other breeds — polled.
+  - Each animal's horned/polled state is fixed for its life (seeded from its ID), so a herd shows a natural mix.
+- **Visual accessories on the base breeds** — monitors (with live ID digits), ear tags, sprayed markers and nose rings are wired onto Holstein, Swiss Brown, Limousin, Angus, Hereford and Highland.
+- **Custom Highland** textures and models (adult, kid, baby, plus bull variants).
+- **Water Buffalo** models bundled and remapped through the pack atlases.
 
-**Six new dairy breeds**
-- Red Holstein
-- Ayrshire
-- Jersey
-- Guernsey
-- Kerry
-- Shorthorn Milkers
+## Breed value calibration
 
-**Eight new beef breeds**
-- Red Angus
-- Hereford
-- Charolais
-- Shorthorn
-- Irish Moiled
-- British Blue
-- Belted Galloway
-- Simmental
+Every pack breed is anchored to RLRM's **base breeds** by size and type. Values below are the **peak (adult) per‑day** figures. Milk is set per breed's real dairy ability — dual‑purpose beef breeds keep a useful yield, pure‑beef breeds stay low.
 
-### Vanilla Edition Bridge (optional)
-If `FS25_AnimalPackage_vanillaEdition` is also loaded, five additional vanilla breeds are surfaced as bridge entries:
-- Holstein (Vanilla)
-- Red Holstein (Vanilla)
-- Brown Swiss (Vanilla)
-- Limousin (Vanilla)
-- Angus (Vanilla)
+**Base reference:** straw is a type constant (dairy `95`, beef/Highland `130`); base max weight is `1200` (cow) / `1400` (bull); dairy milk ref Holstein `330`, beef milk ref Angus `160`.
 
-Default mode (no Mechet): full GS01–GS04 growth-stage support for both cow and bull across all five breeds.
+### Dairy cows
+| Breed | Target wt | Max wt | Food | Straw | Water | Manure | Liq. manure | Milk |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|
+| Red Holstein | 600 | 1200 | 335 | 95 | 125 | 200 | 250 | 335 |
+| Ayrshire | 550 | 1150 | 320 | 95 | 120 | 195 | 245 | 305 |
+| Jersey | 450 | 1000 | 290 | 95 | 110 | 180 | 220 | 270 |
+| Guernsey | 500 | 1050 | 300 | 95 | 115 | 185 | 230 | 290 |
+| Kerry | 450 | 1000 | 285 | 95 | 110 | 175 | 220 | 250 |
+| Shorthorn Milkers | 600 | 1150 | 335 | 95 | 125 | 200 | 250 | 320 |
 
-The bridge auto-disables if you don't have the vanilla mod installed.
-To opt out manually, create an empty file at:
-`<UserProfile>/Documents/My Games/FarmingSimulator2025/modSettings/CowBreedsRLRM_VanillaBridge.disabled`
+### Beef cows
+| Breed | Target wt | Max wt | Food | Straw | Water | Manure | Liq. manure | Milk |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|
+| Red Angus | 700 | 1200 | 440 | 130 | 180 | 300 | 250 | 160 *(low)* |
+| Charolais | 850 | 1200 | 510 | 130 | 195 | 315 | 255 | 180 *(low)* |
+| Shorthorn | 750 | 1200 | 455 | 130 | 175 | 290 | 240 | 235 *(good)* |
+| Irish Moiled | 620 | 1150 | 400 | 130 | 160 | 255 | 215 | 225 *(good)* |
+| British Blue | 800 | 1200 | 495 | 130 | 190 | 310 | 255 | 150 *(low)* |
+| Belted Galloway | 575 | 1100 | 395 | 130 | 150 | 245 | 205 | 170 *(low)* |
+| Simmental | 800 | 1200 | 490 | 130 | 190 | 300 | 250 | 255 *(good)* |
 
-### Le Mechet support (optional)
-If [FS25_The_Mechet](https://www.farming-simulator.com/) is loaded, the pack ships a separate synth bundle (`_synth_mechet/` or `_synth_mechet_only/` depending on whether AnimalPackage is also loaded) that bakes Mechet's four custom breeds into the husbandry config:
-- Charolaise
-- Simmental (Mechet variant)
-- Montbeliarde
-- Vosgienne
+### Dairy bulls
+| Breed | Target wt | Max wt | Food | Straw | Water | Manure | Liq. manure |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| Red Holstein | 900 | 1400 | 420 | 95 | 130 | 200 | 230 |
+| Ayrshire | 800 | 1350 | 375 | 95 | 125 | 185 | 220 |
+| Jersey | 650 | 1150 | 315 | 95 | 115 | 165 | 205 |
+| Guernsey | 700 | 1200 | 340 | 95 | 120 | 175 | 215 |
+| Kerry | 600 | 1100 | 305 | 95 | 110 | 160 | 200 |
+| Shorthorn Milkers | 800 | 1350 | 385 | 95 | 125 | 190 | 225 |
 
-Each at all four growth stages, both cow and bull. Renders with Mechet's own meshes — no fallback to base-game cattle.
+### Beef bulls
+| Breed | Target wt | Max wt | Food | Straw | Water | Manure | Liq. manure |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| Red Angus | 900 | 1400 | 450 | 130 | 180 | 275 | 225 |
+| Charolais | 1050 | 1400 | 535 | 130 | 200 | 310 | 245 |
+| Shorthorn | 900 | 1400 | 465 | 130 | 175 | 280 | 230 |
+| Irish Moiled | 750 | 1250 | 420 | 130 | 165 | 250 | 210 |
+| British Blue | 1000 | 1400 | 515 | 130 | 190 | 300 | 240 |
+| Belted Galloway | 700 | 1200 | 410 | 130 | 155 | 245 | 205 |
+| Simmental | 1000 | 1400 | 510 | 130 | 190 | 300 | 240 |
 
-When **all three** mods are loaded (pack + AnimalPackage + Mechet) the engine's 32-slot husbandry cap forces a trade-off: the vanilla bridge collapses to **bulls only** at all four growth stages, and vanilla cow subtypes are not purchasable. A one-time warning dialog explains this on each new save; acknowledgement is persisted per-savegame.
+### Prices
+Buy/sell anchored to the base tiers — premium beef (Charolais, British Blue) to the Angus/Limousin band, budget & dual‑purpose beef to the Hereford/Highland band, dairy to the Holstein/Swiss band. Dairy breeds earn from milk, so their sell (meat) value sits low by design. Transport cost is unchanged (cow 200 / bull 500).
 
-### Custom Highland textures
-The Highland Cattle adult, calf and baby use a pack-local i3d wrapper plus fresh 4K BC7 diffuse textures, so the Highland look has been updated without modifying any base-game files.
-
-### Water Buffalo
-Water Buffalo adult, calf and baby are bundled and remapped through the pack atlases so they render with the correct buffalo models.
-
-### Visual accessories on base breeds
-Monitors, ear tags, sprayed markers, bum IDs and nose rings are wired up for the base-game breeds (Holstein, Brown Swiss, Limousin, Angus, Hereford) via a hook into RLRM's bridge override path.
+| Breed | Cow buy | Cow sell | Bull buy | Bull sell |
+|---|--:|--:|--:|--:|
+| **Dairy** | | | | |
+| Red Holstein | 2400 | 2200 | 2600 | 2700 |
+| Ayrshire | 2200 | 2000 | 2400 | 2300 |
+| Jersey | 2200 | 1900 | 2300 | 2100 |
+| Guernsey | 2200 | 2000 | 2400 | 2300 |
+| Kerry | 2100 | 1900 | 2300 | 2100 |
+| Shorthorn Milkers | 2400 | 2300 | 2600 | 2600 |
+| **Beef** | | | | |
+| Red Angus | 3000 | 3600 | 3200 | 4000 |
+| Charolais | 3400 | 4200 | 3600 | 4600 |
+| Shorthorn | 2600 | 3200 | 2700 | 3400 |
+| Irish Moiled | 2400 | 2900 | 2500 | 3000 |
+| British Blue | 3400 | 4300 | 3600 | 4700 |
+| Belted Galloway | 2500 | 3000 | 2700 | 3200 |
+| Simmental | 2900 | 3500 | 3100 | 3800 |
 
 ## Installation
 1. Place `FS25_CowBreedsRLRM.zip` in your `mods/` folder.
-2. Make sure `FS25_RealisticLivestockRM` is enabled (v1.2.4.0+ recommended).
-3. (Optional) Place `FS25_AnimalPackage_vanillaEdition.zip` in the same folder for the extra five vanilla breeds.
-4. (Optional) `FS25_The_Mechet.zip` in the same folder for Mechet's four custom breeds — auto-detected at runtime.
-
-If adding to an existing save game, refresh the animal dealer in settings so the new breeds show up straight away — otherwise wait a few in-game days.
+2. Make sure `FS25_RealisticLivestockRM` is enabled.
+3. If adding to an existing save, refresh the animal dealer in settings so the new breeds appear straight away — otherwise wait a few in‑game days.
 
 ## Compatibility
-- Save-game safe: existing animals on a save before installing this pack will keep their breed; new breeds become purchasable from the dealer once you refresh.
-- Pre-v1.0.4 saves (when subType identifiers used the lowercase `_pack` suffix, or no suffix at all) are auto-migrated on load by `Script/Migration.lua` — no manual action needed.
-- The "Hereford" entry in the animal dealer is this pack's `HEREFORD_PACK`. RLRM's own bundled Hereford still exists and remains usable on existing saves with its stock RLRM appearance.
-- Multiplayer supported.
-- The bridge writes nothing to your `mods/` folder — when shipped zipped, it loads the right pre-built synth bundle (`_synth/`, `_synth_mechet/`, or `_synth_mechet_only/`) read-only from inside the pack.
-- Save-compatible with the [FS25_Witcombe](https://www.farming-simulator.com/) map: Witcombe's Jersey breed renders correctly via the foreign-bridge vai remap (no Witcombe-specific synth needed).
+- **Existing saves.** Existing animals keep their breed and new breeds become purchasable once you refresh the dealer — but **back up first** (see the warning above): migration covers the known name histories, not every possible edge case.
+- **Maps.** Works with **Witcombe Park**. **Not** compatible with **Le Mechet** or other maps that add their own extra cow breeds, because this pack overrides the cow husbandry configuration and only one such override can win.
+- **Automatic migration.** Old subtype names are upgraded on load by `Script/Migration.lua`:
+  - Pre‑release names (unsuffixed or lowercase `_pack`) → the current `_PACK` names.
+  - `HEREFORD_PACK` animals → RLRM's base **Hereford** (the pack Hereford was consolidated into it; migrated animals keep the custom models but use RLRM's Hereford economics).
+  - Leftover subtypes from earlier bridge builds (`_vanilla` / `_mechet`) → their base or `_PACK` equivalent.
+  - No manual action needed — load, then save once to bake the new names in.
+- **New models need no migration.** Which model a breed uses is resolved from breed + age at load, so existing animals adopt the new bull/calf models instantly.
+- **Multiplayer supported** (install the mod zipped).
 
 ## License
-This mod is released under the GPL-3 license. See the [LICENSE](LICENSE) file for details.
+Released under the GPL‑3 license. See the [LICENSE](LICENSE) file for details.
 
 ## Credit
-- [rittermod](https://github.com/rittermod) — full layout of the mod and the base bridge architecture.
+- [rittermod](https://github.com/rittermod) — the base structure of the mod that this pack builds on.

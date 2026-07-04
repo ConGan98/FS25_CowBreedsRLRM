@@ -41,27 +41,27 @@ function MyLivestockHook:update(dt)
             targetClass.setMonitor = function(instance)
                 -- Run the original mod code (handles visibility)
                 originalSetMonitor(instance)
-                
-                -- Run custom shader code
-                if instance.nodes and instance.nodes.monitor then
-                    if instance.animal == nil then return end
-					local uniqueId = instance.animal.uniqueId
-					local numChildren = getNumOfChildren(instance.nodes.monitor)
-					
-					if numChildren ==  nil then return end 
+
+                -- Run custom shader code, fully guarded so a bad node/id can never
+                -- throw out of setMonitor (which renders per-visual).
+                local ok, err = pcall(function()
+                    if instance.nodes == nil or instance.nodes.monitor == nil then return end
+                    if instance.animal == nil or instance.animal.uniqueId == nil then return end
+                    local uniqueId = tostring(instance.animal.uniqueId)
+                    local numChildren = getNumOfChildren(instance.nodes.monitor)
+                    if numChildren == nil then return end
                     for i = 0, 5 do
-						if i < numChildren then
-							local child = getChildAt(instance.nodes.monitor, i)
-							--print("The value is: " .. tostring(i))
-							if child ~= nil then
-								-- Success! Perform actions
-								local digit = tonumber(string.sub(uniqueId, i+1, i+1)) or 0
-								--print(string.format("Node Index: %d | ID Position: %d | Digit: %d", i, i + 1, digit))
-								setShaderParameter(child, "playScale", digit, 0, 64, 1, false)
-							end
-						end
-					end
-                    --print(">>> Hook active: Shader applied to Monitor for ID: " .. uniqueId)
+                        if i < numChildren then
+                            local child = getChildAt(instance.nodes.monitor, i)
+                            if child ~= nil then
+                                local digit = tonumber(string.sub(uniqueId, i + 1, i + 1)) or 0
+                                setShaderParameter(child, "playScale", digit, 0, 64, 1, false)
+                            end
+                        end
+                    end
+                end)
+                if not ok then
+                    print("[CowBreedsRLRM/VisualMonitor] setMonitor shader error: " .. tostring(err))
                 end
             end
             

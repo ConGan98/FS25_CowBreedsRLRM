@@ -13,10 +13,16 @@
 -- name, so the on-disk IDs are upgraded automatically and the alias path is
 -- only walked once per legacy animal.
 
+-- Breeds that were renamed <original> -> <original>_PACK. Legacy saves that
+-- still hold the old (unsuffixed / lowercase-_pack) names get aliased forward
+-- to the current _PACK name.
+-- NOTE: HEREFORD is intentionally absent. It was consolidated the OTHER way —
+-- the HEREFORD_PACK subTypes were removed and folded into RLRM's base
+-- COW_HEREFORD/BULL_HEREFORD, so its aliases point _PACK -> base instead (below).
 local PACK_BREEDS = {
-    "REDHOLSTEIN", "AYRSHIRE", "JERSEY", "GUERNSEY", "CHAROLAIS", "REDANGUS",
-    "SHORTHORN", "IRISHMOILED", "BRITISHBLUE", "BELTEDGALLOWAY", "SIMMENTAL",
-    "HEREFORD",
+    "REDHOLSTEIN", "AYRSHIRE", "JERSEY", "GUERNSEY", "KERRY", "SHORTHORNMILKERS",
+    "CHAROLAIS", "REDANGUS", "SHORTHORN", "IRISHMOILED", "BRITISHBLUE",
+    "BELTEDGALLOWAY", "SIMMENTAL",
 }
 
 local SUBTYPE_ALIASES = {}
@@ -31,25 +37,54 @@ for _, b in ipairs(PACK_BREEDS) do
     SUBTYPE_ALIASES["BULL_" .. b .. "_pack"] = target_bull
 end
 
+-- Hereford consolidation: the pack's HEREFORD_PACK subTypes were removed and the
+-- breed folded into RLRM's base COW_HEREFORD/BULL_HEREFORD (enriched via override
+-- with the pack's models/textures). Migrate any saved Hereford animals — in any
+-- historical form — onto the base subType so they resolve after the removal.
+SUBTYPE_ALIASES["COW_HEREFORD_PACK"]  = "COW_HEREFORD"
+SUBTYPE_ALIASES["BULL_HEREFORD_PACK"] = "BULL_HEREFORD"
+SUBTYPE_ALIASES["COW_HEREFORD_pack"]  = "COW_HEREFORD"
+SUBTYPE_ALIASES["BULL_HEREFORD_pack"] = "BULL_HEREFORD"
+
+-- Removed synth bridge (_vanilla / _mechet) orphans. The generic suffix-strip below
+-- catches most, but Brown Swiss needs an explicit map: the bridge used "BROWNSWISS"
+-- while RLRM's base breed is "SWISS_BROWN", so stripping the suffix wouldn't resolve.
+SUBTYPE_ALIASES["COW_BROWNSWISS_vanilla"]  = "COW_SWISS_BROWN"
+SUBTYPE_ALIASES["BULL_BROWNSWISS_vanilla"] = "BULL_SWISS_BROWN"
+SUBTYPE_ALIASES["COW_BROWNSWISS_mechet"]   = "COW_SWISS_BROWN"
+SUBTYPE_ALIASES["BULL_BROWNSWISS_mechet"]  = "BULL_SWISS_BROWN"
+
 local function logf(fmt, ...) print(string.format("[CowBreedsRLRM/Migration] " .. fmt, ...)) end
 
 local function migrateGetSubTypeIndexByName(self, superFunc, name)
     local idx = superFunc(self, name)
     if idx ~= nil then return idx end
 
+    -- 1. Explicit rename aliases (pre-pack forms, Hereford consolidation, Brown Swiss).
     local mapped = SUBTYPE_ALIASES[name]
     if mapped ~= nil then
         local mappedIdx = superFunc(self, mapped)
         if mappedIdx ~= nil then
             logf("migrated legacy subType '%s' -> '%s' (idx=%s)", name, mapped, tostring(mappedIdx))
             return mappedIdx
-        else
-            logf("alias '%s' -> '%s' failed: target also unresolved", name, mapped)
         end
-    else
-        logf("unknown subType '%s' (no alias) — RLRM will drop or default this animal", tostring(name))
+        logf("alias '%s' -> '%s' failed: target also unresolved", name, mapped)
     end
 
+    -- 2. Removed synth-bridge subTypes carried a _vanilla / _mechet suffix. The live
+    -- subType is the same name without it (base breed) or with _PACK (pack breed).
+    local stripped = name:match("^(.+)_vanilla$") or name:match("^(.+)_mechet$")
+    if stripped ~= nil then
+        for _, candidate in ipairs({ stripped, stripped .. "_PACK" }) do
+            local cidx = superFunc(self, candidate)
+            if cidx ~= nil then
+                logf("migrated bridge subType '%s' -> '%s' (idx=%s)", name, candidate, tostring(cidx))
+                return cidx
+            end
+        end
+    end
+
+    logf("unknown subType '%s' (no alias) — RLRM will drop or default this animal", tostring(name))
     return nil
 end
 

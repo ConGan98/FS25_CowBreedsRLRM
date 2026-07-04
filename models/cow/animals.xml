@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <animalHusbandry>
 	<animals milkRobotSoundGroup="milkRobot" milkRobotDoorSoundGroup="milkRobotDoor">
 	<!--BUFFALO ADULT-->
@@ -220,6 +220,171 @@
 			</assets>
 			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotion.xml"/>
 			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Dairy BULL (male dairy breeds) -> cattleHolsteinBull.i3d-->
+		<animal visualAnimalIndex="13" radius="1.8" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="true" canDrink="true" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="holstein/cattleHolsteinBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/holstein/cattleHolstein_posed.i3d" animation="$dataS/character/animals/domesticated/cow/animations/adult/cattleAdultAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|0|0" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Guernsey -->
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Guernsey -->
+				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
+				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Jersey -->
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Jersey -->
+				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
+				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
+				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Holstein -->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Kerry -->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotion.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Dairy BULL CALF (male dairy kid stage) -> cattleCalfHolsteinBull.i3d-->
+		<animal visualAnimalIndex="14" radius="1.1" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="false" canDrink="false" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="holstein/cattleCalfHolsteinBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/calf/cattleCalfHolstein_posed.i3d" animation="$dataS/character/animals/domesticated/cow/animations/young/cattleCalfAnimations.i3d" skeletonIndex="1" meshIndex="0" proxyIndex="2" shaderIndex="0|0" headIndex="1>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Guernsey -->
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Guernsey -->
+				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
+				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Red Holstein -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Ayrshire -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Jersey -->
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Jersey -->
+				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
+				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--BrownSwiss-->
+				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Holstein-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Holstein -->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Kerry -->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn Milkers -->
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Beef BULL (male beef breeds) -> cattleAngusBull.i3d-->
+		<animal visualAnimalIndex="15" radius="1.8" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="true" canDrink="true" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="angus/cattleAngusBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/angus/cattleAngus_posed.i3d" animation="$dataS/character/animals/domesticated/cow/animations/adult/cattleAdultAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|0|0" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Hereford -->
+				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- British Blue -->
+				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Charolais -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- IrishMoiled -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- BeltedGalloway -->
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- SIMMENTAL -->
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- RedAngus -->
+				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Angus-->
+				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--British Blue-->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Shorthorn-->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--IrishMoiled-->
+				<node index="1|0|0" visibility="false"/>
+				<node index="1|1|0" visibility="false"/>
+				<node index="1|2|0" visibility="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotion.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Beef BULL CALF (male beef kid stage) -> cattleCalfBull.i3d-->
+		<animal visualAnimalIndex="16" radius="1.1" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="false" canDrink="false" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="angus/cattleCalfBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/calf/cattleCalf_posed.i3d" animation="$dataS/character/animals/domesticated/cow/animations/young/cattleCalfAnimations.i3d" skeletonIndex="1" meshIndex="0" proxyIndex="2" shaderIndex="0|0" headIndex="1>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Hereford -->
+				<texture multi="true" tileUIndex="1" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- British Blue -->
+				<texture multi="true" tileUIndex="0" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Charolais -->
+				<texture multi="true" tileUIndex="0" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- Shorthorn -->
+				<texture multi="true" tileUIndex="1" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- IrishMoiled -->
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- BeltedGalloway -->
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- SIMMENTAL -->
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!-- RedAngus -->
+				<texture multi="true" tileUIndex="2" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Angus-->
+				<texture multi="true" tileUIndex="2" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="3" tileVIndex="0" numTilesU="4" numTilesV="4" mirrorV="false"/><!--LIMOUSIN-->
+				<texture multi="true" tileUIndex="3" tileVIndex="1" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="3" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--hereford-->
+				<texture multi="true" tileUIndex="2" tileVIndex="3" numTilesU="4" numTilesV="4" mirrorV="false"/><!--British Blue-->
+				<texture multi="true" tileUIndex="3" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--Shorthorn-->
+				<texture multi="true" tileUIndex="2" tileVIndex="2" numTilesU="4" numTilesV="4" mirrorV="false"/><!--IrishMoiled-->
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/locomotionKid.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="8000" yellMaxInterval="20000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Highland BULL (male highland adult) -> cattleHighlandBull.i3d-->
+		<animal visualAnimalIndex="17" radius="1.8" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="true" canDrink="true" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="highland/cattleHighlandBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/highland/cattleHighland_posed.i3d" animation="$dataS/character/animals/domesticated/cow/highland/animations/adult/cattleHighlandAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|0" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotion.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!--Highland BULL CALF (male highland kid stage) -> cattleCalfHighlandBull.i3d-->
+		<animal visualAnimalIndex="18" radius="1.1" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="false" canDrink="false" canSleep="true" canEatDuringNight="false" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="highland/cattleCalfHighlandBull.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_posed.i3d" animation="$dataS/character/animals/domesticated/cow/highland/animations/young/cattleCalfHighlandAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|2" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotionKid.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<!-- ============================================================ -->
+		<!-- TEMP PLACEHOLDER slots 19-21.                                 -->
+		<!-- RLRM's base Highland subTypes reference husbandry slots       -->
+		<!-- 19/20/21 (from RLRM's own 21-slot config). Our override only  -->
+		<!-- went to 18, so RLRM logged harmless "invalid index 19/20/21"  -->
+		<!-- warnings. These entries just duplicate the Highland models    -->
+		<!-- so those references resolve and the warnings stop.            -->
+		<!-- TEMP: to be replaced with real models down the line.          -->
+		<!-- ============================================================ -->
+		<animal visualAnimalIndex="19" radius="1.8" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="true" canDrink="true" canSleep="true" canEatDuringNight="true" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="highland/cattleHighland.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/highland/cattleHighland_posed.i3d" animation="$dataS/character/animals/domesticated/cow/highland/animations/adult/cattleHighlandAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|0" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotion.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<animal visualAnimalIndex="20" radius="1.1" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="false" canDrink="false" canSleep="true" canEatDuringNight="false" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="26666" grazeMax="39999" chewMin="9000" chewMax="18000" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="highland/cattleCalfHighland.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_posed.i3d" animation="$dataS/character/animals/domesticated/cow/highland/animations/young/cattleCalfHighlandAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|2" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotionKid.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yell" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
+		</animal>
+		<animal visualAnimalIndex="21" radius="0.7" handleThreats="false" threatAwarenessRadius="5" slowingDistance="0.5" allowMilkingPlace="true" headOffset="0.8" canEat="false" canDrink="false" canSleep="true" canEatDuringNight="false" canBeCleaned="true" interessDistance="10.0">
+			<statesTimers idleMin="6666" idleMax="19998" sleepMin="120000" sleepMax="180000" restMin="12000" restMax="26666" grazeMin="0" grazeMax="0" chewMin="0" chewMax="0" eatMin="66665" eatMax="93331" wanderMin="5000" wanderMax="10000"/>
+			<assets filename="highland/cattleCalfHighlandBaby.i3d" filenamePosed="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighlandBaby_posed.i3d" animation="$dataS/character/animals/domesticated/cow/highland/animations/young/cattleCalfHighlandBabyAnimations.i3d" skeletonIndex="0" meshIndex="1" proxyIndex="2" shaderIndex="1|2" headIndex="0>0|0|0|0|0|0|0|0">
+				<texture multi="true" tileUIndex="0" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="0" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="0" numTilesU="2" numTilesV="2" mirrorV="false"/>
+				<texture multi="true" tileUIndex="1" tileVIndex="1" numTilesU="2" numTilesV="2" mirrorV="false"/>
+			</assets>
+			<locomotion filename="$dataS/character/animals/domesticated/cow/highland/locomotionBaby.xml"/>
+			<audio eatSoundGroup="eat" yellSoundGroup="yellBaby" yellMinInterval="12000" yellMaxInterval="24000" yellTimerCrowdScale="0.2"/>
 		</animal>
 	</animals>
 	<sound>

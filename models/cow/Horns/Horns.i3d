@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Horns.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="../angus/cattleAngus_diffuse.dds"/>
+    <File fileId="9" filename="../highland/cattleHighland_diffuse.dds"/>
+    <File fileId="6" filename="../holstein/cattleHolstein_diffuse.dds"/>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml"/>
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/angus/cattleAngus_normal.dds"/>
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/angus/cattleAngus_specular.dds"/>
+    <File fileId="10" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_normal.dds"/>
+    <File fileId="11" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_specular.dds"/>
+    <File fileId="7" filename="$dataS/character/animals/domesticated/cow/holstein/cattleHolstein_normal.dds"/>
+    <File fileId="8" filename="$dataS/character/animals/domesticated/cow/holstein/cattleHolstein_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="cattleAngus_mat" materialId="5" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="cattleHighland_02_mat" materialId="6" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 0"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1"/>
+    </Material>
+    <Material name="cattleHolstein_mat" materialId="7" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Horns.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="Horns" nodeId="12">
+      <Shape name="Horns_ORI_Beef" rotation="90 -0 0" shapeId="1" clipDistance="300" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="5"/>
+      <Shape name="Horns_ORI_Dairy" rotation="90 -0 0" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="7"/>
+      <Shape name="Horns_ORI_Highland" translation="0 0.00745018 6.51315e-10" rotation="90 -0 0" shapeId="3" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="6"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

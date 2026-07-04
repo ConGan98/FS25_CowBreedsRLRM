@@ -8,6 +8,7 @@
   <Files>
     <File fileId="4" filename="../../bullRing.i3d"/>
     <File fileId="6" filename="../../bumId.i3d"/>
+	<File fileId="1811" filename="../Horns/Horns.i3d"/>
     <File fileId="5" filename="../../collar.i3d"/>
     <File fileId="8" filename="cattleAngus_diffuse.png"/>
     <File fileId="1" filename="../../earTags.i3d"/>
@@ -81,6 +82,7 @@
                       <TransformGroup name="cow_eyeball_R_skin_jnt" translation="-0.118432 0.061226 0.208758" rotation="151.811 -27.1069 -154.859" nodeId="53"/>
                       <TransformGroup name="cow_eyelid_up_R_skin_jnt" translation="-0.141939 0.071295 0.228962" rotation="179.193 -38.3111 156.813" nodeId="54"/>
                       <ReferenceNode name="noseRing" translation="0.00472863 -0.203413 0.400121" rotation="60.0824 0.746844 0.335526" scale="0.5 0.5 0.5" referenceId="4" nodeId="58"/>
+					  <ReferenceNode name="Horns" translation="0 0.242 0.102" rotation="0 0 0" scale="1 1 1" referenceId="1811" />
                     </TransformGroup>
                   </TransformGroup>
                   <ReferenceNode name="monitor" translation="0.168246 0.277683 -1.76818e-08" rotation="19.83 90 0" scale="1.2 1.1 1" referenceId="5" nodeId="67" referenceChildPath="0>"/>
