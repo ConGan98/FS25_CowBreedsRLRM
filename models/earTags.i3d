@@ -2,30 +2,58 @@
 
 <i3D name="earTags.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.8"/>
+    <Export program="CowBreedsRLRM blender/build_eartags.py" version="1"/>
   </Asset>
 
   <Files>
-    <File fileId="3" filename="colourShader.xml"/>
-    <File fileId="1" filename="earTags_diffuse.dds"/>
+    <File fileId="1" filename="earTagPlastic_diffuse.dds"/>
+    <File fileId="2" filename="colourShader.xml"/>
+    <File fileId="3" filename="earTagGlyphs_diffuse.dds"/>
+    <File fileId="4" filename="offsetUV.xml"/>
   </Files>
 
-
   <Materials>
-    <Material name="Material.001" materialId="27" specularColor="1 1 0" customShaderId="3">
+    <Material name="earTag_mat" materialId="1" specularColor="0.45 1 0" customShaderId="2">
       <Texture fileId="1"/>
-      <CustomParameter name="colorScale" value="0.8 0.7 0"/>
+      <CustomParameter name="colorScale" value="0.8 0.68 0.02"/>
+    </Material>
+    <Material name="earTagCap_mat" materialId="2" specularColor="0.7 1 0" customShaderId="2">
+      <Texture fileId="1"/>
+      <CustomParameter name="colorScale" value="0.02 0.02 0.02"/>
+    </Material>
+    <Material name="earTagPrint_mat" materialId="3" specularColor="0.45 1 0" customShaderId="4">
+      <Texture fileId="3"/>
+      <CustomParameter name="playScale" value="0 0 16 8"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
     </Material>
   </Materials>
-
 
   <Shapes externalShapesFile="earTags.i3d.shapes">
   </Shapes>
 
   <Scene>
-    <Shape name="earTag" shapeId="1" nodeId="8" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="27">
-      <TransformGroup name="back" translation="0.0014762 0 0" rotation="-180 -180 -180" nodeId="9"/>
-      <TransformGroup name="front" translation="-0.001 -8.38843e-10 7.82405e-05" rotation="-180 0 -180" nodeId="10"/>
+    <Shape clipDistance="50" name="earTag" shapeId="1" nodeId="1" castsShadows="false" receiveShadows="true" materialIds="1">
+      <TransformGroup name="back" translation="-0.0011 0 0" rotation="0 180 0" nodeId="2"/>
+      <TransformGroup name="front" translation="0.0011 0 0" nodeId="3"/>
+      <Shape clipDistance="50" name="cap" shapeId="2" nodeId="4" castsShadows="false" receiveShadows="true" materialIds="2"/>
+      <Shape clipDistance="50" name="button" translation="-0.012 0.046 0" rotation="0 -90 0" shapeId="3" nodeId="5" castsShadows="false" receiveShadows="true" materialIds="1"/>
+      <Shape clipDistance="50" name="pin" translation="-0.0011 0.046 0" scale="0.0109 1 1" shapeId="4" nodeId="6" castsShadows="false" receiveShadows="true" materialIds="1"/>
+      <Shape name="g01" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="5" nodeId="7" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g02" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="6" nodeId="8" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g03" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="7" nodeId="9" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g04" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="8" nodeId="10" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g05" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="9" nodeId="11" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g06" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="10" nodeId="12" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g07" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="11" nodeId="13" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g08" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="12" nodeId="14" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g09" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="13" nodeId="15" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g10" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="14" nodeId="16" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g11" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="15" nodeId="17" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g12" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="16" nodeId="18" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g13" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="17" nodeId="19" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g14" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="18" nodeId="20" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g15" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="19" nodeId="21" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
+      <Shape name="g16" translation="0.00125 0 0" scale="1 0.01 0.01" shapeId="20" nodeId="22" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="20" visibility="false"/>
     </Shape>
   </Scene>
 

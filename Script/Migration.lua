@@ -101,8 +101,9 @@ local function tryInstall(stage)
         migrateGetSubTypeIndexByName
     )
     hookInstalled = true
-    logf("installed AnimalSystem.getSubTypeIndexByName hook at %s (aliases=%d)",
-         stage, table.maxn and table.maxn(SUBTYPE_ALIASES) or 0)
+    local aliases = 0
+    for _ in pairs(SUBTYPE_ALIASES) do aliases = aliases + 1 end
+    logf("installed AnimalSystem.getSubTypeIndexByName hook at %s (aliases=%d)", stage, aliases)
     return true
 end
 

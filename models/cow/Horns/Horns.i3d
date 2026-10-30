@@ -24,12 +24,13 @@
       <Texture fileId="1"/>
       <Normalmap fileId="2"/>
       <Glossmap fileId="3"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.25 0.25 0 0"/>
     </Material>
     <Material name="cattleHighland_02_mat" materialId="6" customShaderId="4" customShaderVariation="sssSpecularDirt">
       <Texture fileId="9"/>
       <Normalmap fileId="10"/>
       <Glossmap fileId="11"/>
-      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0"/>
       <CustomParameter name="dirt" value="0 20 20"/>
       <CustomParameter name="sssColor" value="0.938 0.938 0.938 1"/>
     </Material>
@@ -39,6 +40,7 @@
       <Glossmap fileId="8"/>
       <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
       <CustomParameter name="dirt" value="0 20 20"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.25 0.25 0.5 0"/>
     </Material>
   </Materials>
 
@@ -48,9 +50,9 @@
 
   <Scene>
     <TransformGroup name="Horns" nodeId="12">
-      <Shape name="Horns_ORI_Beef" rotation="90 -0 0" shapeId="1" clipDistance="300" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="5"/>
-      <Shape name="Horns_ORI_Dairy" rotation="90 -0 0" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="7"/>
-      <Shape name="Horns_ORI_Highland" translation="0 0.00745018 6.51315e-10" rotation="90 -0 0" shapeId="3" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="6"/>
+      <Shape name="Horns_ORI_Beef" visibility="false" rotation="90 -0 0" shapeId="1" clipDistance="300" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="5"/>
+      <Shape name="Horns_ORI_Dairy" visibility="false" rotation="90 -0 0" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="7"/>
+      <Shape name="Horns_ORI_Highland" visibility="false" translation="0 0.00745018 6.51315e-10" rotation="90 -0 0" shapeId="3" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="6"/>
     </TransformGroup>
   </Scene>
 

@@ -2,19 +2,6 @@
 	<texts>
 		<!-- COWS -->
 		
-		<text name="fillType_bull" text="Touro"/>
-		<text name="fillType_bull_swiss_brown" text="Touro Brown-Swiss"/>
-		<text name="fillType_bull_holstein" text="Touro Holstein"/>
-		<text name="fillType_bull_angus" text="Touro Angus"/>
-		<text name="fillType_bull_limousin" text="Touro Limousin"/>
-		<text name="fillType_cow_hereford" text="Hereford"/>
-		<text name="fillType_bull_hereford" text="Hereford Bull"/>
-		<text name="fillType_cow_highland_cattle" text="Gado Highland"/>
-		<text name="fillType_bull_highland_cattle" text="Touro Highland"/>
-		<text name="animal_descriptionBullFeed" text="Touros gostam de erva, feno e TMR."/>
-		<text name="animal_descriptionBullYoung" text="Ele é um novilho."/>
-		<text name="animal_descriptionBullReproduction" text="Touros saudáveis e com mais de 12 meses podem reproduzir."/>
-		<text name="rl_descriptionCowReproduction" text="Vacas saudáveis e com mais de 12 meses podem reproduzir."/>
 
 			<!-- Fill type names -->
 		<text name="fillType_cow_red_holstein_pack" text="Gado Red Holstein"/>
@@ -58,5 +45,7 @@
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_kerry_pack" text="Kerry"/>
 		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
+		<!-- The pedigree bull line in the animal info boxes (Script/CowVariants.lua) -->
+		<text name="cvb_ui_pedigree" text="Pedigree"/>
 	</texts>
 </l10n>

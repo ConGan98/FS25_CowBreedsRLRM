@@ -2,19 +2,6 @@
 	<texts>
 		<!-- COWS -->
 		
-		<text name="fillType_bull" text="Byk"/>
-		<text name="fillType_bull_swiss_brown" text="Brown-Swiss Byk"/>
-		<text name="fillType_bull_holstein" text="Byk rasy holsztyńskiej"/>
-		<text name="fillType_bull_angus" text="Angus Byk"/>
-		<text name="fillType_bull_limousin" text="Byk rasy Limousin"/>
-		<text name="fillType_cow_hereford" text="Hereford"/>
-		<text name="fillType_bull_hereford" text="Hereford Bull"/>
-		<text name="fillType_cow_highland_cattle" text="Bydło Highland"/>
-		<text name="fillType_bull_highland_cattle" text="Byk Highland"/>
-		<text name="animal_descriptionBullFeed" text="Byki lubią trawę, siano i TMR."/>
-		<text name="animal_descriptionBullYoung" text="Jest to cielę płci męskiej."/>
-		<text name="animal_descriptionBullReproduction" text="Byki, które są zdrowe i starsze niż 12 miesięcy, mogą się rozmnażać."/>
-		<text name="rl_descriptionCowReproduction" text="Krowy, które są zdrowe i starsze niż 12 miesięcy, mogą się rozmnażać."/>
 
 	<!-- Fill type names -->
 		<text name="fillType_cow_red_holstein_pack" text="Bydło Red Holstein"/>
@@ -58,5 +45,7 @@
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_kerry_pack" text="Kerry"/>
 		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
+		<!-- The pedigree bull line in the animal info boxes (Script/CowVariants.lua) -->
+		<text name="cvb_ui_pedigree" text="Rodowód"/>
 	</texts>
 </l10n>

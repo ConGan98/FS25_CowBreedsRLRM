@@ -42,5 +42,7 @@
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_kerry_pack" text="Kerry"/>
 		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
+		<!-- The pedigree bull line in the animal info boxes (Script/CowVariants.lua) -->
+		<text name="cvb_ui_pedigree" text="Pedigree"/>
     </texts>
 </l10n>

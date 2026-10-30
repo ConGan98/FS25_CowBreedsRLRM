@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="brahmanCalf" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Maya Exporter" version="10.0.0" revision="41901" />
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/cow/brahman/brahmanCalf_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/brahman/brahmanCalf_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/brahman/brahmanCalf_specular.png" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/cow/cattle_alpha.png" />
+    <File fileId="6" filename="cattleBrahmanBullParts_diffuse.dds"/>
+    <File fileId="7" filename="cattleBrahmanBullParts_normal.dds"/>
+    <File fileId="8" filename="cattleBrahmanBullParts_specular.dds"/>
+    <File fileId="9" filename="../../earTags.i3d"/>
+    <File fileId="10" filename="../../monitor.i3d"/>
+    <File fileId="11" filename="../../earTagsRight.i3d"/>
+    <File fileId="12" filename="../../sprayedMarker_cattle.i3d"/>
+  </Files>
+
+  <Materials>
+    <Material name="brahmanCalf:brahmanCalf_01_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.8 0.8 1"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="cattleBrahmanBullParts_mat" materialId="6" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.8 0.8 1"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="brahmanCalf:brahmanCalf_02_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0"/>
+      <CustomParameter name="dirt" value="1 20 20"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.2 0.2 0.2 1"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="brahmanCalf1:brahmanCalf_01_mat" materialId="3" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.8 0.8 1"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="brahmanCalf2:brahmanCalf_01_mat" materialId="4" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.8 0.8 1"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="standardSurface1" materialId="5" diffuseColor="0.4 0.4 0.4 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="brahmanCalf.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="BrahmanCalfSkeleton" nodeId="1">
+      <TransformGroup name="calf_root_skin_jnt" nodeId="2">
+        <TransformGroup name="calf_spine_skin_jnt_01" translation="0 0.92566 -0.433473" rotation="0 -90 0" nodeId="3">
+          <TransformGroup name="calf_tail_skin_jnt_01" translation="-0.015155 0.235426 0" rotation="-180 0 176.891342" nodeId="4">
+            <TransformGroup name="calf_tail_skin_jnt_02" translation="0.19778 0 0" rotation="0 0 -38.555691" nodeId="5">
+              <TransformGroup name="calf_tail_skin_jnt_03" translation="0.220923 0 0" rotation="0 0 -9.012101" nodeId="6">
+                <TransformGroup name="calf_tail_skin_jnt_04" translation="0.239838 0 0" rotation="0 0 -0.954205" nodeId="7">
+                  <TransformGroup name="calf_tail_skin_jnt_05" translation="0.20951 0 0" nodeId="8"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_L_skin_jnt" translation="-0.072421 0.091072 -0.133706" rotation="0 0 -60.495724" nodeId="9">
+            <TransformGroup name="calf_knee_L_skin_jnt" translation="0.292057 0 0" rotation="0 0 -55.643448" nodeId="10">
+              <TransformGroup name="calf_ankle_L_skin_jnt" translation="0.387275 0 0" rotation="0 0 31.530563" nodeId="11">
+                <TransformGroup name="calf_hind_foot_L_skin_jnt" translation="0.314601 0 0" rotation="0 0 1.160991" nodeId="12">
+                  <TransformGroup name="calf_hind_ball_L_skin_jnt" translation="0.051171 0 0" nodeId="13"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_R_skin_jnt" translation="-0.072421 0.091072 0.133706" rotation="0 0 119.50428" nodeId="14">
+            <TransformGroup name="calf_knee_R_skin_jnt" translation="-0.292057 0 0" rotation="0 0 -55.643448" nodeId="15">
+              <TransformGroup name="calf_ankle_R_skin_jnt" translation="-0.387275 0 0" rotation="0 0 31.530563" nodeId="16">
+                <TransformGroup name="calf_hind_foot_R_skin_jnt" translation="-0.314601 0 0" rotation="0 0 -178.839005" nodeId="17">
+                  <TransformGroup name="calf_hind_ball_R_skin_jnt" translation="0.051171 0 0" nodeId="18"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_spine_skin_jnt_02" translation="0.473913 0 0" nodeId="19">
+            <TransformGroup name="calf_spine_skin_jnt_03" translation="0.473913 0 0" nodeId="20">
+              <TransformGroup name="calf_neck_skin_jnt_01" translation="0.030938 -0.072361 0" rotation="0 0 26.298672" nodeId="21">
+                <TransformGroup name="calf_neck_skin_jnt_02" translation="0.21149 -0.003692 0" rotation="0 0 -1.082535" nodeId="22">
+                  <TransformGroup name="calf_neck_skin_jnt_03" translation="0.211517 0.000305 0" rotation="0 0 1.082535" nodeId="23">
+                    <TransformGroup name="calf_head_skin_jnt" rotation="41.400414 90 0" nodeId="24">
+                      <TransformGroup name="calf_jaw_skin_jnt" translation="0 0.00288 0.116768" rotation="90 -44.654106 -90" nodeId="25">
+                        <TransformGroup name="calf_tongue_skin_jnt_01" translation="0.078013 -0.063904 0" rotation="0 0 22.657143" nodeId="26">
+                          <TransformGroup name="calf_tongue_skin_jnt_02" translation="0.06822 0 0" nodeId="27"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_L_skin_jnt_01" translation="0.103528 0.115985 -0.008514" rotation="6.440661 2.462258 -80.595535" nodeId="28">
+                        <TransformGroup name="calf_ear_L_skin_jnt_02" translation="0 0.144279 0" rotation="0.036943 0 0" nodeId="29">
+                          <ReferenceNode name="earTag" translation="0.11058 -0.00616455 0.0335045" rotation="-112.467 58.0542 -17.9195" scale="1 0.9 0.9" referenceId="9" nodeId="67"/>
+                          <ReferenceNode name="monitor" translation="0.0316162 -0.0308838 -0.00554848" rotation="-128.324 -88.2186 125.249" scale="1 0.5 0.5" referenceId="10" nodeId="68" visibility="false"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_R_skin_jnt_01" translation="-0.103528 0.115985 -0.008514" rotation="173.559341 2.462258 -99.404465" nodeId="30">
+                        <TransformGroup name="calf_ear_R_skin_jnt_02" translation="0 0.144279 0" rotation="-0.036943 0 0" nodeId="31">
+                          <ReferenceNode name="earTagRight" translation="0.11058 -0.00610352 -0.0335236" rotation="112.467 -58.0542 -17.9195" scale="1 0.9 0.9" referenceId="11" nodeId="69"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_eyeball_L_skin_jnt1" translation="0.091195 0.049358 0.103518" rotation="-6.79273 45.984058 -16.217577" nodeId="32"/>
+                      <TransformGroup name="calf_eyelidPivot_up_L_skin_jnt" translation="0.091195 0.049358 0.103518" rotation="6.845818 45.977921 2.665579" nodeId="33">
+                        <TransformGroup name="calf_eyelid_up_L_skin_jnt" translation="0.001677 0.0118 0.022226" rotation="0 0 -0.000372" nodeId="34"/>
+                      </TransformGroup>
+                      <TransformGroup name="calf_eyeball_R_skin_jnt1" translation="-0.091195 0.049358 0.103517" rotation="173.207275 -45.984058 16.217577" nodeId="35"/>
+                      <TransformGroup name="calf_eyelidPivot_up_R_skin_jnt" translation="-0.091195 0.049358 0.103517" rotation="-173.154175 -45.977921 -2.665579" nodeId="36">
+                        <TransformGroup name="calf_eyelid_up_R_skin_jnt" translation="-0.001677 -0.0118 -0.022226" rotation="0.000372 0 0" nodeId="37"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_L_skin_jnt" translation="0.049116 -0.022032 -0.125725" rotation="0 0 -117.484505" nodeId="38">
+                <TransformGroup name="calf_elbow_L_skin_jnt" translation="0.299091 0 0" rotation="0 0 36.862595" nodeId="39">
+                  <TransformGroup name="calf_wrist_L_skin_jnt" translation="0.320898 0 0" rotation="0 0 -14.180241" nodeId="40">
+                    <TransformGroup name="calf_front_foot_L_skin_jnt" translation="0.218764 0 0" rotation="0 0 13.141648" nodeId="41">
+                      <TransformGroup name="calf_front_ball_L_skin_jnt" translation="0.053417 0 0" nodeId="42"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_R_skin_jnt" translation="0.049116 -0.022032 0.125725" rotation="0 0 62.515491" nodeId="43">
+                <TransformGroup name="calf_elbow_R_skin_jnt" translation="-0.299091 0 0" rotation="0 0 36.862595" nodeId="44">
+                  <TransformGroup name="calf_wrist_R_skin_jnt" translation="-0.320898 0 0" rotation="0 0 -14.180241" nodeId="45">
+                    <TransformGroup name="calf_front_foot_R_skin_jnt" translation="-0.218764 0 0" rotation="0 0 -166.858353" nodeId="46">
+                      <TransformGroup name="calf_front_ball_R_skin_jnt" translation="0.053417 0 0" nodeId="47"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="calf_belly_skin_jnt" translation="0 -0.386373 0" rotation="0 90 0" nodeId="48"/>
+          </TransformGroup>
+          <ReferenceNode name="sprayedMarker" translation="0.263672 0.293598 0.0184326" rotation="93.1997 87.3871 84.3253" scale="0.1 0.1 0.1" referenceId="12" nodeId="70" visibility="false"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="BrahmanCalf" nodeId="49">
+      <TransformGroup name="hair" clipDistance="300" nodeId="50">
+        <Shape name="ear" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="28 29 30 31 32 35 33 36 34 37 24" clipDistance="300" nodeId="51"/>
+        <Shape name="whiskers" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="32 35 33 36 34 37 24 25 26 27" clipDistance="300" nodeId="52"/>
+        <Shape name="tail" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="5 6 7 8" clipDistance="300" nodeId="53"/>
+        <Shape name="eyelashes" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="32 35 33 36 34 37 24" clipDistance="300" nodeId="54"/>
+        <TransformGroup name="reverse" clipDistance="300" nodeId="55">
+          <Shape name="ear" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="28 29 30 31 32 35 33 36 34 37 24" clipDistance="300" nodeId="56"/>
+          <Shape name="eyelashes" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="32 35 33 36 34 37 24" clipDistance="300" nodeId="57"/>
+          <Shape name="tail" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="5 6 7 8" clipDistance="300" nodeId="58"/>
+          <Shape name="whiskers" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="32 35 33 36 34 37 24 25 26 27" clipDistance="300" nodeId="59"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="brahmanTeeth" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="24 25 26 27" clipDistance="300" nodeId="60"/>
+      <Shape name="brahmanBody" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="11 16 48 28 29 30 31 39 44 32 35 33 36 34 37 42 47 41 46 24 13 18 12 17 9 14 25 10 15 21 22 23 2 38 43 3 19 20 4 5 6 7 8 26 27 40 45" clipDistance="300" nodeId="61"/>
+      <Shape name="brahmanEyes" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="32 35 33 36 34 37 24" clipDistance="300" nodeId="62"/>
+      <Shape name="brahmanTonge" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="4" skinBindNodeIds="24 25 26 27" clipDistance="300" nodeId="63"/>
+      <Shape name="M_brahmanCalf_sack" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="6" skinBindNodeIds="11 16 48 28 29 30 31 39 44 32 35 33 36 34 37 42 47 41 46 24 13 18 12 17 9 14 25 10 15 21 22 23 2 38 43 3 19 20 4 5 6 7 8 26 27 40 45" clipDistance="300" nodeId="65" visibility="false"/>
+      <Shape name="M_brahman" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="11 16 48 28 29 30 31 39 44 32 35 33 36 34 37 42 47 41 46 24 13 18 12 17 9 14 25 10 15 21 22 23 2 38 43 3 19 20 4 5 6 7 8 26 27 40 45" clipDistance="300" nodeId="66" visibility="false"/>
+    </TransformGroup>
+    <Shape name="BrahmanCalf_proxy" visibility="false" shapeId="13" kinematic="true" density="0" collisionFilterGroup="0x10200000" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5" nodeId="64"/>
+  </Scene>
+
+</i3D>

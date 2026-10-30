@@ -2,9 +2,10 @@
 --
 -- The shared "Horns" accessory (models/cow/Horns/Horns.i3d) holds three shapes:
 --   Horns_ORI_Beef, Horns_ORI_Dairy, Horns_ORI_Highland
--- referenced into ADULT animal i3ds. All three are visible by default, so this
--- script shows at most ONE per animal (or none) based on the animal's breed, and
--- hides the rest.
+-- referenced into ADULT animal i3ds. All three are HIDDEN in the file (an animal
+-- nothing dresses - a map's decoration pen - would otherwise wear all three), so
+-- this script shows at most ONE per animal (or none) based on the animal's breed.
+-- CowVariants.lua calls HornSelector.applyToRoot for the map decoration animals.
 --
 -- Horn choice is PER BREED (not per model): breeds share visualAnimalIndex models,
 -- so a shared model (e.g. the beef bull) can carry the reference and this script
@@ -77,25 +78,22 @@ end
 -- Log each distinct breed once (to catch any breed-string mismatch without spam).
 local loggedBreeds = {}
 
-local function applyHorns(instance)
-    if instance == nil or instance.nodes == nil or instance.animal == nil then return end
-    local root = instance.nodes.root
-    if root == nil or root == 0 then return end
+--- Show the horn shape an animal of this breed and gender gets (or none) under root. seed keeps the
+--- horned / polled roll stable for one animal. Returns what it showed ("beef", ..., or nil).
+function HornSelector.applyToRoot(root, breed, gender, seed)
+    if root == nil or root == 0 then return nil end
 
     local found = {}
     findHorns(root, found)
     if found.beef == nil and found.dairy == nil and found.highland == nil then
-        return -- this model has no horns reference
+        return nil -- this model has no horns reference
     end
 
-    local animal = instance.animal
-    local breed = animal.breed
     local cfg = BREED_HORNS[breed]
-
     local showType = nil
     if cfg ~= nil then
-        local chance = (animal.gender == "male") and cfg.bull or cfg.cow
-        if chance >= 100 or stableRoll(tostring(animal.uniqueId) .. "|horn") < chance then
+        local chance = (gender == "male") and cfg.bull or cfg.cow
+        if chance >= 100 or stableRoll(tostring(seed) .. "|horn") < chance then
             showType = cfg.type
         end
     end
@@ -107,9 +105,16 @@ local function applyHorns(instance)
     if not loggedBreeds[tostring(breed)] then
         loggedBreeds[tostring(breed)] = true
         print(string.format("%s breed=%s gender=%s -> %s (cfg=%s)",
-            TAG, tostring(breed), tostring(animal.gender),
+            TAG, tostring(breed), tostring(gender),
             showType or "polled", cfg ~= nil and "mapped" or "unmapped"))
     end
+    return showType
+end
+
+local function applyHorns(instance)
+    if instance == nil or instance.nodes == nil or instance.animal == nil then return end
+    local animal = instance.animal
+    HornSelector.applyToRoot(instance.nodes.root, animal.breed, animal.gender, animal.uniqueId)
 end
 
 function HornSelector:loadMap(name)

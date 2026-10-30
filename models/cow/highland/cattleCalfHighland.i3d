@@ -152,6 +152,7 @@
         <Shape name="hairFur03" shapeId="17" clipDistance="300" nodeId="93" castsShadows="true" receiveShadows="true" skinBindNodeIds="66 71 58 40 41 42 43 49 54 44 45 46 47 52 57 51 56 36 68 73 67 72 64 69 37 65 70 33 34 35 29 48 53 30 31 32 59 60 61 62 63 38 39 50 55" materialIds="7"/>
         <Shape name="spineFur" shapeId="18" clipDistance="300" nodeId="94" castsShadows="true" receiveShadows="true" skinBindNodeIds="66 71 58 40 41 42 43 49 54 44 45 46 47 52 57 51 56 36 68 73 67 72 64 69 37 65 70 33 34 35 29 48 53 30 31 32 59 60 61 62 63 38 39 50 55" materialIds="7"/>
       </TransformGroup>
+      <Shape name="M_highland" shapeId="20" clipDistance="300" nodeId="96" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73" materialIds="5"/>
     </TransformGroup>
     <Shape name="cattleCalfHighlandproxy" shapeId="19" visibility="false" kinematic="true" collisionFilterGroup="0x200000" collisionFilterMask="0xfffffbff" linearDamping="0.5" angularDamping="0.5" nodeId="95" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
   </Scene>

@@ -17,6 +17,9 @@
     <File fileId="3" filename="../../earTagsRight.i3d"/>
     <File fileId="2" filename="../../monitor.i3d"/>
     <File fileId="4" filename="../../sprayedMarker_cattle.i3d"/>
+    <File fileId="13" filename="waterBuffaloBullParts_diffuse.dds"/>
+    <File fileId="14" filename="waterBuffaloBullParts_normal.dds"/>
+    <File fileId="15" filename="waterBuffaloBullParts_specular.dds"/>
   </Files>
 
 
@@ -36,6 +39,15 @@
       <Texture fileId="5"/>
       <Normalmap fileId="6"/>
       <Glossmap fileId="7"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1"/>
+    </Material>
+    <Material name="waterBuffaloBullParts_mat" materialId="8" customShaderId="8" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
       <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
       <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
       <CustomParameter name="dirt" value="0 20 20"/>
@@ -146,6 +158,8 @@
         <Shape name="Fur" shapeId="9" clipDistance="300" nodeId="185" castsShadows="true" receiveShadows="true" skinBindNodeIds="22 23 24 25 26 27 28 32 33 99 100 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 161 162 163 164 165 166 167 168 169 170 29" materialIds="6"/>
         <Shape name="Lash_reverse" shapeId="10" clipDistance="300" nodeId="186" castsShadows="true" receiveShadows="true" skinBindNodeIds="22 23 24 25 26 27 28 32 33 99 100 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 161 162 163 164 165 166 167 168 169 170 29" materialIds="6"/>
       </TransformGroup>
+      <Shape name="M_buffaloCalf_sack" shapeId="12" clipDistance="300" nodeId="188" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="22 23 24 25 26 27 28 29 32 33 99 100 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 161 162 163 164 165 166 167 168 169 170" materialIds="8"/>
+      <Shape name="M_buffaloCalf_sheath" shapeId="13" clipDistance="300" nodeId="189" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="22 23 24 25 26 27 28 29 32 33 99 100 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 161 162 163 164 165 166 167 168 169 170" materialIds="8"/>
     </TransformGroup>
     <Shape name="proxy" shapeId="11" visibility="false" kinematic="true" collisionFilterGroup="0x200000" collisionFilterMask="0xfffffbff" linearDamping="0.5" angularDamping="0.5" nodeId="187" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
   </Scene>

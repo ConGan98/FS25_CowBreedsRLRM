@@ -2,73 +2,67 @@
 
 <i3D name="collar.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+    <Export program="CowBreedsRLRM blender/build_collar.py" version="2"/>
   </Asset>
 
   <Files>
-    <File fileId="14" filename="font_normal_white.dds"/>
-    <File fileId="16" filename="offsetUV.xml"/>
-    <File fileId="1" filename="textures/tensionBeltForestry_diffuse.dds"/>
-    <File fileId="6" filename="$data/shaders/vehicleShader.xml"/>
-    <File fileId="4" filename="$data/shared/default_normal.dds"/>
-    <File fileId="5" filename="$data/shared/default_vmask.dds"/>
-    <File fileId="8" filename="$data/shared/detailLibrary/flat_normal.png"/>
-    <File fileId="9" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
-    <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
-    <File fileId="3" filename="$data/shared/white_diffuse.dds"/>
+    <File fileId="1" filename="collarDigits_diffuse.dds"/>
+    <File fileId="2" filename="offsetUV.xml"/>
   </Files>
 
-
   <Materials>
-    <Material name="COLLAR" materialId="5" specularColor="0.501961 1 0">
+    <Material name="collarStrap_mat" materialId="1" specularColor="0.3 1 0">
       <Texture fileId="1"/>
     </Material>
-    <Material name="Material.001" materialId="30" specularColor="1 1 0" customShaderId="16">
-      <Texture fileId="14"/>
-      <CustomParameter name="playScale" value="0 0 64 1"/>
-      <CustomParameter name="colorScale" value="0 0 0"/>
+    <Material name="collarTag_mat" materialId="2" specularColor="0.55 1 0" customShaderId="2">
+      <Texture fileId="1"/>
+      <CustomParameter name="playScale" value="10 0 16 1"/>
+      <CustomParameter name="colorScale" value="1 1 1"/>
     </Material>
-    <Material name="Material.001" materialId="72" specularColor="1 1 0" customShaderId="16">
-      <Texture fileId="14"/>
-      <CustomParameter name="playScale" value="0 0 64 1"/>
-      <CustomParameter name="colorScale" value="0 0 0"/>
+    <Material name="collarSensor_mat" materialId="3" specularColor="0.6 1 0">
+      <Texture fileId="1"/>
     </Material>
-    <Material name="plasticPainted_mat" materialId="7" customShaderId="6">
-      <Texture fileId="3"/>
-      <Normalmap fileId="4"/>
-      <Glossmap fileId="5"/>
-      <Custommap name="detailSpecular" fileId="7"/>
-      <Custommap name="detailNormal" fileId="8"/>
-      <Custommap name="detailDiffuse" fileId="9"/>
-      <CustomParameter name="colorScale" value="0.585642 0.61809 0.0310598"/>
-    </Material>
-    <Material name="plasticPaintedShinyBlack_mat" materialId="8" customShaderId="6">
-      <Texture fileId="3"/>
-      <Normalmap fileId="4"/>
-      <Glossmap fileId="5"/>
-      <Custommap name="detailSpecular" fileId="7"/>
-      <Custommap name="detailNormal" fileId="8"/>
-      <Custommap name="detailDiffuse" fileId="9"/>
-      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
-      <CustomParameter name="smoothnessScale" value="1.52"/>
+    <Material name="collarSteel_mat" materialId="4" specularColor="0.65 1 1">
+      <Texture fileId="1"/>
     </Material>
   </Materials>
-
 
   <Shapes externalShapesFile="collar.i3d.shapes">
   </Shapes>
 
   <Scene>
-    <Shape name="monitor" scale="1.05 1.1 1" shapeId="1" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="5,8,7">
-      <Shape name="bumId1" translation="0.121542 -0.316672 0.0610723" rotation="0 -0 -0.350126" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="30"/>
-      <Shape name="bumId1" translation="0.117831 -0.351131 0.0701944" rotation="0 -0 -4.45657" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="30"/>
-      <Shape name="bumId1" translation="0.112996 -0.381294 0.0809594" rotation="0 -0 -4.45657" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="16" castsShadows="true" receiveShadows="true" materialIds="30"/>
-      <Shape name="bumId1" translation="0.097265 -0.412925 0.0901763" rotation="0 -0 -16.0937" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="17" castsShadows="true" receiveShadows="true" materialIds="30"/>
-      <Shape name="bumId1" translation="0.0897499 -0.442361 0.0991767" rotation="0 -0 -16.0937" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="18" castsShadows="true" receiveShadows="true" materialIds="30"/>
-      <Shape name="bumId1" translation="0.0717791 -0.464368 0.107859" rotation="0 -0 -27.2166" scale="0.6 0.6 0.6" shapeId="2" clipDistance="300" nodeId="19" castsShadows="true" receiveShadows="true" materialIds="72"/>
-      <Shape name="Sphere" shapeId="3" nodeId="20" castsShadows="true" receiveShadows="true" materialIds="8"/>
-    </Shape>
-    <Light name="light" translation="17.2473 17.1038 16.8954" rotation="-34.916 41.5623 -1.78289e-07" nodeId="21" type="directional" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" numShadowMapSplits="5" shadowMapSplitDistancesParameter="0.9" range="500"/>
+    <TransformGroup name="collar" nodeId="1">
+      <Shape name="strap_dairy_F_young" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="1" nodeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_F_adult" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="2" nodeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100"/>
+      <Shape name="strap_dairy_F_old" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="3" nodeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_young" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="4" nodeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_adult" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="5" nodeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_old" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="6" nodeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_young_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="7" nodeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_adult_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="8" nodeId="9" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_old_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="9" nodeId="10" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_dairy_M_pedigree" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="10" nodeId="11" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_F_young" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="11" nodeId="12" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_F_adult" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="12" nodeId="13" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_F_old" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="13" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_young" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="14" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_young_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="15" nodeId="16" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_adult" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="16" nodeId="17" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_adult_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="17" nodeId="18" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_old" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="18" nodeId="19" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_old_steer" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="19" nodeId="20" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="strap_beef_M_pedigree" translation="0.04643 -0.35528 0.01941" rotation="-12.684 0 -3.779" scale="0.99388 0.99795 1" shapeId="20" nodeId="21" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="100" visibility="false"/>
+      <Shape name="tagL1" translation="0.11023 -0.14635 -0.02846" rotation="-113.622 77.316 -93.779" shapeId="21" nodeId="22" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagL2" translation="0.12755 -0.20784 -0.01491" rotation="-104.449 77.316 -93.779" shapeId="22" nodeId="23" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagL3" translation="0.13171 -0.27165 -0.00064" rotation="-92.56 77.316 -93.779" shapeId="23" nodeId="24" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagL4" translation="0.12488 -0.33492 0.01367" rotation="-84.499 77.316 -93.779" shapeId="24" nodeId="25" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagR1" translation="-0.10851 -0.14343 -0.02587" rotation="-106.796 -77.316 86.221" shapeId="25" nodeId="26" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagR2" translation="-0.1264 -0.20467 -0.01185" rotation="-97.223 -77.316 86.221" shapeId="26" nodeId="27" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagR3" translation="-0.13034 -0.26849 0.00254" rotation="-85.101 -77.316 86.221" shapeId="27" nodeId="28" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="tagR4" translation="-0.12395 -0.33178 0.01666" rotation="-77.795 -77.316 86.221" shapeId="28" nodeId="29" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="30"/>
+      <Shape name="sensor" translation="-0.10194 -0.42275 0.03676" rotation="-69.377 -77.316 86.221" shapeId="29" nodeId="30" castsShadows="false" receiveShadows="true" materialIds="3" clipDistance="50"/>
+      <Shape name="buckle" translation="0.10148 -0.42543 0.03435" rotation="-75.757 77.316 -93.779" shapeId="30" nodeId="31" castsShadows="false" receiveShadows="true" materialIds="4" clipDistance="50"/>
+    </TransformGroup>
   </Scene>
 
 </i3D>

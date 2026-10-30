@@ -27,11 +27,11 @@
   </Shapes>
 
   <Scene>
-    <Shape name="bumId" shapeId="1" clipDistance="300" nodeId="13" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
-      <Shape name="bumId1" shapeId="2" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="6"/>
-      <Shape name="bumId2" shapeId="3" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" materialIds="6"/>
-      <Shape name="bumId3" shapeId="4" clipDistance="300" nodeId="16" castsShadows="true" receiveShadows="true" materialIds="6"/>
-      <Shape name="bumId4" shapeId="5" clipDistance="300" nodeId="17" castsShadows="true" receiveShadows="true" materialIds="6"/>
+    <Shape name="bumId" shapeId="1" clipDistance="30" nodeId="13" castsShadows="false" receiveShadows="true" nonRenderable="true" materialIds="5">
+      <Shape name="bumId1" shapeId="2" clipDistance="30" nodeId="14" castsShadows="false" receiveShadows="true" materialIds="6"/>
+      <Shape name="bumId2" shapeId="3" clipDistance="30" nodeId="15" castsShadows="false" receiveShadows="true" materialIds="6"/>
+      <Shape name="bumId3" shapeId="4" clipDistance="30" nodeId="16" castsShadows="false" receiveShadows="true" materialIds="6"/>
+      <Shape name="bumId4" shapeId="5" clipDistance="30" nodeId="17" castsShadows="false" receiveShadows="true" materialIds="6"/>
     </Shape>
   </Scene>
 

@@ -2,7 +2,7 @@
 
 <i3D name="sprayedMarker_cattle.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.6"/>
+    <Export program="CowBreedsRLRM blender/build_rump_marks.py" version="1"/>
   </Asset>
 
   <Files>
@@ -10,19 +10,47 @@
     <File fileId="1" filename="sprayedMarker.dds"/>
   </Files>
 
-
   <Materials>
     <Material name="Material.001" materialId="5" specularColor="1 1 0" customShaderId="3">
       <Texture fileId="1"/>
     </Material>
   </Materials>
 
-
   <Shapes externalShapesFile="sprayedMarker_cattle.i3d.shapes">
   </Shapes>
 
   <Scene>
-    <Shape name="sprayedMarker" rotation="4.45738 90 0" scale="0.171093 0.171093 0.171093" shapeId="1" clipDistance="300" nodeId="8" castsShadows="false" receiveShadows="false" materialIds="5"/>
+    <Shape name="sprayedMarker" rotation="4.45738 90 0" scale="0.171093 0.171093 0.171093" shapeId="1" clipDistance="300" nodeId="8" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="5">
+      <Shape name="m00" shapeId="2" clipDistance="300" nodeId="10" castsShadows="false" receiveShadows="false" materialIds="5"/>
+      <Shape name="m01" shapeId="3" clipDistance="300" nodeId="11" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m02" shapeId="4" clipDistance="300" nodeId="12" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m03" shapeId="5" clipDistance="300" nodeId="13" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m04" shapeId="6" clipDistance="300" nodeId="14" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m05" shapeId="7" clipDistance="300" nodeId="15" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m06" shapeId="8" clipDistance="300" nodeId="16" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m07" shapeId="9" clipDistance="300" nodeId="17" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m08" shapeId="10" clipDistance="300" nodeId="18" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m09" shapeId="11" clipDistance="300" nodeId="19" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m10" shapeId="12" clipDistance="300" nodeId="20" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m11" shapeId="13" clipDistance="300" nodeId="21" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m12" shapeId="14" clipDistance="300" nodeId="22" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m13" shapeId="15" clipDistance="300" nodeId="23" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m14" shapeId="16" clipDistance="300" nodeId="24" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m15" shapeId="17" clipDistance="300" nodeId="25" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m16" shapeId="18" clipDistance="300" nodeId="26" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m17" shapeId="19" clipDistance="300" nodeId="27" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m18" shapeId="20" clipDistance="300" nodeId="28" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m19" shapeId="21" clipDistance="300" nodeId="29" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m20" shapeId="22" clipDistance="300" nodeId="30" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m21" shapeId="23" clipDistance="300" nodeId="31" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m22" shapeId="24" clipDistance="300" nodeId="32" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m23" shapeId="25" clipDistance="300" nodeId="33" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m24" shapeId="26" clipDistance="300" nodeId="34" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m25" shapeId="27" clipDistance="300" nodeId="35" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m26" shapeId="28" clipDistance="300" nodeId="36" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m27" shapeId="29" clipDistance="300" nodeId="37" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+      <Shape name="m28" shapeId="30" clipDistance="300" nodeId="38" castsShadows="false" receiveShadows="false" materialIds="5" visibility="false"/>
+    </Shape>
   </Scene>
 
 </i3D>

@@ -3,19 +3,6 @@
 	<translationContributors>Kalderone</translationContributors>
     <texts>
 		<!-- КОРОВИ -->
-		<text name="fillType_bull" text="Бик"/>
-		<text name="fillType_bull_swiss_brown" text="Бурий швейцарський бик"/>
-		<text name="fillType_bull_holstein" text="Гольштінський бик"/>
-		<text name="fillType_bull_angus" text="Ангусьский бик"/>
-		<text name="fillType_bull_limousin" text="Лімузинський бик"/>
-		<text name="fillType_cow_hereford" text="Hereford"/>
-		<text name="fillType_bull_hereford" text="Hereford Bull"/>
-		<text name="fillType_cow_highland_cattle" text="Хайленд"/>
-		<text name="fillType_bull_highland_cattle" text="Бик Хайленд"/>
-		<text name="animal_descriptionBullFeed" text="Бики їдять траву, сіно та TMR."/>
-		<text name="animal_descriptionBullYoung" text="Це бичок."/>
-		<text name="animal_descriptionBullReproduction" text="Бики, які здорові та старші за 12 місяців, можуть розмножуватись."/>
-		<text name="rl_descriptionCowReproduction" text="Корови, які здорові та старші за 12 місяців, можуть розмножуватись."/>
 
 			<!-- Fill type names -->
 		<text name="fillType_cow_red_holstein_pack" text="Red Holstein"/>
@@ -59,5 +46,7 @@
 		<text name="breed_jersey_pack" text="Jersey"/>
 		<text name="breed_kerry_pack" text="Kerry"/>
 		<text name="breed_shorthornmilkers_pack" text="Shorthorn Milkers"/>
+		<!-- The pedigree bull line in the animal info boxes (Script/CowVariants.lua) -->
+		<text name="cvb_ui_pedigree" text="Родовід"/>
 	</texts>
 </l10n>

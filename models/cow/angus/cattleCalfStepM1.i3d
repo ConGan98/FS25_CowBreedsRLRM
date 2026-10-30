@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="cattleCalfStepM1.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.6"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml"/>
+    <File fileId="1" filename="cattleAngus_diffuse.png"/>
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_normal.png"/>
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_specular.png"/>
+    <File fileId="6" filename="$dataS/character/animals/domesticated/cow/cattle_alpha.png"/>
+    <File fileId="7" filename="../../earTags.i3d"/>
+    <File fileId="9" filename="../../earTagsRight.i3d"/>
+    <File fileId="8" filename="../../monitor.i3d"/>
+    <File fileId="10" filename="../../sprayedMarker_cattle.i3d"/>
+    <File fileId="11" filename="cattleCalfParts_diffuse.dds"/>
+    <File fileId="12" filename="cattleCalfParts_normal.dds"/>
+    <File fileId="13" filename="cattleCalfParts_specular.dds"/>
+    <File fileId="14" filename="../holstein/cattleHolstein_diffuse.dds"/>
+    <File fileId="15" filename="../holstein/cattleHolstein_diffuse.dds"/>
+    <File fileId="16" filename="cattleCalfDairyParts_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="cattleCalf_mat" materialId="5" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+    <Material name="cattleCalfAlpha_mat1" materialId="6" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="alphaMap" fileId="6"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="cattleCalfParts_mat" materialId="8" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+    <Material name="cattleCalf_mat_dairy" materialId="9" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="14"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+    <Material name="cattleCalfAlpha_mat1_dairy" materialId="10" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <Texture fileId="15"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="alphaMap" fileId="6"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+    <Material name="cattleCalfParts_mat_dairy" materialId="11" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="16"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20 20"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cattleCalfStepM1.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="cattleCalf" nodeId="26">
+      <Shape name="calf" shapeId="1" clipDistance="300" nodeId="27" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="5"/>
+      <Shape name="eyes" shapeId="2" clipDistance="300" nodeId="28" castsShadows="true" receiveShadows="true" skinBindNodeIds="165 166" materialIds="5"/>
+      <Shape name="teeth" shapeId="3" clipDistance="300" nodeId="29" castsShadows="true" receiveShadows="true" skinBindNodeIds="53" materialIds="5"/>
+      <Shape name="tongue" shapeId="4" clipDistance="300" nodeId="30" castsShadows="true" receiveShadows="true" skinBindNodeIds="54 55 53" materialIds="5"/>
+      <TransformGroup name="hair" nodeId="31">
+        <Shape name="tail" shapeId="5" clipDistance="300" nodeId="32" castsShadows="true" receiveShadows="true" skinBindNodeIds="181 182 183 184" materialIds="6"/>
+        <Shape name="tail_reverse" shapeId="6" clipDistance="300" nodeId="33" castsShadows="true" receiveShadows="true" skinBindNodeIds="181 183 182 184" materialIds="6"/>
+        <Shape name="ears" shapeId="7" clipDistance="300" nodeId="34" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 57 123 56 124" materialIds="6"/>
+        <Shape name="ears_reverse" shapeId="8" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 123 56 57 124" materialIds="6"/>
+        <Shape name="ears2" shapeId="9" clipDistance="300" nodeId="36" castsShadows="true" receiveShadows="true" skinBindNodeIds="123 56 57 124" materialIds="6"/>
+        <Shape name="ears2_reverse" shapeId="10" clipDistance="300" nodeId="37" castsShadows="true" receiveShadows="true" skinBindNodeIds="123 56 57 124" materialIds="6"/>
+        <Shape name="whiskers" shapeId="11" clipDistance="300" nodeId="38" castsShadows="true" receiveShadows="true" skinBindNodeIds="53 52" materialIds="6"/>
+        <Shape name="whiskers_reverse" shapeId="12" clipDistance="300" nodeId="39" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 53" materialIds="6"/>
+        <Shape name="lash" shapeId="13" clipDistance="300" nodeId="40" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 167 168" materialIds="6"/>
+        <Shape name="lash_reverse" shapeId="14" clipDistance="300" nodeId="41" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 167 168" materialIds="6"/>
+        <Shape name="mainHair" shapeId="15" clipDistance="300" nodeId="42" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 51" materialIds="6"/>
+        <Shape name="mainHair_reverse" shapeId="16" clipDistance="300" nodeId="43" castsShadows="true" receiveShadows="true" skinBindNodeIds="51 52" materialIds="6"/>
+      </TransformGroup>
+<Shape name="C_F_early_heavy_dairy" shapeId="18" clipDistance="300" nodeId="200" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_F_early_lean_dairy" shapeId="19" clipDistance="300" nodeId="201" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_F_early_normal_dairy" shapeId="20" clipDistance="300" nodeId="202" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_heavy_dairy" shapeId="21" clipDistance="300" nodeId="203" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_heavy_dairy_groin" shapeId="22" clipDistance="300" nodeId="204" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_heavy_dairy_sack" shapeId="23" clipDistance="300" nodeId="205" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_heavy_dairy_sheath" shapeId="24" clipDistance="300" nodeId="206" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_lean_dairy" shapeId="25" clipDistance="300" nodeId="207" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_lean_dairy_groin" shapeId="26" clipDistance="300" nodeId="208" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_lean_dairy_sack" shapeId="27" clipDistance="300" nodeId="209" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_lean_dairy_sheath" shapeId="28" clipDistance="300" nodeId="210" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_normal_dairy" shapeId="29" clipDistance="300" nodeId="211" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_normal_dairy_groin" shapeId="30" clipDistance="300" nodeId="212" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_normal_dairy_sack" shapeId="31" clipDistance="300" nodeId="213" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_normal_dairy_sheath" shapeId="32" clipDistance="300" nodeId="214" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_heavy_dairy" shapeId="33" clipDistance="300" nodeId="215" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_heavy_dairy_groin" shapeId="34" clipDistance="300" nodeId="216" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_heavy_dairy_sack" shapeId="35" clipDistance="300" nodeId="217" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_heavy_dairy_sheath" shapeId="36" clipDistance="300" nodeId="218" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_lean_dairy" shapeId="37" clipDistance="300" nodeId="219" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_lean_dairy_groin" shapeId="38" clipDistance="300" nodeId="220" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_lean_dairy_sack" shapeId="39" clipDistance="300" nodeId="221" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_lean_dairy_sheath" shapeId="40" clipDistance="300" nodeId="222" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_normal_dairy" shapeId="41" clipDistance="300" nodeId="223" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="C_M_early_steer_normal_dairy_groin" shapeId="42" clipDistance="300" nodeId="224" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_normal_dairy_sack" shapeId="43" clipDistance="300" nodeId="225" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="11"/>
+<Shape name="C_M_early_steer_normal_dairy_sheath" shapeId="44" clipDistance="300" nodeId="226" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<TransformGroup name="dairyCoat" nodeId="227">
+<Shape name="D_calf" shapeId="45" clipDistance="300" nodeId="228" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="46 47 48 49 50 51 52 53 56 57 123 124 167 168 169 170 171 172 173 174 175 176 177 178 180 181 182 183 185 186 187 188 189 190 191 192 193 194 179" materialIds="9"/>
+<Shape name="D_eyes" shapeId="46" clipDistance="300" nodeId="229" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="165 166" materialIds="9"/>
+<Shape name="D_teeth" shapeId="47" clipDistance="300" nodeId="230" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="53" materialIds="9"/>
+<Shape name="D_tongue" shapeId="48" clipDistance="300" nodeId="231" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="54 55 53" materialIds="9"/>
+<Shape name="D_tail" shapeId="49" clipDistance="300" nodeId="232" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="181 182 183 184" materialIds="10"/>
+<Shape name="D_tail_reverse" shapeId="50" clipDistance="300" nodeId="233" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="181 183 182 184" materialIds="10"/>
+<Shape name="D_ears" shapeId="51" clipDistance="300" nodeId="234" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 57 123 56 124" materialIds="10"/>
+<Shape name="D_ears_reverse" shapeId="52" clipDistance="300" nodeId="235" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 123 56 57 124" materialIds="10"/>
+<Shape name="D_ears2" shapeId="53" clipDistance="300" nodeId="236" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="123 56 57 124" materialIds="10"/>
+<Shape name="D_ears2_reverse" shapeId="54" clipDistance="300" nodeId="237" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="123 56 57 124" materialIds="10"/>
+<Shape name="D_whiskers" shapeId="55" clipDistance="300" nodeId="238" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="53 52" materialIds="10"/>
+<Shape name="D_whiskers_reverse" shapeId="56" clipDistance="300" nodeId="239" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 53" materialIds="10"/>
+<Shape name="D_lash" shapeId="57" clipDistance="300" nodeId="240" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 167 168" materialIds="10"/>
+<Shape name="D_lash_reverse" shapeId="58" clipDistance="300" nodeId="241" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 167 168" materialIds="10"/>
+<Shape name="D_mainHair" shapeId="59" clipDistance="300" nodeId="242" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 51" materialIds="10"/>
+<Shape name="D_mainHair_reverse" shapeId="60" clipDistance="300" nodeId="243" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="51 52" materialIds="10"/>
+</TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="calfSkeleton" nodeId="44">
+      <TransformGroup name="calf_root_skin_jnt" nodeId="45">
+        <TransformGroup name="calf_spine_skin_jnt_01" translation="0 0.7630222 -0.3573116" rotation="0 -90 0" nodeId="46">
+          <TransformGroup name="calf_spine_skin_jnt_02" translation="0.3906469 0 0" nodeId="47">
+            <TransformGroup name="calf_spine_skin_jnt_03" translation="0.3906469 0 0" nodeId="48">
+              <TransformGroup name="calf_neck_skin_jnt_01" translation="0.02550194 -0.05964734 0" rotation="0 0 26.2987" nodeId="49">
+                <TransformGroup name="calf_neck_skin_jnt_02" translation="0.1743317 -0.003042716 0" rotation="-1e-06 0 -1.08254" nodeId="50">
+                  <TransformGroup name="calf_neck_skin_jnt_03" translation="0.1743536 0.0002509358 0" rotation="0 0 1.08254" nodeId="51">
+                    <TransformGroup name="calf_head_skin_jnt" rotation="41.4004 90 0" nodeId="52">
+                      <TransformGroup name="calf_jaw_skin_jnt" translation="0 0.002374826 0.09625248" rotation="90 -44.6541 -90" nodeId="53">
+                        <TransformGroup name="calf_tongue_skin_jnt_01" translation="0.04517417 -0.02466804 0" rotation="0 0 22.6571" nodeId="54">
+                          <TransformGroup name="calf_tongue_skin_jnt_02" translation="0.07768132 0 0" nodeId="55"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_L_skin_jnt_01" translation="0.0853382 0.09560653 -0.007017615" rotation="6.44066 2.46226 -80.5955" nodeId="56">
+                        <TransformGroup name="calf_ear_L_skin_jnt_02" translation="0 0.1189292 0" rotation="0.036943 0 0" nodeId="57">
+                          <ReferenceNode name="earTag" translation="0.06677363 0.0001793628 0.02883939" rotation="-116.579 67.8286 -22.6305" scale="0.9541284 0.8587156 0.8587156" referenceId="7" nodeId="90"/>
+                          <ReferenceNode name="monitor" translation="0.003423346 -0.02911437 0.005545299" rotation="-1.02736 -73.0891 91.854" scale="0.9541284 0.4770642 0.4770642" referenceId="8" nodeId="122"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_R_skin_jnt_01" translation="-0.0853382 0.09560653 -0.007017615" rotation="173.559 2.46226 -99.4045" nodeId="123">
+                        <TransformGroup name="calf_ear_R_skin_jnt_02" translation="0 0.1189292 0" rotation="-0.036943 0 0" nodeId="124">
+                          <ReferenceNode name="earTagRight" translation="0.066714 0.01644116 -0.02462529" rotation="109.188 -74.8847 -10.718" scale="0.9541284 0.8587156 0.8587156" referenceId="9" nodeId="146"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_eyeball_L_skin_jnt" translation="0.07233629 0.05475743 0.1078928" rotation="24.0112 -29.1566 -11.1239" nodeId="165"/>
+                      <TransformGroup name="calf_eyeball_R_skin_jnt" translation="-0.07233629 0.05475743 0.1078928" rotation="155.989 -29.1566 -168.876" nodeId="166"/>
+                      <TransformGroup name="calf_eyelid_up_L_skin_jnt" translation="0.08928161 0.06448382 0.122658" rotation="0.236387 -37.078 29.8551" nodeId="167"/>
+                      <TransformGroup name="calf_eyelid_up_R_skin_jnt" translation="-0.08928161 0.06448382 0.122658" rotation="178.477 -37.078 150.145" nodeId="168"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_L_skin_jnt" translation="0.04048653 -0.01816088 -0.1036355" rotation="0 0 -117.485" nodeId="169">
+                <TransformGroup name="calf_elbow_L_skin_jnt" translation="0.2465411 0 0" rotation="0 0 36.8626" nodeId="170">
+                  <TransformGroup name="calf_wrist_L_skin_jnt" translation="0.2645168 0 0" rotation="0 0 -14.1802" nodeId="171">
+                    <TransformGroup name="calf_front_foot_L_skin_jnt" translation="0.1803274 0 0" rotation="0 0 13.1416" nodeId="172">
+                      <TransformGroup name="calf_front_ball_L_skin_jnt" translation="0.04403207 0 0" nodeId="173"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_R_skin_jnt" translation="0.04048653 -0.01816088 0.1036355" rotation="0 0 62.5155" nodeId="174">
+                <TransformGroup name="calf_elbow_R_skin_jnt" translation="-0.2465411 0 0" rotation="0 0 36.8626" nodeId="175">
+                  <TransformGroup name="calf_wrist_R_skin_jnt" translation="-0.2645168 0 0" rotation="0 0 -14.1802" nodeId="176">
+                    <TransformGroup name="calf_front_foot_R_skin_jnt" translation="-0.1803274 0 0" rotation="0 0 -166.858" nodeId="177">
+                      <TransformGroup name="calf_front_ball_R_skin_jnt" translation="0.04403207 0 0" nodeId="178"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="calf_belly_skin_jnt" translation="0 -0.3184871 0" rotation="0 90 0" nodeId="179"/>
+          </TransformGroup>
+          <TransformGroup name="calf_tail_skin_jnt_01" translation="-0.0124924 0.1940621 0" rotation="-180 0 176.891" nodeId="180">
+            <TransformGroup name="calf_tail_skin_jnt_02" translation="0.16303 0 0" rotation="0 0 -38.5557" nodeId="181">
+              <TransformGroup name="calf_tail_skin_jnt_03" translation="0.1821069 0 0" rotation="0 0 -9.0121" nodeId="182">
+                <TransformGroup name="calf_tail_skin_jnt_04" translation="0.1976992 0 0" rotation="0 0 -0.954205" nodeId="183">
+                  <TransformGroup name="calf_tail_skin_jnt_05" translation="0.1726992 0 0" nodeId="184"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_L_skin_jnt" translation="-0.05969695 0.07507083 -0.1102142" rotation="0 0 -60.4957" nodeId="185">
+            <TransformGroup name="calf_knee_L_skin_jnt" translation="0.2407428 0 0" rotation="0 0 -55.6434" nodeId="186">
+              <TransformGroup name="calf_ankle_L_skin_jnt" translation="0.3192313 0 0" rotation="0 0 31.5306" nodeId="187">
+                <TransformGroup name="calf_hind_foot_L_skin_jnt" translation="0.2593254 0 0" rotation="0 0 1.16099" nodeId="188">
+                  <TransformGroup name="calf_hind_ball_L_skin_jnt" translation="0.04218011 0 0" nodeId="189"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_R_skin_jnt" translation="-0.05969695 0.07507083 0.1102142" rotation="0 0 119.504" nodeId="190">
+            <TransformGroup name="calf_knee_R_skin_jnt" translation="-0.2407428 0 0" rotation="0 0 -55.6434" nodeId="191">
+              <TransformGroup name="calf_ankle_R_skin_jnt" translation="-0.3192313 0 0" rotation="0 0 31.5306" nodeId="192">
+                <TransformGroup name="calf_hind_foot_R_skin_jnt" translation="-0.2593254 0 0" rotation="0 0 -178.839" nodeId="193">
+                  <TransformGroup name="calf_hind_ball_R_skin_jnt" translation="0.04218011 0 0" nodeId="194"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <ReferenceNode name="sprayedMarker" visibility="false" translation="0.108452 0.2228863 0.0171705" rotation="93.1997 87.3871 94.3253" scale="0.09541284 0.09541284 0.09541284" referenceId="10" nodeId="198"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <Shape name="calfProxy" scale="0.9541284 0.9541284 0.9541284" shapeId="17" kinematic="true" collisionFilterGroup="0x10200000" collisionFilterMask="0xfffffbff" density="0.0001" nodeId="199" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7"/>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="46">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="47">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="48">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="49">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="50">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="51">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="52">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="53">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="54">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="55">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="56">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="57">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="123">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="124">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="165">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="166">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="167">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="168">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="169">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="170">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="171">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="172">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="173">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="174">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="175">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="176">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="177">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="178">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="179">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="180">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="181">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="182">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="183">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="184">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="185">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="186">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="187">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="188">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="189">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="190">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="191">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="192">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="193">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="194">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

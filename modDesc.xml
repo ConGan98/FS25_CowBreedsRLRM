@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="107">
 	<author>Con_Gan</author>
-	<version>1.1.0.0</version>
+	<version>1.2.0.0</version>
 	<title>
 		<en>Cow Breeds Pack for RLRM</en>
 		<de>Rinderrassen-Paket für RLRM</de>
@@ -12,17 +12,33 @@
 Dairy: Red Holstein, Ayrshire, Jersey, Guernsey, Kerry, Shorthorn Milkers.
 Beef: Red Angus, Charolais, Shorthorn, Irish Moiled, British Blue, Belted Galloway, Simmental.
 
-Also adds custom male/calf models and per-breed horns to the base breeds (incl. Hereford, Angus, Highland).
+For these and the base breeds (Holstein, Brown Swiss, Angus, Hereford, Limousin, Highland):
+- Bull, steer and calf bodies, sized by breed, with lean / normal / heavy builds that follow each animal's weight
+- Calves that grow in steps from newborn to adult
+- Pedigree bulls: top genetics and the right type earn a bigger model and a breeding-stock price
+- Per-breed horns, a monitor collar showing the animal's ID, Irish or UK ear tags (console: cowEarTags IE / UK), and spray marks and bum IDs fitted to each body
+- Male water buffalo and Brahman bodies (Brahman needs the Beans and Alpacas DLC)
+- Sale prices per kg by age, weight and quality
 
-Requires Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></en>
+Animals in saves from older versions keep their breed and coat.
+
+Requires Realistic Livestock - Ritter version (FS25_RealisticLivestockRM), tested with 1.4.2.0.]]></en>
 		<de><![CDATA[Fuegt 13 neue Rinderrassen mit Texturvariationen zu Realistic Livestock RM hinzu.
 
 Milch: Red Holstein, Ayrshire, Jersey, Guernsey, Kerry, Shorthorn Milkers.
 Fleisch: Red Angus, Charolais, Shorthorn, Irish Moiled, British Blue, Belted Galloway, Simmental.
 
-Fuegt ausserdem eigene Bullen-/Kalb-Modelle und rassenspezifische Hoerner zu den Basisrassen hinzu (inkl. Hereford, Angus, Highland).
+Fuer diese und die Basisrassen (Holstein, Braunvieh, Angus, Hereford, Limousin, Highland):
+- Bullen-, Ochsen- und Kalbmodelle in Rassengroessen, mit mageren / normalen / schweren Koerpern, die dem Gewicht des Tieres folgen
+- Kaelber, die stufenweise vom Neugeborenen zum ausgewachsenen Tier wachsen
+- Herdbuchbullen: Top-Genetik und der passende Typ bringen ein groesseres Modell und einen Zuchttierpreis
+- Rassentypische Hoerner, ein Sensor-Halsband mit der Tiernummer, irische oder britische Ohrmarken (Konsole: cowEarTags IE / UK) sowie an jeden Koerper angepasste Spruehmarkierungen und Nummern am Hinterteil
+- Maennliche Wasserbueffel- und Brahman-Koerper (Brahman benoetigt das Beans and Alpacas DLC)
+- Verkaufspreise pro kg nach Alter, Gewicht und Qualitaet
 
-Benoetigt Realistic Livestock - Ritter version (FS25_RealisticLivestockRM).]]></de>
+Tiere in Spielstaenden aus aelteren Versionen behalten ihre Rasse und ihr Fell.
+
+Benoetigt Realistic Livestock - Ritter version (FS25_RealisticLivestockRM), getestet mit 1.4.2.0.]]></de>
 	</description>
 	<iconFilename>icon.dds</iconFilename>
 	<multiplayer supported="true"/>

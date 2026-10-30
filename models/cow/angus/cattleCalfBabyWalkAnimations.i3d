@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<i3D xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cattleCalfBabyWalkAnimations.i3d" version="1.6" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+  </Materials>
+
+
+  <Scene>
+    <TransformGroup name="cattleCalf" nodeId="1">
+      <TransformGroup name="hair" nodeId="2">
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="calfSkeleton" nodeId="3">
+      <TransformGroup name="calf_root_skin_jnt" nodeId="4">
+        <TransformGroup name="calf_spine_skin_jnt_01" translation="0 0.533137 -0.24966" rotation="0 -90 0" nodeId="5">
+          <TransformGroup name="calf_spine_skin_jnt_02" translation="0.272952 0 0" nodeId="6">
+            <TransformGroup name="calf_spine_skin_jnt_03" translation="0.272952 0 0" nodeId="7">
+              <TransformGroup name="calf_neck_skin_jnt_01" translation="0.0178187 -0.0416767 0" rotation="0 0 26.298672" nodeId="8">
+                <TransformGroup name="calf_neck_skin_jnt_02" translation="0.121809 -0.002126 0" rotation="-0.000001 0 -1.082535" nodeId="9">
+                  <TransformGroup name="calf_neck_skin_jnt_03" translation="0.121824 0.000175333 0" rotation="0 0 1.082535" nodeId="10">
+                    <TransformGroup name="calf_head_skin_jnt" rotation="41.400414 90 0" nodeId="11">
+                      <TransformGroup name="calf_jaw_skin_jnt" translation="0 0.00165933 0.0672533" rotation="90 -44.654106 -90" nodeId="12">
+                        <TransformGroup name="calf_tongue_skin_jnt_01" translation="0.031564 -0.017236 0" rotation="0 0 22.657143" nodeId="13">
+                          <TransformGroup name="calf_tongue_skin_jnt_02" translation="0.0542773 0 0" nodeId="14" />
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_L_skin_jnt_01" translation="0.0596273 0.066802 -0.00490333" rotation="6.440661 2.462258 -80.595535" nodeId="15">
+                        <TransformGroup name="calf_ear_L_skin_jnt_02" translation="0 0.083098 0" rotation="0.036943 0 0" nodeId="16" />
+                      </TransformGroup>
+                      <TransformGroup name="calf_ear_R_skin_jnt_01" translation="-0.0596273 0.066802 -0.00490333" rotation="173.559341 2.462258 -99.404465" nodeId="17">
+                        <TransformGroup name="calf_ear_R_skin_jnt_02" translation="0 0.083098 0" rotation="-0.036943 0 0" nodeId="18" />
+                      </TransformGroup>
+                      <TransformGroup name="calf_eyeball_L_skin_jnt" translation="0.0505427 0.03826 0.0753867" rotation="24.01125 -29.156639 -11.12394" nodeId="19" />
+                      <TransformGroup name="calf_eyeball_R_skin_jnt" translation="-0.0505427 0.03826 0.0753867" rotation="155.988754 -29.156639 -168.876053" nodeId="20" />
+                      <TransformGroup name="calf_eyelid_up_L_skin_jnt" translation="0.0623827 0.045056 0.0857033" rotation="0.236387 -37.078014 29.855055" nodeId="21" />
+                      <TransformGroup name="calf_eyelid_up_R_skin_jnt" translation="-0.0623827 0.045056 0.0857033" rotation="178.477081 -37.078014 150.144943" nodeId="22" />
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_L_skin_jnt" translation="0.0282887 -0.0126893 -0.072412" rotation="0 0 -117.484505" nodeId="23">
+                <TransformGroup name="calf_elbow_L_skin_jnt" translation="0.172263 0 0" rotation="0 0 36.862595" nodeId="24">
+                  <TransformGroup name="calf_wrist_L_skin_jnt" translation="0.184823 0 0" rotation="0 0 -14.180241" nodeId="25">
+                    <TransformGroup name="calf_front_foot_L_skin_jnt" translation="0.125998 0 0" rotation="0 0 13.141648" nodeId="26">
+                      <TransformGroup name="calf_front_ball_L_skin_jnt" translation="0.030766 0 0" nodeId="27" />
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="calf_shoulder_R_skin_jnt" translation="0.0282887 -0.0126893 0.072412" rotation="0 0 62.515491" nodeId="28">
+                <TransformGroup name="calf_elbow_R_skin_jnt" translation="-0.172263 0 0" rotation="0 0 36.862595" nodeId="29">
+                  <TransformGroup name="calf_wrist_R_skin_jnt" translation="-0.184823 0 0" rotation="0 0 -14.180241" nodeId="30">
+                    <TransformGroup name="calf_front_foot_R_skin_jnt" translation="-0.125998 0 0" rotation="0 0 -166.858353" nodeId="31">
+                      <TransformGroup name="calf_front_ball_R_skin_jnt" translation="0.030766 0 0" nodeId="32" />
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="calf_belly_skin_jnt" translation="0 -0.222533 0" rotation="0 90 0" nodeId="33" />
+          </TransformGroup>
+          <TransformGroup name="calf_tail_skin_jnt_01" translation="-0.00872867 0.135595 0" rotation="-180 0 176.891342" nodeId="34">
+            <TransformGroup name="calf_tail_skin_jnt_02" translation="0.113912 0 0" rotation="0 0 -38.555691" nodeId="35">
+              <TransformGroup name="calf_tail_skin_jnt_03" translation="0.127241 0 0" rotation="0 0 -9.012101" nodeId="36">
+                <TransformGroup name="calf_tail_skin_jnt_04" translation="0.138136 0 0" rotation="0 0 -0.954205" nodeId="37">
+                  <TransformGroup name="calf_tail_skin_jnt_05" translation="0.120668 0 0" nodeId="38" />
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_L_skin_jnt" translation="-0.0417113 0.0524533 -0.0770087" rotation="0 0 -60.495724" nodeId="39">
+            <TransformGroup name="calf_knee_L_skin_jnt" translation="0.168211 0 0" rotation="0 0 -55.643448" nodeId="40">
+              <TransformGroup name="calf_ankle_L_skin_jnt" translation="0.223053 0 0" rotation="0 0 31.530563" nodeId="41">
+                <TransformGroup name="calf_hind_foot_L_skin_jnt" translation="0.181195 0 0" rotation="0 0 1.160991" nodeId="42">
+                  <TransformGroup name="calf_hind_ball_L_skin_jnt" translation="0.029472 0 0" nodeId="43" />
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="calf_hip_R_skin_jnt" translation="-0.0417113 0.0524533 0.0770087" rotation="0 0 119.50428" nodeId="44">
+            <TransformGroup name="calf_knee_R_skin_jnt" translation="-0.168211 0 0" rotation="0 0 -55.643448" nodeId="45">
+              <TransformGroup name="calf_ankle_R_skin_jnt" translation="-0.223053 0 0" rotation="0 0 31.530563" nodeId="46">
+                <TransformGroup name="calf_hind_foot_R_skin_jnt" translation="-0.181195 0 0" rotation="0 0 -178.839005" nodeId="47">
+                  <TransformGroup name="calf_hind_ball_R_skin_jnt" translation="0.029472 0 0" nodeId="48" />
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="cattleCalfBabyWalkAnimations.i3d.anim" />
+</i3D>

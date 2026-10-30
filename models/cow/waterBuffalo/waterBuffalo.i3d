@@ -21,6 +21,9 @@
     <File fileId="3" filename="../../earTagsRight.i3d"/>
     <File fileId="2" filename="../../monitor.i3d"/>
     <File fileId="6" filename="../../sprayedMarker_cattle.i3d"/>
+    <File fileId="17" filename="waterBuffaloBullParts_diffuse.dds"/>
+    <File fileId="18" filename="waterBuffaloBullParts_normal.dds"/>
+    <File fileId="19" filename="waterBuffaloBullParts_specular.dds"/>
   </Files>
 
 
@@ -41,6 +44,12 @@
       <Texture fileId="7"/>
       <Normalmap fileId="8"/>
       <Glossmap fileId="9"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+    </Material>
+    <Material name="waterBuffaloBullParts_mat" materialId="9" customShaderId="10" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
       <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
     </Material>
     <Material name="waterBuffaloHorns_mat" materialId="8">
@@ -180,6 +189,10 @@
         <Shape name="horn_v01_l" shapeId="23" clipDistance="300" nodeId="238" castsShadows="true" receiveShadows="true" skinBindNodeIds="43" materialIds="8"/>
         <Shape name="horn_v01_r" shapeId="24" clipDistance="300" nodeId="239" castsShadows="true" receiveShadows="true" skinBindNodeIds="43" materialIds="8"/>
       </TransformGroup>
+      <Shape name="M_buffalo" shapeId="26" clipDistance="300" nodeId="241" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="37 38 39 40 41 42 43 44 48 49 115 116 159 160 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 193 192" materialIds="7"/>
+      <Shape name="M_buffalo_groin" shapeId="27" clipDistance="300" nodeId="242" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="37 38 39 40 41 42 43 44 48 49 115 116 159 160 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 193 192" materialIds="9"/>
+      <Shape name="M_buffalo_sack" shapeId="28" clipDistance="300" nodeId="243" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="37 38 39 40 41 42 43 44 48 49 115 116 159 160 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 193 192" materialIds="9"/>
+      <Shape name="M_buffalo_sheath" shapeId="29" clipDistance="300" nodeId="244" visibility="false" castsShadows="true" receiveShadows="true" skinBindNodeIds="37 38 39 40 41 42 43 44 48 49 115 116 159 160 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 193 192" materialIds="9"/>
     </TransformGroup>
     <Shape name="cowProxy" shapeId="25" visibility="false" kinematic="true" collisionFilterGroup="0x200000" collisionFilterMask="0xfffffbff" linearDamping="0.5" angularDamping="0.5" nodeId="240" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
   </Scene>
