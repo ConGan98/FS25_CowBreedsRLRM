@@ -25,9 +25,11 @@ A companion pack for **FS25 Realistic Livestock (RM)** that adds **13 new cow br
 
 ## Features
 
-- **Custom bull (male) models** for the dairy, beef and Highland lines — males are no longer just the cow model.
+- **Cow bodies and udders** — every adult dairy and beef cow has young (12–24 months), adult and old (6 years and over) bodies (Highland, buffalo and Brahman cows keep their own). Her belly shows from 40 % of the way through a pregnancy and is full from 75 %, and her udder follows her state: a heifer's, filling up late in her first pregnancy, full while she's in milk, small when she's dry, and bagging up again just before calving.
+- **Bull and steer bodies** — dairy and beef bulls have young (12–24 months), adult and old (5 years and over) bodies with the scrotum and sheath on bare skin, and steers a smaller pouch; Highland bulls have their own bull body. Males are no longer just the cow model.
 - **Custom calf models**, including male calf variants, for dairy, beef and Highland.
 - **Dairy breed sizes** — dairy cows and bulls are sized by breed: Holstein, Red Holstein and Brown Swiss at full size, Shorthorn Milkers, Ayrshire and Guernsey about 9% smaller, Jersey and Kerry about 18% smaller. Young stock (12–24 months) is a step smaller again, and pedigree bulls a size up. Each size moves with its own scaled animation.
+- **Beef sizes and builds** — adult beef cattle are sized by the breed's height (Belted Galloway and Irish Moiled compact, Charolais, Limousin and Simmental tall) and built native, continental or double‑muscled (British Blue), with a lean / normal / heavy body that follows each animal's weight. Young stock is a step smaller and pedigree bulls a size up.
 - **Growing beef calves** — beef calves from 6 to 12 months come in four sizes, set by age (6–9 / 9–12 months) and the breed's height (compact, standard, tall), so they grow steadily into the young adults. Heifer, bull and steer calves each have their own body, with the breed's build and a lean / normal / heavy body that follows their weight. Bull calves show the scrotum and steers a smaller pouch, on bare skin. Baby beef calves are a size bigger from 3 months. Each size moves with its own scaled animation.
 - **Growing dairy calves** — dairy calves grow the same way, on the same calf models with their own dairy coats: sized by age and the breed's dairy size (Jersey and Kerry the smallest, Holstein, Red Holstein and Brown Swiss the biggest), with heifer, bull and steer bodies that follow their weight. Dairy babies are a size bigger from 3 months too.
 - **Baby calves** — newborns wobble on the unsteady baby walk for their first two months, then walk and run like calves from 2 months (the calf animations fitted to the baby). Bull babies show a small scrotum and steers a pouch, on bare skin, with a sheath — beef and dairy, at both baby sizes.
@@ -37,7 +39,6 @@ A companion pack for **FS25 Realistic Livestock (RM)** that adds **13 new cow br
   - **Hereford, Limousin, Charolais, Shorthorn, British Blue, Simmental** — occasionally horned (bulls more often than cows).
   - All other breeds — polled.
   - Each animal's horned/polled state is fixed for its life (seeded from its ID), so a herd shows a natural mix.
-- **Beef sizes and builds** — adult beef cattle are sized by the breed's height (Belted Galloway and Irish Moiled compact, Charolais, Limousin and Simmental tall) and built native, continental or double‑muscled (British Blue), with a lean / normal / heavy body that follows each animal's weight. Young stock is a step smaller and pedigree bulls a size up.
 - **Pedigree bulls** — an entire bull of 24 months or older with Very Good genetics or better may be a pedigree bull: about 1 in 4 of those has the type for it, fixed per bull by his ID. Pedigree bulls get the bigger pedigree model, a "Pedigree: Yes" line in the look‑at box, the RL menu and the Animals page, and a breeding‑stock price (see *Prices*).
 - **Visual accessories on the base breeds** — monitors, ear tags, sprayed markers and nose rings are wired onto Holstein, Swiss Brown, Limousin, Angus, Hereford and Highland, as on the pack breeds.
 - **Monitor collar** — a GEA‑style activity collar with the animal's last four ID digits on its tags, fitted to every adult body. Pedigree bulls and heavy adult bulls go without (the monitor still works). Monitors applied with "apply to all" show straight away.
@@ -47,6 +48,7 @@ A companion pack for **FS25 Realistic Livestock (RM)** that adds **13 new cow br
 - **Water Buffalo** models bundled and remapped through the pack atlases. Buffalo bulls and bull calves have male bodies (bare‑skin groin, scrotum and sheath).
 - **Brahman** (Beans and Alpacas DLC) — fitted into the pack's model slots, with male bodies for bulls and bull calves.
 - **Coats kept on update** — animals from an older version of the pack, or from plain RLRM, keep their coat.
+- **Lighter on performance** — the small accessories stop being drawn sooner (the printing on the tags from 20 m, collar tags and bum ID tiles from 30 m, ear tag pieces and the collar's buckle and sensor from 50 m), and none of those small parts casts a shadow any more (the collar strap still does).
 
 ## Breed value calibration
 
@@ -130,6 +132,7 @@ Every cattle breed, base breeds included, sells on a **per‑kg ladder** by mark
   - `HEREFORD_PACK` animals → RLRM's base **Hereford** (the pack Hereford was consolidated into it; migrated animals keep the custom models but use RLRM's Hereford economics).
   - Leftover subtypes from earlier bridge builds (`_vanilla` / `_mechet`) → their base or `_PACK` equivalent.
   - No manual action needed — load, then save once to bake the new names in.
+- **Coat migration.** RLRM saves only each animal's place in its model's coat list, and those lists have changed between pack versions. `Script/CoatMigration.lua` sees which version (or plain RLRM) the save was last made with and moves each animal to the same coat in today's list, so nobody changes colour on update. Saves from plain RLRM need no change.
 - **New models need no migration.** Which model a breed uses is resolved from breed + age at load, so existing animals adopt the new bull/calf models instantly.
 - **Multiplayer supported** (install the mod zipped).
 
@@ -138,6 +141,33 @@ Every cattle breed, base breeds included, sells on a **per‑kg ladder** by mark
 - `cowVariants` — re‑check every adult's body and parts and report the counts.
 - `cowVariantsWeights` — list every beef animal's weight against its breed's, and the body it shows.
 - `cowVariantsYoung` — list every animal under 12 months: the model slot it shows and the one it belongs on.
+
+## Changelog
+
+### 1.2.0.0
+**New**
+- Cow bodies by age with pregnancy bellies and udders that follow the cow's state; bull and steer bodies by age.
+- Dairy breed sizes, beef sizes and builds, and lean / normal / heavy bodies that follow each animal's weight.
+- Growing beef and dairy calves (6–12 months, by age and breed size); baby calves walk from 2 months and are a size bigger from 3 months.
+- Pedigree bulls: Very Good genetics plus the type for it (about 1 in 4), a bigger model, a "Pedigree: Yes" line in the info boxes and a breeding‑stock price.
+- Per‑kg sale prices by age and market class, with heavy beef and pedigree premiums.
+- GEA‑style monitor collar with the animal's ID on its tags, fitted to every adult body; none on pedigree or heavy adult bulls.
+- Irish / UK ear tags (`cowEarTags IE` / `UK`), and spray marks and bum IDs fitted to each body.
+- Male bodies for water buffalo and Brahman bulls and bull calves; Brahman support for owners of the Beans and Alpacas DLC.
+- Coat migration for saves from older versions; support for RLRM 1.4.2.0.
+- Lighter accessories: shorter draw distances and no shadows on the small parts.
+
+**Fixed**
+- Monitors applied with "apply to all" now show straight away, not after a reload.
+- Other species (RLRM's pigs, sheep, horses, chickens) are no longer sent to cattle models.
+- The ear tag style is saved, and a style change updates both ears.
+- A castration by the animal worker now updates the animal's look at once.
+- No errors from the Brahman lines for players without the DLC.
+
+**Tidied**
+- About 10 MB of old models and textures removed; an unused model slot no longer loads a model of its own.
+- Breed names and descriptions in French, Dutch, Polish, Portuguese and Ukrainian now come from RLRM's own translations.
+- Quieter load messages in the log.
 
 ## License
 Released under the GPL‑3 license. See the [LICENSE](LICENSE) file for details.
